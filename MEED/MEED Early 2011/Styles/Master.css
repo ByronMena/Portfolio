@@ -1,0 +1,447 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Styles for Staff Page*/
+@import "StaffLayout.css" screen;
+/*Styles for jQuery Slide Show*/
+@import "SlideShow.css" screen;
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.TableHeader{
+	background-color:#003366;
+	width:100%;
+	border:none;
+	padding:0;
+	border-collapse:collapse;
+}
+.TableLayout{
+	width:100%;
+	border: none;
+	padding:0;
+	border-collapse:collapse;
+}
+.bluebackground {
+	background-color: #003366;
+}
+.TDBODYCONTENT {
+	padding: 0px;
+}
+.TDBODYCONTENT h1 {
+	margin: 0 0 20px;
+	padding-top:20px;
+	padding-left:15px;
+	padding-bottom:15px;
+	text-align: left;
+	font-size:3.2em;
+	border-bottom:solid 1px #999;
+}
+h1 small {
+			color:gray;
+			font-size: 0.35em;
+			text-shadow: none;
+			display: block;
+			font-family: arial, helvetica, san-serif;
+}
+.smallblack{
+	color:#000;
+}
+h2, h3, h4 {
+	padding-left:15px;
+	padding-right:15px;
+	}
+p {
+	padding-left:15px;
+	padding-right:15px;
+	line-height: 1.5em;
+	text-align: justify;
+/*	padding-bottom:15px;*/
+	}
+.SlideshowContainer{
+	margin-top:15px;
+	margin-bottom:15px;
+}
+a img{
+border:none;
+}
+.UnorderedList li{
+padding-bottom:10px;
+}
+.OrderedList li{
+	padding-bottom:10px;
+}
+/*ACCESSIBLE TOOLBAR STYLES*/
+#BottomToolbar {
+	height: 0px; /*the height is set at 0px but when the page loads jQuery script will set it at 50px*/
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	background: #e2e2e2;
+	background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe));
+	background: -webkit-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+	background: -o-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+	background: -ms-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 );
+	background: linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+/*	background-color: #f0f0f0;*/
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #bbbbbb;
+}
+#BottomToolbar ul {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height:auto;
+	float: left;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height:normal;
+}
+#BottomToolbar ul li {
+	height:auto;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	position: relative;
+}
+#BottomToolbar ul li a{
+	height:auto;
+	padding: 10px;
+	float: left;
+	width:100px; /*Originally 16px*/
+	text-decoration: none;
+	color: #464c54;
+	position: relative;
+	font-weight:bold;
+	font-size:14px;
+	vertical-align: middle;
+	text-align:center;
+	text-transform: uppercase;
+	text-indent:10px;
+}
+html #BottomToolbar ul li a:hover{
+	color: #333333;
+	background-color:#fff;
+	border-left:solid 1px #bbbbbb;
+	border-right:solid 1px #bbbbbb;
+	border-top:solid 5px #0066FF;
+}
+html #BottomToolbar ul li a:active{
+	border-top:solid 5px #000;
+}
+#BottomToolbar ul li a img {
+	/*padding: 5px;*//*Originally 16px*/
+	border-style: none;
+	text-decoration: none;
+	margin-bottom:2px;
+}
+
+/*| Styles for Horizontal jQuery Navigation Bar |
+=====================================================*/
+.jqueryslidemenu{
+width:960px;
+height:1%;
+font: bold 12px Verdana;
+border-bottom: 1px solid #0066ff;
+padding-left: 0px; /*offset of tabs relative to browser left edge*/
+}
+
+.jqueryslidemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a{
+display: block;
+background-color:#0066ff;
+padding: 3px 10px 3px 10px;
+margin-right: 0px; /*spacing between tabs*/
+border-right: 1px solid #fff;
+border-bottom-width: 0;
+color: #fff;
+text-decoration: none;
+font-size:12px;
+}
+
+.jqueryslidemenu ul li a:hover{
+background-color:#dd0606;
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+position: absolute;
+left: 0;
+display: block;
+visibility: hidden;
+border-top: 1px solid white;
+z-index:100;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+font: normal 13px Verdana;
+width: 160px; /*width of sub menus*/
+color: white;
+padding: 4px 5px;
+margin: 0;
+border-top-width: 0;
+border-bottom: 1px solid white;
+background-color:#0066ff;
+}
+
+.jqueryslidemenu ul li ul li a:hover{ /*sub menus hover style
+background: #eff9ff;*/
+background-color:#dd0606;
+font-weight:bold;
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+/*.downarrowclass{
+position: absolute;
+top: 7px;
+right: 5px;
+}*/
+
+/*.rightarrowclass{
+position: absolute;
+top: 5px;
+right: 5px;
+}*/
+
+/*Style for Vertical Navigation Links
+======================================================
+*/
+.content {
+	background-color:#003366;
+	padding:0px;
+	/*	border-top:0px;*/
+	border-right:1px solid #464c54;
+	font-family:Arial, Helvetica, sans-serif;
+	width:160px;
+	/* [disabled]background-image:url(../Minimal%20MDC/css/images/content_bottom.jpg); */
+	/* [disabled]background-repeat:repeat-x; */
+	/* [disabled]background-position:bottom; */
+}
+/*.content a:hover{
+	background-color:#fff;
+	}*/
+#content_2, #content_3 {
+	/* [disabled]display:none; */
+}
+
+.content ul {
+	margin:0px;
+/*	padding:0px 5px 0px 5px;*/
+	padding:0px 5px 0px 5px;
+	list-style:none;
+}
+/*.content ul a:hover{
+	background-color:#ffffff;
+	}*/
+.content ul li {
+	display:block;
+	list-style:none;
+	border-bottom:1px solid #d6dde0;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:14px;
+	color:#fff;
+}
+/*.content ul li:hover{
+	background-color:#FC0;
+	color:#000;
+	}*/
+	
+.content ul li:last-child {
+	border-bottom:none;
+}
+/*Styles for the links and text size*/
+.content ul li a {
+	display:block;
+	/* [disabled]font-size:12px; */
+	font-weight:bold;
+	text-decoration:none;
+	color:#FFF;
+}
+.content ul li a small {
+	color:#8b959c;
+	font-size:9px;
+	text-transform:uppercase;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	position:relative;
+	left:4px;
+	top:0px;
+}
+.content ul li a:hover {
+	/*background-color:#FC0;*/
+	color:#FC0;
+	padding-left: 5px;
+}
+.content ul li a:hover small {
+	color:#baae8e;
+}
+
+/*--|START OF FOOTER SECTION|--*/
+.footer {
+	background-color: #FFCC33;
+	clear: both;
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 0.7em;
+}
+
+.bottomenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	color: #003366;
+}
+.bottomenu a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	color: #003366;
+	text-decoration: underline;
+}
+.bottomenu a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 7pt;
+	color: #003366;
+	text-decoration: underline;
+}
+.bottomenu a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	color: #0066ff;
+	text-decoration: none;
+}
+
+/*SEARCH FORM STYLES*/
+#searchform #xSearchBar {
+	border: 2px solid #0066ff;
+	height: 50px;
+	width: 350px;
+	/* [disabled]padding: 5px; */
+	font-size: 36px;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #0066ff;
+	text-decoration: none;
+	vertical-align: middle;
+	padding-left:65px;
+	background-color: #FFF;
+	background-image: url(../Images/icons/Search-icon.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	float:left;
+}
+#searchform {
+	text-align: left;
+	background-color: #f0f0f0;
+	border: 1px solid #c3c3c3;
+	height: 55px;
+	padding: 10px;
+	width: auto;
+}
+#searchform #xSearchButton {
+	font-size: 36px;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #FFF;
+	text-decoration: none;
+	vertical-align: middle;
+	background-color: #0066ff;
+	border: 1px solid #0066ff;
+	height: 55px;
+	margin-left: 10px;
+	float:left;
+}
+
+/*END OF SEARCH FORM*/
+
+/*STAR OF HIDE IMAGE STYLE*/
+#HideImagesForm {
+	background-color: #F0F0F0;
+	border: 1px solid #C3C3C3;
+	padding: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#HideImagesForm label #hidebutton {
+	border: 1px solid #C3C3C3;
+	background-color: #F00;
+	padding: 10px;
+	color: #FFF;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor:pointer;
+}
+#HideImagesForm label #hidebutton:hover {
+	border: 1px solid #C3C3C3;
+	background-color: #C3C3C3;
+	cursor:pointer;
+}
+#HideImagesForm label #showbutton {
+	border: 1px solid #C3C3C3;
+	background-color: #0066ff;
+	padding: 10px;
+	color: #FFF;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor:pointer;
+}
+#HideImagesForm label #showbutton:hover {
+	border: 1px solid #C3C3C3;
+	background-color: #C3C3C3;
+	cursor:pointer;
+}
+/*END OF HIDE IMAGE STYLE*/
+
+/*START OF CONTRAST STYLE USING HIDEIMAGE STYLE*/
+#HideImagesForm label .GeneralFormDesign{
+	padding: 10px;
+	background-color: #0066ff;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #FFF;
+	border: 1px solid #c3c3c3;
+}
+#HideImagesForm label .GeneralFormDesign:hover{
+	background-color: #ffcc33;
+	color: #000;
+	cursor:pointer;
+}
+#HideImagesForm label .GeneralFormDesign:active{
+	background-color:#c3c3c3;
+}
+/*END OF CONTRAST FORM STYLE*/

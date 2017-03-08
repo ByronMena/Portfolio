@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*STYLE FOR TOP HORIZONTAL NAV BAR FOR IE 9 AND BELOW===================================================================*/
+.NavBarBKGDColor{
+	background-color:#0066ff;
+}
+.jqueryslidemenu{
+	width:960px;
+	height:1%;
+	background-color: #36f;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+	white-space:nowrap;
+}
+
+.jqueryslidemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a{
+	display: block; /*background of tabs (default state)*/
+	color: white;
+	text-decoration: none;
+	background-color: #0066ff;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFF;
+	padding-top: 3px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	text-align: center;
+	font-size:12px;
+}
+
+* html .jqueryslidemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+color: white;
+}
+
+.jqueryslidemenu ul li a:hover{
+	/* [disabled]background: black; */ /*tab link background during hover state*/
+	color: white;
+	background-color: #dd0606;
+	font-weight: bold;
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+position: absolute;
+left: 0;
+display: block;
+visibility: hidden;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+	width: 160px; /*width of sub menus*/
+	padding: 5px;
+	margin: 0;
+	border-top-width: 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	float:right; /*Fixes the submenu's floating problem which overlaps and give ugly white gap spaces */
+	z-index:1; /*This fixes the horizontal nav bar from underlapping the search bar*/
+}
+
+.jqueryslidemenuz ul li ul li a:hover{ /*sub menus hover style*/
+	/* [disabled]background: #eff9ff; */
+	/* [disabled]color: black; */
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+	/* [disabled]position: absolute; */
+	/* [disabled]top: 12px; */
+	/* [disabled]right: 7px; */
+}
+
+.rightarrowclass{
+	/* [disabled]position: absolute; */
+	/* [disabled]top: 6px; */
+	/* [disabled]right: 5px; */
+}
+
+/*
+Styles for Search Bar
+============================================================================*/
+#searchwrapper {
+	width:244px; /*follow your image's size*/
+	height:44px;/*follow your image's size*/
+	background-image: url(../img/searchbar.jpg);
+	background-repeat:no-repeat; /*important*/
+	padding:0px;
+	margin:0px;
+	/*position:relative; important*/
+	position:relative;
+	float:right;
+	clear:none;
+	z-index:-1; /*This fixes the horizontal nav bar from underlapping the search bar*/
+}
+ 
+#searchwrapper form {
+	display: inline;
+}
+ 
+.searchbox {
+	border:0px; /*important*/
+	/*position:absolute; important*/
+	top:4px;
+	left:9px;
+	width:180px;
+	height:25px;
+	/* [disabled]background-image: url(../Minimal%20MDC/css/SEARCH%20PANEL.jpg); */
+	/* [disabled]background-repeat: no-repeat; */
+	/* [disabled]padding: 10px; */
+	background-color: Transparent;
+	margin: 10px 15px 10px 15px;
+}
+ 
+.searchbox_submit {
+	border:0px; /*important*/
+	background-color:transparent; /*important*/
+	position:absolute; /*important*/
+	top:1px;
+	left:202px;
+	width:43px;
+	height:43px;
+}
+/* Bottom(FOOTER) Menu Bar
+======================================================================================*/
+.footer{
+	clear:both;
+	padding:0.7em;
+	background-color:#FFCC33;
+	color:#333;
+	font:.75em Verdana, Arial, Helvetica, sans-serif;
+}

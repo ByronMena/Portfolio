@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/UNIVERSALTEMPLATE.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="ACCESS assists students with disabilities to utilize resources, accommodations and the technologies that ensure equal access and equal educational opportunity at Miami Dade College" />
+<meta name="keywords" content="access, disability services, wolfson access, access department, " />
+
+<!--STYLE SHEETS GROUPS GOES HERE-->
+<link rel="stylesheet" type="text/css" href="css/UNIVERSALCSS.css" media="all"/>
+<link rel="alternate stylesheet" type="text/css" media="screen" title="UNIVERSALCSS_2" href="css/UNIVERSALCSS_2.CSS" /><!--Black bkgd yellow text-->
+<link rel="alternate stylesheet" type="text/css" media="screen" title="UNIVERSALCSS_3" href="css/UNIVERSALCSS_3.CSS" /><!--Yellow bkgd black text-->
+
+<!--JAVASCRIPTS GROUPS-->
+<script language="javascript" type="text/javascript" src="scripts/jquery-1.4.3.min.js"></script><!--DO NOT REMOVE THIS SCRIPT-->
+<script language="javascript" type="text/javascript" src="scripts/jqueryslidemenu.js"></script><!--HORIZONTAL MENU-->
+<script language="javascript" type="text/javascript" src="scripts/styleswitch.js"></script><!--CONTRAST CHANGER SCRIPT-->
+<script language="javascript" type="text/javascript" src="scripts/jquery.orbit.min.js"></script><!--JQUERY SLIDESHOW-->
+<script language="javascript" type="text/javascript" src="scripts/jquery.orbit.js"></script><!--JQUERY SLIDESHOW CONFIG-->
+<script language="javascript1.1" type="text/javascript" src="scripts/warning.js"></script><!--IE UPGRADE NOTIFIER -->
+<!-- Run the jQuery slideshow plugin -->
+<script type="text/javascript">
+			$(window).load(function() {
+				$('#featured').orbit({
+					'bullets': true,
+					'timer' : true,
+					'animation' : 'fade'
+				});
+			});
+</script>
+
+<!--jQuery behavior for the ACCESSIBLE TOOLBAR-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+	//Adjust panel height
+	$.fn.adjustPanel = function(){
+		$(this).find("ul, .subpanel").css({ 'height' : 'auto'}); //Reset subpanel and ul height
+
+		var windowHeight = $(window).height(); //Get the height of the browser viewport
+		var panelsub = $(this).find(".subpanel").height(); //Get the height of subpanel
+		var panelAdjust = windowHeight - 100; //Viewport height - 100px (Sets max height of subpanel)
+		var ulAdjust =  panelAdjust - 25; //Calculate ul size after adjusting sub-panel (27px is the height of the base panel)
+
+		if ( panelsub >= panelAdjust ) {	 //If subpanel is taller than max height...
+			$(this).find(".subpanel").css({ 'height' : panelAdjust }); //Adjust subpanel to max height
+			$(this).find("ul").css({ 'height' : ulAdjust}); //Adjust subpanel ul to new size
+		}
+		else if ( panelsub < panelAdjust ) { //If subpanel is smaller than max height...
+			$(this).find("ul").css({ 'height' : 'auto'}); //Set subpanel ul to auto (default size)
+		}
+	};
+
+	//Execute function on load
+	$("#chatpanel").adjustPanel(); //Run the adjustPanel function on #chatpanel
+	$("#alertpanel").adjustPanel(); //Run the adjustPanel function on #alertpanel
+
+	//Each time the viewport is adjusted/resized, execute the function
+	$(window).resize(function () {
+		$("#chatpanel").adjustPanel();
+		$("#alertpanel").adjustPanel();
+	});
+
+	//Click event on Chat Panel + Alert Panel
+	$("#chatpanel a:first, #alertpanel a:first").click(function() { //If clicked on the first link of #chatpanel and #alertpanel...
+		if($(this).next(".subpanel").is(':visible')){ //If subpanel is already active...
+			$(this).next(".subpanel").hide(); //Hide active subpanel
+			$("#footpanel li a").removeClass('active'); //Remove active class on the subpanel trigger
+		}
+		else { //if subpanel is not active...
+			$(".subpanel").hide(); //Hide all subpanels
+			$(this).next(".subpanel").toggle(); //Toggle the subpanel to make active
+			$("#footpanel li a").removeClass('active'); //Remove active class on all subpanel trigger
+			$(this).toggleClass('active'); //Toggle the active class on the subpanel trigger
+		}
+		return false; //Prevent browser jump to link anchor
+	});
+
+	//Click event outside of subpanel
+	$(document).click(function() { //Click anywhere and...
+		$(".subpanel").hide(); //hide subpanel
+		$("#footpanel li a").removeClass('active'); //remove active class on subpanel trigger
+	});
+	$('.subpanel ul').click(function(e) {
+		e.stopPropagation(); //Prevents the subpanel ul from closing on click
+	});
+
+	//Delete icons on Alert Panel
+	$("#alertpanel li").hover(function() {
+		$(this).find("a.delete").css({'visibility': 'visible'}); //Show delete icon on hover
+	},function() {
+		$(this).find("a.delete").css({'visibility': 'hidden'}); //Hide delete icon on hover out
+	});
+
+
+
+
+
+
+});
+</script>
+
+<!--Image Hide Script-->
+<!--<script type="text/javascript">
+
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+
+</script>//-->
+
+<script>
+
+function changeme(id, action) {
+       if (action=="hide") {
+            document.getElementById(id).style.display = "none";
+       } else {
+            document.getElementById(id).style.display = "block";
+       }
+}
+
+</script>
+
+<!--Text Resizer-->
+<script type="text/javascript">
+// Document Text Sizer
+
+//Specify affected tags. Add or remove from list:
+var tgs = new Array( 'div','td');
+
+//Specify spectrum of different font sizes:
+var szs = new Array( 'xx-small','x-small','small','medium','large','x-large','xx-large' );
+var startSz = 2;
+
+function ts( trgt,inc ) {
+	if (!document.getElementById) return
+	var d = document,cEl = null,sz = startSz,i,j,cTags;
+
+	sz += inc;
+	if ( sz < 0 ) sz = 0;
+	if ( sz > 6 ) sz = 6;
+	startSz = sz;
+
+	if ( !( cEl = d.getElementById( trgt ) ) ) cEl = d.getElementsByTagName( trgt )[ 0 ];
+
+	cEl.style.fontSize = szs[ sz ];
+
+	for ( i = 0 ; i < tgs.length ; i++ ) {
+		cTags = cEl.getElementsByTagName( tgs[ i ] );
+		for ( j = 0 ; j < cTags.length ; j++ ) cTags[ j ].style.fontSize = szs[ sz ];
+	}
+}
+</script>
+
+<!--jQuery inline popup window-->
+<script>
+$(document).ready(function() {
+
+
+	//select all the a tag with name equal to modal
+	$('a[name=modal]').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		//Get the A tag
+		var id = $(this).attr('href');
+
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+
+		//Set height and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+
+		//transition effect
+		$('#mask').fadeIn(1000);
+		$('#mask').fadeTo("fast",0.8);
+
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+
+		//Set the popup window to center
+
+		//$(id).css('top', (winH/2-$(id).height()) + $(window).scrollTop());
+		//$(id).css('left', (winW/2-$(id).width()/2) + $(window).scrollLeft());
+
+		$(id).css('top', Math.max(winH/2-$(id).height()/2 + $(window).scrollTop(),0));
+		$(id).css('left', Math.max(winW/2-$(id).width()/2 + $(window).scrollLeft(),0));
+
+		$(window).bind('resize', function(e) {
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+
+		//Set height and width to mask to fill up the whole screen
+		$('#modalMask').css({'width':maskWidth,'height':maskHeight});
+		});
+
+		//transition effect
+		$(id).fadeIn(2000);
+
+	});
+
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		$('#mask, .window').hide();
+	});
+
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});
+
+});
+
+</script>
+
+<!--Clears out the text on the search form when user click on it-->
+<script type="text/javascript">
+function clickclear(thisfield, defaulttext) {
+if (thisfield.value == defaulttext) {
+thisfield.value = "";
+}
+}
+function clickrecall(thisfield, defaulttext) {
+if (thisfield.value == "") {
+thisfield.value = defaulttext;
+}
+}
+</script>
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Miami Dade College - MEED Mission</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+
+<body>
+<!--[if lte IE 7]><script type="text/javascript" language="javascript">window.onload=function(){e("ie6/")}</script><![endif]-->
+<!--TOP SECTION TABLE-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#003366">
+  <tr >
+    <td width="31%"><img src="img/logo_73.gif" name="MDClogo" width="320" height="73" align="left" id="MDClogo"/></td>
+	<td width="69%">
+    <!--STUDENT LIFE FLASH IMAGE-->
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="73" align="right" id="FlashID"><param name="movie" value="img/student.swf" /><param name="quality" value="high" /><param name="wmode" value="opaque" /><param name="swfversion" value="6.0.65.0" /><!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don't want users to see the prompt. --><param name="expressinstall" value="scripts/expressInstall.swf" /><!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. --><!--[if !IE]>--><object data="img/student.swf" type="application/x-shockwave-flash" width="400" height="73" align="right"><!--<![endif]--><param name="quality" value="high" /><param name="wmode" value="opaque" /><param name="swfversion" value="6.0.65.0" /><param name="expressinstall" value="scripts/expressInstall.swf" /><!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --><div><h4>Content on this page requires a newer version of Adobe Flash Player.</h4><p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p><!--[if !IE]>--></object><!--<![endif]--></object>
+    <!--END OF FLASH IMAGE CODE-->
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#0066FF">
+    <!--Horizontal Navigation starts here-->
+<div class="jqueryslidemenu" id="myslidemenu">
+        <ul>
+       		 <li><a href="http://www.mdc.edu/main/">MDC Home</a></li></ul>
+
+		<ul>
+			<li><a href="">Students</a>
+
+        		<ul>
+
+					<li><a href="http://www.mdc.edu/current/">Current</a></li>
+					<li><a href="http://www.mdc.edu/prospective/">Prospective &raquo;</a>
+						<ul>
+							<li><a href="https://sisvsr.mdc.edu/admission2/default.aspx">Admission</a></li>
+							<li><a href="http://www.mdc.edu/catalog/">College Catalog</a></li>
+							<li><a href="http://www.mdc.edu/course_catalog/">Course Catalog</a></li>
+
+           					<li><a href="https://sisvsr.mdc.edu/catalog/">Course by discipline</a></li>
+							<li><a href="http://www.mdc.edu/ce/">Non-Credit Courses</a></li>
+							<li><a href="http://www.mdc.edu/ce/">Non-Credit Registration</a></li>
+							<li><a href="http://www.mdc.edu/testing_information/testmain.asp">Placement Testing</a></li>
+							<li><a href="http://www.mdc.edu/tuition/">Tuition and Fees</a></li>
+							<li><a href="http://www.mdc.edu/financial_aid/">Financial Aid</a></li>
+
+						</ul>
+                  </li>
+				</ul>
+         	</li>
+
+<li><a href="https://sisvsr.mdc.edu/ps/sheet.aspx">Programs</a>
+	<ul>
+		<li><a href="https://sisvsr.mdc.edu/ps/sheet.aspx">Credit Programs</a></li>
+    	<li><a href="" >Distance Education &raquo;</a>
+
+    		<ul>
+            	<li><a href="http://www.vcollege.org/portal/index.aspx" target="_blank">Virtual College</a></li>
+            	<li><a href="http://virtual.mdc.edu/portal/opencollege.aspx" target="_blank">Open College</a></li>
+            	<li><a href="http://www.mdc.edu/kendall/independent/" target="_blank">Independant Studies</a></li>
+            </ul>
+        </li>
+		<li><a href="http://www.mdc.edu/ce/" target="_new">Non-Credit Programs</a></li>
+
+		<li><a href="http://www.mdc.edu/honorsCollege/" target="_blank">Honors College</a></li>
+	</ul>
+</li>
+
+<li><a href="http://mdcalumni.com/">Alumni Foundation</a></li>
+
+<li><a href="https://www.mdc.edu/employees">Employees</a></li>
+
+<li><a href="http://www.mdc.edu/main/retirees/">Retirees</a></li>
+
+<li><a href="http://www.mdc.edu/main/campus_finder/default.asp">Campuses</a>
+
+	<ul>
+		<li><a href="http://www.mdc.edu/hialeah/">Hialeah Campus</a></li>
+		<li><a href="http://www.mdc.edu/homestead/">Homestead Campus</a></li>
+		<li><a href="http://www.mdc.edu/iac/">InterAmerican Campus</a></li>
+        <li><a href="http://www.mdc.edu/kendall/">Kendall Campus</a></li>
+        <li><a href="http://www.mdc.edu/medical/">Medical Center Campus</a></li>
+
+        <li><a href="http://www.mdc.edu/north/">North Campus</a></li>
+        <li><a href="http://www.mdc.edu/west/">West Campus</a></li>
+        <li><a href="http://www.mdc.edu/wolfson/">Wolfson Campus</a></li>
+	</ul>
+</li>
+
+<li><a href="http://www.mdc.edu/askmdc/" target="_blank">Help/Ask MDC</a></li>
+
+<li><a href="http://www.mdc.edu/main/safety/" target="_blank">Public Safety</a></li>
+
+</ul>
+</div>
+	<!--END OF HORIZONTAL NAV-->
+    </td>
+</table>
+<!--END OF TOP SECTION-->
+
+<!--START OF BODY SECTION TABLE-->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0">
+	<tr valign="top">
+    	<td width="160px" class="bluebackground">
+        	<!--UL LEFT SIDEBAR NAVBAR-->
+			<div id="content_1" class="content">
+        	<ul>
+            	<li><a href="Home.html">MEED Home</a></li>
+            	<li><a href="History.html">History</a></li>
+            	<li><a href="Mission.html">Mission</a></li>
+	     		<li><a href="Employmentassist.html">Employment Assistance</a></li>
+            	<li><a href="Internship.html">Internships</a></li>
+         		<li><a href="MeedAcademy.html">The MEED Academy<br/><!--<small>Updated 10/25/2010</small>--></a></li>
+                <li><a href="Studio.html">The Studio</a></li>
+          		<li><a href="Americorps.html">Americorps Programs</a></li>
+                <li><a href="AASPD.html">AASPD</a></li>
+                <!-- <li><a href="Staff.html">Contact Staff</a></li> -->
+			</ul>
+            </div>
+            <!--END OF UL SIDEBAR BAR-->
+        </td>
+        <td class="TDBODYCONTENT">
+
+        <!--START OF BODY CONTENTS-->
+        <!-- InstanceBeginEditable name="BODY CONTENTS" -->
+        <h1>Mission</h1>
+        <p>The mission of the MEED Program is to provide a fully   accessible and comprehensive program of education and training, career   preparation, internship and job placement assistance that results in a   career in advanced and technical fields in both private and public   community entities.  At the same time, MEED promotes awareness and   provides informational resources that improve employability for all   individuals with disabilities.</p>
+        <!-- InstanceEndEditable -->
+        <!--END OF BODY CONTENTS-->
+      </td>
+  </tr>
+</table>
+<!--END OF BODY SECTION TABLE-->
+
+<!--FOOTER SECTION BEGINS HERE-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="center" valign="middle" bgcolor="#FFCC33">
+	<td width="100%" height="12" nowrap="nowrap" class="footer">
+    	<a href="http://www.mdc.edu/home/">MDC Home</a> |
+		<a href="http://www.mdc.edu/sis/">Current Students</a> |
+		<a href="http://www.mdc.edu/prospective/">Prospective Students</a> |
+		<a href="http://www.mdc.edu/programs/">Programs</a> |
+		<a target="_blank" href="http://www.miamidade.onlinecommunity.com/">Alumni</a>
+		| <a href="https://www.mdc.edu/employees/">Employees</a> |
+		<a href="http://www.mdc.edu/college_wide/campus_finder/">Campuses</a> |
+		<a href="http://www.mdc.edu/Home/about/">About MDC</a> |
+		<a href="http://mdcc.custhelp.com/">Help/Ask MDC</a>
+    </td>
+  </tr>
+  <tr align="center">
+    <td width="100%" height="48" class="bottomenu">Copyright
+		© &lt;%= year((now)) %&gt; Miami Dade College.<br>
+		Miami Dade College is an equal access/equal opportunity institution and does not discriminate on the basis of gender, race, color, marital status, age, religion, national origin,
+disability, veteran's status, sexual orientation, or genetic information. Contact the Office of Equal Opportunity Programs/ADA Coordinator, at 305.237.2577 for information.</td>
+  </tr>
+  <tr align="center">
+    <td width="100%" nowrap="nowrap"><a href="http://www.mdc.edu/directory/" target="_blank" class="bottomenu" style="font-size: 12px;">MDC Website
+		Directory</a></td>
+  </tr>
+</table>
+<br /><br />
+<!--ACCESSIBLE TOOLBAR-->
+<div id="footpanel">
+    <ul id="mainpanel">
+        <li><a href="Home.html" title="MDC MEED Homepage" class="home">Home</a></li>
+        <li><a href="javascript:ts('body',1)" class="zoomin">Zoom In<small>Increase Text</small></a></li>
+        <li><a href="javascript:ts('body',-1)" class="zoomout">Zoom Out <small>Decrease Text</small></a></li>
+        <li><a href="#dialog" name="modal" class="film">ASL Video<small>Watch ASL Video</small></a></li>
+        <li><a href="#dialog2" name="modal" class="speaker">Audio<small>Play Audio</small></a></li>
+        <li><a href="#dialog1" name="modal" class="contrast">Contrast<small>Change Contrast</small></a></li>
+        <li><a href="#dialog4" name="modal" class="textonly">Text Only<small>Hide Images</small></a></li>
+        <li><a href="#dialog3" name="modal" class="search">Search<small>Search MDC</small></a></li>
+        <li id="alertpanel">
+        <a href="#" class="alerts">Alerts</a>
+         <div class="subpanel">
+        <h3><span> &ndash; </span>Notifications</h3>
+        <ul>
+            <li class="view"><a href="#">View All</a></li>
+            <li>
+                <a href="#" class="delete">X</a>
+                <p>Don't Forget to register for summer! Call your counselor for an appointment.</p>
+            </li>
+        </ul>
+    </div>
+
+        </li>
+        <li id="chatpanel"><a href="#" class="chat">Staff</a>
+        <div class="subpanel">
+        <h3><span> &ndash; </span>Staff</h3>
+        <ul>
+					<li><span>Directors</span></li>
+					<li><a href=""><img src="img/icons/user-business.png" alt="" /> Dr. Ken M</a></li>
+					<li><a href=""><img src="img/icons/user-business.png" alt="" /> J.C.</a></li>
+					<li><span>Resource Advisors</span></li>
+					<li><a href=""><img src="img/icons/user-business.png" alt="" /> Ms. Esperanza P</a></li>
+					<li><a href=""><img src="img/icons/user-business.png" alt="" /> Mrs. Eunice Z</a></li>
+					<li><a href=""><img src="img/icons/user-business.png" alt="" /> Ms. Tracy B</a></li>
+					<li><a href=""><img src="img/icons/user-business.png" alt="" /> Ms. Lucy M</a></li>
+					<li><a href=""><img src="img/icons/user-business.png" alt="" />View all</a></li>
+        </ul>
+    </div>
+
+        </li>
+    </ul>
+</div>
+<!--END OF ACCESSIBLE TOOLBAR--><!-- InstanceBeginEditable name="PopUpWindow" -->
+<div id="boxes">
+  <!-- #customize your modal aka popup window here -->
+  <div id="dialog" class="window"> <b>ASL Video Message</b> |
+    <!-- close button is defined as close class -->
+    <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
+    <p align="center">ASL VIDEO IS NOT AVAILABLE. CHECK BACK SOON</p>
+  </div>
+  <div id="dialog1" class="window"> <b>Contrast Picker</b>
+    <!-- close button is defined as close class -->
+    <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
+    <p align="justify">Select your preference.<br />
+    </p>
+    <form id="switchform">
+      <input type="radio" name="choice" value="UNIVERSALCSS" onclick="chooseStyle(this.value, 60)" />
+      Default style<br />
+      <input type="radio" name="choice" value="UNIVERSALCSS_2" onclick="chooseStyle(this.value, 60)" />
+      <span style="background-color:black; color:yellow;"><b>Black background and yellow text</b></span><br />
+      <input type="radio" name="choice" value="UNIVERSALCSS_3" onclick="chooseStyle(this.value, 60)" />
+      <span style="background-color:yellow; color:black;"><b>Yellow background and black text</b></span>
+    </form>
+    <p></p>
+  </div>
+  <div id="dialog2" class="window"> <b>Audio Transcription</b>
+    <!-- close button is defined as close class -->
+    <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
+    <p align="center">AUDIO TRANSCRIPT IS NOT AVAILABLE. CHECK BACK SOON</p>
+  </div>
+  <div id="dialog3" class="window"> <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a><br />
+    <form id="searchform" name="form1" method="get" action="http://www.google.com/u/mdc">
+      <input name="q" type="text" id="xSearchBar" value="Search MDC" size="25" lable="query" onclick="clickclear(this, 'Search MDC')" onblur="clickrecall(this,'Search MDC')" />
+      <input type="submit" name="xSearchButton" id="xSearchButton" value="Search" />
+    </form>
+  </div>
+  <div id="dialog4" class="window"> <b>Hide Images</b>
+    <!-- close button is defined as close class -->
+    <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
+ <p align="center"><img src="img/icons/exclamation.png" align="middle"/> No image to select</p>
+  </div>
+  <!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
+  <div id="mask"></div>
+</div>
+<!-- InstanceEndEditable --><!--END OF FOOTER-->
+
+</body>
+<!-- InstanceEnd --></html>

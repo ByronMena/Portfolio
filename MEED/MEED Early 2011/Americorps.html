@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/MasterTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="ACCESS assists students with disabilities to utilize resources, accommodations and the technologies that ensure equal access and equal educational opportunity at Miami Dade College" />
+<meta name="keywords" content="access, disability services, wolfson access, access department, " />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+<!--STYLE SHEETS GROUPS GOES HERE-->
+<link rel="stylesheet" type="text/css" href="Styles/Master.css" media="screen" />
+<link rel="alternate stylesheet" type="text/css" media="screen" title="BlackYellowTxt" href="Styles/BlackYellowTxt.CSS" media="screen" /><!--Black bkgd yellow text-->
+<link rel="alternate stylesheet" type="text/css" media="screen" title="YellowBlackTxt" href="Styles/YellowBlackTxt.CSS" media="screen" /><!--Yellow bkgd black text-->
+
+<!--JAVASCRIPTS GROUPS-->
+<script language="javascript" type="text/javascript" src="Scripts/jquery-1.6.min.js"></script><!--DO NOT REMOVE THIS SCRIPT-->
+<script language="javascript" type="text/javascript" src="scripts/jqueryslidemenu.js"></script><!--HORIZONTAL MENU-->
+<script language="javascript" type="text/javascript" src="Scripts/styleswitch.js"></script><!--CONTRAST CHANGER SCRIPT-->
+<script language="javascript1.1" type="text/javascript" src="scripts/warning.js"></script><!--IE UPGRADE NOTIFIER -->
+<script language="javascript" type="text/javascript"  src="Scripts/SlideShow/jquery.orbit.min.js"></script><!--JQUERY SLIDESHOW-->
+<script language="javascript" type="text/javascript" src="scripts/SlideShow/jquery.orbit.js"></script><!--JQUERY SLIDESHOW CONFIG-->
+<script type="text/javascript" src="Scripts/jquery-ui-1.8.13.custom.min.js"></script><!--JQUERY EFFECTS SCRIPT-->
+
+<!--Accessible Toolbar Scripts and Styles-->
+<script type="text/javascript" src="Scripts/Accessbar/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="Scripts/Accessbar/osx.js"></script>
+<link type="text/css" href="Styles/AccessBar/osx.css" rel="stylesheet" media="screen" />
+
+<script>
+<!--When Page is loaded the Accessible Toolbar slides up and bounces-->
+$(document).ready(function(){
+$('#BottomToolbar').animate({height:"50px"});
+$('#BottomToolbar').effect("bounce", { times:3 }, 300);
+});
+</script>
+
+<!-- Run the jQuery slideshow plugin -->
+<script type="text/javascript">
+			$(window).load(function() {
+				$('#featured').orbit({
+					'bullets': true,
+					'timer' : true,
+					'animation' : 'fade'
+				});
+			});
+</script>
+
+<!--Text Resizer-->
+<script type="text/javascript">
+// Document Text Sizer
+
+//Specify affected tags. Add or remove from list:
+var tgs = new Array( 'div','td');
+
+//Specify spectrum of different font sizes:
+var szs = new Array( 'xx-small','x-small','small','medium','large','x-large','xx-large' );
+var startSz = 2;
+
+function ts( trgt,inc ) {
+	if (!document.getElementById) return
+	var d = document,cEl = null,sz = startSz,i,j,cTags;
+
+	sz += inc;
+	if ( sz < 0 ) sz = 0;
+	if ( sz > 6 ) sz = 6;
+	startSz = sz;
+
+	if ( !( cEl = d.getElementById( trgt ) ) ) cEl = d.getElementsByTagName( trgt )[ 0 ];
+
+	cEl.style.fontSize = szs[ sz ];
+
+	for ( i = 0 ; i < tgs.length ; i++ ) {
+		cTags = cEl.getElementsByTagName( tgs[ i ] );
+		for ( j = 0 ; j < cTags.length ; j++ ) cTags[ j ].style.fontSize = szs[ sz ];
+	}
+}
+</script>
+
+<!--Clears out the text on the search form when user click on it-->
+<script type="text/javascript">
+function clickclear(thisfield, defaulttext) {
+if (thisfield.value == defaulttext) {
+thisfield.value = "";
+}
+}
+function clickrecall(thisfield, defaulttext) {
+if (thisfield.value == "") {
+thisfield.value = defaulttext;
+}
+}
+</script>
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Miami Dade College - Americorps</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+
+<!--Hide Image Script-->
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".HideImg").click(function(){
+				$("img").toggle();
+				$(".TDBODYCONTENT").css("float","left");
+				$("#TopHeaderTemplate").toggle();
+				$("#LeftSideTemplate").toggle();
+				$("#BottomFooterTemplate").toggle();
+	});
+});
+
+</script>
+
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<!--[if lte IE 7]>
+<style>#jQuerySLIDESHOW {
+display:none;}
+</style>
+<script type="text/javascript" language="javascript">window.onload=function(){e("ie6/")}</script><![endif]-->
+
+<!--TOP SECTION TABLE-->
+<table class="TableHeader" id="TopHeaderTemplate">
+  <tr>
+    <td width="31%"><a href="http://www.mdc.edu/home/"><img src="Images/Template_Images/logo_73.gif" alt="Miami Dade College" name="MDClogo" width="320" height="73" align="left" id="MDClogo"/></a></td>
+    <td width="69%"><!--STUDENT LIFE FLASH IMAGE-->
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="73" align="right" id="FlashID">
+        <param name="movie" value="Images/Template_Images/student.swf" />
+        <param name="quality" value="high" />
+        <param name="wmode" value="opaque" />
+        <param name="swfversion" value="6.0.65.0" />
+        <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don't want users to see the prompt. -->
+        <param name="expressinstall" value="scripts/expressInstall.swf" />
+        <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+        <!--[if !IE]>-->
+        <object data="Images/Template_Images/student.swf" type="application/x-shockwave-flash" width="400" height="73" align="right">
+          <!--<![endif]-->
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <param name="swfversion" value="6.0.65.0" />
+          <param name="expressinstall" value="scripts/expressInstall.swf" />
+          <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+          <div>
+          <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+          <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+          <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+      <!--END OF FLASH IMAGE CODE--></td>
+  </tr>
+  <tr>
+    <td colspan="2" bgcolor="#0066FF" id="HorizontalNavBarColor"><!--Horizontal Navigation starts here-->
+      <div class="jqueryslidemenu" id="myslidemenu">
+        <ul>
+          <li><a href="http://www.mdc.edu/main/">MDC Home</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Students</a>
+            <ul>
+              <li><a href="http://www.mdc.edu/current/">Current</a></li>
+              <li><a href="http://www.mdc.edu/prospective/">Prospective &raquo;</a>
+                <ul>
+                  <li><a href="https://sisvsr.mdc.edu/admission2/default.aspx">Admission</a></li>
+                  <li><a href="http://www.mdc.edu/catalog/">College Catalog</a></li>
+                  <li><a href="http://www.mdc.edu/course_catalog/">Course Catalog</a></li>
+                  <li><a href="https://sisvsr.mdc.edu/catalog/">Course by discipline</a></li>
+                  <li><a href="http://www.mdc.edu/ce/">Non-Credit Courses</a></li>
+                  <li><a href="http://www.mdc.edu/ce/">Non-Credit Registration</a></li>
+                  <li><a href="http://www.mdc.edu/testing_information/testmain.asp">Placement Testing</a></li>
+                  <li><a href="http://www.mdc.edu/tuition/">Tuition and Fees</a></li>
+                  <li><a href="http://www.mdc.edu/financial_aid/">Financial Aid</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="https://sisvsr.mdc.edu/ps/sheet.aspx">Programs</a>
+            <ul>
+              <li><a href="https://sisvsr.mdc.edu/ps/sheet.aspx">Credit Programs</a></li>
+              <li><a href="" >Distance Education &raquo;</a>
+                <ul>
+                  <li><a href="http://www.vcollege.org/portal/index.aspx" target="_blank">Virtual College</a></li>
+                  <li><a href="http://virtual.mdc.edu/portal/opencollege.aspx" target="_blank">Open College</a></li>
+                  <li><a href="http://www.mdc.edu/kendall/independent/" target="_blank">Independant Studies</a></li>
+                </ul>
+              </li>
+              <li><a href="http://www.mdc.edu/ce/" target="_new">Non-Credit Programs</a></li>
+              <li><a href="http://www.mdc.edu/honorsCollege/" target="_blank">Honors College</a></li>
+            </ul>
+          </li>
+          <li><a href="http://mdcalumni.com/">Alumni Foundation</a></li>
+          <li><a href="https://www.mdc.edu/employees">Employees</a></li>
+          <li><a href="http://www.mdc.edu/main/retirees/">Retirees</a></li>
+          <li><a href="http://www.mdc.edu/main/campus_finder/default.asp">Campuses</a>
+            <ul>
+              <li><a href="http://www.mdc.edu/hialeah/">Hialeah Campus</a></li>
+              <li><a href="http://www.mdc.edu/homestead/">Homestead Campus</a></li>
+              <li><a href="http://www.mdc.edu/iac/">InterAmerican Campus</a></li>
+              <li><a href="http://www.mdc.edu/kendall/">Kendall Campus</a></li>
+              <li><a href="http://www.mdc.edu/medical/">Medical Center Campus</a></li>
+              <li><a href="http://www.mdc.edu/north/">North Campus</a></li>
+              <li><a href="http://www.mdc.edu/west/">West Campus</a></li>
+              <li><a href="http://www.mdc.edu/wolfson/">Wolfson Campus</a></li>
+            </ul>
+          </li>
+          <li><a href="http://www.mdc.edu/askmdc/" target="_blank">Help/Ask MDC</a></li>
+          <li><a href="http://www.mdc.edu/main/safety/" target="_blank">Public Safety</a></li>
+        </ul>
+      </div>
+      <!--END OF HORIZONTAL NAV--></td>
+</table>
+<!--END OF TOP SECTION-->
+
+<!--START OF BODY SECTION TABLE-->
+<table class="TableLayout">
+  <tr valign="top">
+    <td width="160px" class="bluebackground" id="LeftSideTemplate">
+    <!--UL LEFT SIDEBAR NAVBAR-->
+      <div id="content_1" class="content">
+        <ul>
+          <li><a href="index.html">MEED Home</a></li>
+          <li><a href="History.html">History</a></li>
+          <li><a href="Mission.html">Mission</a></li>
+          <li><a href="Employmentassist.html">Employment Assistance</a></li>
+          <li><a href="Internship.html">Internships</a></li>
+          <li><a href="MeedAcademy.html">The MEED Academy<br/>
+            <!--<small>Updated 10/25/2010</small>-->
+            </a></li>
+          <li><a href="Studio.html">The Studio</a></li>
+          <li><a href="Americorps.html">Americorps<br />
+            Programs</a></li>
+          <li><a href="AOA.html">AOA</a></li>
+          <!-- <li><a href="Staff.html">Contact Staff</a></li> -->
+          <li><a href="Location.html">Location</a></li>
+        </ul>
+      </div>
+      <!--END OF UL SIDEBAR BAR--></td>
+    <td class="TDBODYCONTENT">
+
+          <noscript><p style="font-weight:bold; color:red">You do not have javascript enabled. In order to use Accessible Toolbar it relies on javascript. To learn how to enable javascript please <a href="http://www.activatejavascript.org/" alt="Click here to learn how to activate javascript">click here</a>
+     	</p></noscript>
+
+    <!--START OF BODY CONTENTS-->
+      <!-- InstanceBeginEditable name="BODY CONTENTS" -->
+      <h1>Americorps</h1>
+        <a href="http://www.americorps.gov/"><img src="Images/americorpsmed.jpg" alt="Americorps Logo" width="350" hspace="10" vspace="10" border="0" align="right" title="Americorps Logo" /></a>
+      <h2>What is Americorps?</h2>
+        <p>AmeriCorps is an opportunity to make a big difference   in your life and in the lives of those around you. It's a chance to   apply your skills and ideals toward helping others and meeting critical   needs in the community.</p>
+        <p>Each year, AmeriCorps offers 75,000 opportunities for   adults of all ages and backgrounds to serve through a network of   partnerships with local and national nonprofit groups. Whether your   service makes a community safer, gives a child a second chance, or helps   protect the environment, you'll be getting things done through   AmeriCorps!</p>
+        <p>AmeriCorps members address critical needs in communities all across America. As an AmeriCorps member, you can:</p>
+
+        <ul>
+          <li>Tutor and mentor disadvantaged youth</li>
+          <li>Fight illiteracy</li>
+          <li>Improve health services</li>
+          <li>Build affordable housing</li>
+          <li>Teach computer skills</li>
+
+          <li>Clean parks and streams</li>
+          <li>Manage or operate after-school programs</li>
+          <li>Help communities respond to disasters</li>
+          <li>Build organizational capacity</li>
+        </ul>
+        <h2>Benefits of Service</h2>
+
+        <p>As an AmeriCorps member, you'll gain new skills and experiences—and   you'll also find the tremendous satisfaction that comes from helping   others. In addition, full-time members who complete their service earn a   Segal AmeriCorps Education Award of $4,725 to pay for college, graduate   school, or to pay back qualified student loans; members who serve   part-time receive a partial Award. Some AmeriCorps members may also   receive a modest living allowance during their term of service.</p>
+        <p>For more information about Americorps please make an appointment with   Ms. Lucy Moscoso-Zammel, Outreach Specialis at (305) 237-3670 or visit   the Americorps website at <a href="http://www.americorps.gov/">http://www.americorps.gov</a></p>
+
+      <!-- InstanceEndEditable -->
+      <!--END OF BODY CONTENTS--></td>
+  </tr>
+</table>
+<!--END OF BODY SECTION TABLE-->
+
+<!--FOOTER SECTION BEGINS HERE-->
+<table class="TableLayout" id="BottomFooterTemplate"><!--width="100%" border="0" cellspacing="0" cellpadding="0"-->
+  <tr align="center" valign="middle" bgcolor="#FFCC33">
+    <td width="100%" height="12" nowrap="nowrap" class="footer"><a href="http://www.mdc.edu/home/">MDC Home</a> | <a href="http://www.mdc.edu/sis/">Current Students</a> | <a href="http://www.mdc.edu/prospective/">Prospective Students</a> | <a href="http://www.mdc.edu/programs/">Programs</a> | <a target="_blank" href="http://mdcalumni.com/">Alumni</a> | <a href="https://www.mdc.edu/employees/">Employees</a> | <a href="http://www.mdc.edu/college_wide/campus_finder/">Campuses</a> | <a href="http://www.mdc.edu/Home/about/">About MDC</a> | <a href="http://support.mdc.edu/ics/support/default.asp?deptID=5314">Help/Ask MDC</a></td>
+  </tr>
+  <tr align="center">
+    <td width="100%" height="48" class="bottomenu">Copyright ©
+      <script type="text/javascript">
+	<!--
+	var currentTime = new Date()
+	var year = currentTime.getFullYear()
+	document.write(year)
+	//-->
+    </script>
+      Miami Dade College.<br>
+      Miami Dade College is an equal access/equal opportunity institution and does not discriminate on the basis of gender, race, color, marital status, age, religion, national origin,
+      disability, veteran's status, sexual orientation, or genetic information. Contact the Office of Equal Opportunity Programs/ADA Coordinator, at 305.237.2577 for information.</td>
+  </tr>
+  <tr align="center">
+    <td width="100%" nowrap="nowrap"><a href="http://www.mdc.edu/directory/" target="_blank" class="bottomenu" style="font-size: 12px;">MDC Website
+      Directory</a></td>
+  </tr>
+</table>
+<br />
+<br />
+<!--END OF FOOTER-->
+
+<!--BOTTOM TOOLBAR AKA ACCESSIBLE TOOLBAR-->
+<div id="BottomToolbar">
+  <div id="MainPanel">
+    <ul>
+      <li><a href="javascript:ts('body',1)" title="Increase text size" accesskey="+"> <img src="Images/icons/zoom+.png" alt="Increase text size"/><br />
+        Zoom In</a></li>
+      <li><a href="javascript:ts('body',-1)" title="Decrease text size" accesskey="-"> <img src="Images/icons/zoom-.png" alt="Decrease text size"/><br />
+        Zoom Out</a></li>
+      <li><a href="#" title="Watch ASL video" accesskey="v" class="asl"> <img src="Images/icons/film.png" alt="Watch ASL video"/><br />
+        ASL Video</a></li>
+      <li><a href="#" title="Change contrast color" accesskey="c" class="Contrast" > <img src="Images/icons/contrast.png" alt="Change contrast color"/><br />
+        Contrast</a></li>
+      <li><a href="#" title="Hide image(s)" accesskey="h" class="HideImg"> <img src="Images/icons/textonly.png" alt="Hide image(s)"/><br />
+        Text Only</a></li>
+      <li><a href="#" title="Search Miami Dade College website" accesskey="S" class="Search"> <img src="Images/icons/binocular.png" alt="Search Miami Dade College website"/><br />
+        Search</a></li>
+      <li><a href="#" title="News announcement" accesskey="n" class="News"> <img src="Images/icons/newspaper.png" alt="News announcement"/><br />
+        Alert</a></li>
+        <li><a href="Help.html" title="Help?" accesskey="?" class="Help"><img src="Images/icons/question-mark.png" alt="Click for more info about this toolbar" /><br />
+        Help ?</a></li>
+    </ul>
+  </div>
+</div>
+<!--MODAL WINDOWS-->
+
+<!--ASL-->
+<div id="osx-modal-content">
+  <div id="osx-modal-title">American Sign Language Video</div>
+  <div class="close"><a href="#" class="simplemodal-close" title="Close" alt="Close">X</a></div>
+  <div id="osx-modal-data">
+    <!--<h2>Welcome!</h2>-->
+    <center>
+      <!-- begin embedded WindowsMedia file... -->
+      <table border='0' cellpadding='0' align="center">
+      <tr><td>
+      <OBJECT id='mediaPlayer' width="600" height="445"
+      classid='CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95'
+      codebase='http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701'
+      standby='Loading Microsoft Windows Media Player components...' type='application/x-oleobject'>
+      <param name='fileName' value="ASLINTRO.mp4">
+      <param name='animationatStart' value='true'>
+      <param name='transparentatStart' value='true'>
+      <param name='autoStart' value="true">
+      <param name='showControls' value="true">
+      <param name='loop' value="true">
+      <p>video has been removed for privacy reason</p>
+      </OBJECT>
+      </td></tr>
+      <!-- ...end embedded WindowsMedia file -->
+      </table>
+    </center>
+    <p>
+      <center>
+        <button class="simplemodal-close">Close</button>
+        <br />
+        <span>(or press ESC or click outside the box)</span>
+      </center>
+    </p>
+    </div>
+</div>
+
+<!--Contrast-->
+<div id="Contrast">
+  <div id="osx-modal-title">Contrast Chooser</div>
+  <div class="close"><a href="#" class="simplemodal-close" title="Close" alt="Close">X</a></div>
+  <div id="osx-modal-data">
+    <h2>Choose which contrast setting suits you.</h2>
+    <form action="" method="post" name="HideImagesForm" id="HideImagesForm">
+      <p>
+        <label>
+          <input name="button" type="button" class="GeneralFormDesign" tabindex="1" onclick="chooseStyle('Master', 60)" value="Select" >
+        </label>
+        Default Style</p>
+      <p>
+        <label>
+          <input name="button" type="button" class="GeneralFormDesign" tabindex="2" value="Select" onClick="chooseStyle('BlackYellowTxt', 60)">
+        </label>
+        <span style="background-color:black; color:yellow;"><b>Black background with yellow text</b></span></p>
+      <p>
+        <label>
+          <input name="button" type="button" class="GeneralFormDesign" tabindex="3" value="Select" onClick="chooseStyle('YellowBlackTxt', 60)">
+        </label>
+        <span style="background-color:yellow; color:black;"><b>Yellow background with black text</b></span></p>
+    </form>
+    <p>
+      <center>
+        <button class="simplemodal-close">Close</button>
+        <br />
+        <span>(or press ESC or click outside the box)</span>
+      </center>
+    </p>
+  </div>
+</div>
+
+<!--Text Only
+<div id="HideImg">
+  <div id="osx-modal-title">Text Only</div>
+  <div class="close"><a href="#" class="simplemodal-close">x</a></div>
+  <div id="osx-modal-data">
+    <h2>This option allows you to control the viewing of the image(s)</h2>
+    <p></p>
+    <center>
+      <form name="HideImagesForm" id="HideImagesForm" method="post" action="">
+        <label id="AlertNotice"><span id="ImgStatus" style="display:none">You have <b id="NumOfImages">0</b> image(s) hidden<br />
+          </span>Would you like to
+          <input type="button" name="hidebutton" id="hidebutton" value="Hide" onClick="HideImages('hide')" />
+          <input type="submit" name="showbutton" id="showbutton" value="Show" onClick="HideImages('show')" style="display:none" />
+          Image(s)? </label>
+      </form>
+      <button class="simplemodal-close">Close</button>
+      <br />
+      <span>(or press ESC or click outside the box)</span>
+    </center>
+    <p></p>
+  </div>
+</div>-->
+
+<!--Search MDC-->
+<div id="Search">
+  <div id="osx-modal-title">Search Miami Dade College</div>
+  <div class="close"><a href="#" class="simplemodal-close">X</a></div>
+  <div id="osx-modal-data">
+    <h2>To begin searching, type inside the search bar below.</h2>
+    <form id="searchform" name="form1" method="get" action="http://www.google.com/u/mdc">
+      <input name="q" type="text" id="xSearchBar" value="Search MDC" lable="query" onclick="clickclear(this, 'Search MDC')" onblur="clickrecall(this,'Search MDC')" />
+      <input type="submit" name="xSearchButton" id="xSearchButton" value="Search" />
+    </form>
+    <p>
+      <button class="simplemodal-close">Close</button>
+      <span>(or press ESC or click outside the box)</span></p>
+  </div>
+</div>
+
+<!--News-->
+<div id="News">
+  <div id="osx-modal-title">News Alert!</div>
+  <div class="close"><a href="#" class="simplemodal-close">X</a></div>
+  <div id="osx-modal-data">
+    <h2>Attention Students!</h2>
+    <p>Florida law eliminated the CLAST exam effective July 1, 2009; therefore, the CLAST exam will not be offered after June 30, 2009. However, AA degree-seeking students must meet the current CLAST exemptions in order to graduate (the exemptions include earning a 2.5 GPA in 6 credits of specific courses, or achieving the requisite scores on the SAT or ACT). <a href="http://www.mdc.edu/testing_information/CLAS.asp">Learn more</a></p>
+    <p>
+      <button class="simplemodal-close">Close</button>
+      <span>(or press ESC or click outside the box)</span></p>
+  </div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

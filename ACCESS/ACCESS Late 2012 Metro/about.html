@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<!-- #BeginEditable "doctitle" -->
+<title>About ACCESS</title>
+<!-- #EndEditable -->
+
+<!-- ***StyleSheets*** -->
+<link href="styles/Master.css" rel="stylesheet" type="text/css" />
+<link href="styles/BlackYellowTxt.css" rel="alternate stylesheet" type="text/css" media="screen" title="BlackYellowTxt" />
+<link href="styles/YellowBlackTxt.css" rel="alternate stylesheet" type="text/css" media="screen" title="YellowBlackTxt" /> 
+
+<!-- ***Javascripts*** -->
+<script src="scripts/jquery-1.6.2.min.js" type="text/javascript" language="javascript"></script>
+<script src="scripts/jquery-ui-1.8.13.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="scripts/PopupHint.js" type="text/javascript" language="javascript"></script>
+<script src="scripts/AccessTB.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+$(document).ready(function () {
+			
+		 /*Sidebar FX*/			
+		$("#sidebar li a").hover(function(){
+			$(this).stop().animate({ paddingLeft: '10%' }, 500);	
+			}, function() {
+				$(this).stop().animate({ paddingLeft: '5%'}, 500);
+		});
+				
+		/* Search Engine */		
+		 $(".searchbox").val("Search MDC...").css("color", "#A9A9A9").focus(function() {
+   		 $(this).css("color", "black");
+    			if ($(this).val() == "Search MDC...") {
+        			$(this).val("");
+    			}
+		}).blur(function() {
+    		$(this).css("color", "#A9A9A9");
+    			if ($(this).val() == "") {
+       				 $(this).val("Search MDC...");
+    		}
+		});
+			
+		/* Accessible Toolbar */
+		$('#toolbar-drawer').hide();
+		$(".tab-toggler").click(function() {
+		hideToolbar();
+		});
+		
+		$('.tab-toggler').hover(function(){
+			$(this).stop().animate({color:'black', backgroundColor:'#FFCC33'},500);
+			}, function(){
+			$(this).stop().animate({color:'#FFCC33', backgroundColor:'black'},500);
+		});
+		
+		/* Font Sizer [target, Minimum Size, Default Size, Maximum Size]*/
+		fontSize("#content,.ULMetro,.OLMetro,.OLMetro p", 12, 16, 30);
+		
+		$("#hideText").click(function(){
+		hideText();
+		});
+		
+		/* Jqm Modal WIndows */
+		$().ready(function() {
+  		$('#dialog').jqm();
+  		$('#dialog2').jqm({
+  		trigger:'#ASL',
+  		});
+  		});
+		
+});
+//]]>
+</script>
+<!-- <script src="scripts/jquery.jshowoff.js" type="text/javascript" language="javascript"></script> --><!--SlideShow-->
+<!-- <script src="scripts/scroll-to-top.js" type="text/javascript" language="javascript"></script> --><!-- jQuery Scroll to Top -->
+<!-- <script src="scripts/galleria-1.2.5.min.js" type="text/javascript"></script>-->
+</head>
+
+<body>
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<a href="default.html">
+		<img alt="Miami Dade College" height="73" src="images/MDC_LogoDB.gif" width="320" /></a>	
+<object class="swf" data="images/student.swf" type="application/x-shockwave-flash" width="400" height="73">
+	<param name="movie" value ="images/student.swf" />
+</object>
+</div>
+	<!-- End Masthead -->
+	<!-- Begin Page Content -->
+	<div id="page_content">
+		<div id="Search-Bar">
+			<form action="http://www.google.com/u/mdc" method="get" name="form1">
+					<div style="text-align:center">
+						<input name="q" type="text" class="searchbox" size="30" maxlength="100" />
+						<label><input name="SUBMIT" type="submit" class="textbutton" id="go" value="GO!" /></label>
+						</div>
+				</form>
+		</div>
+		<!-- Begin Sidebar -->
+		<div id="sidebar">
+			<ul>
+				<li><a href="default.html" title="Home">Home</a></li>
+				<li><a href="about.html" title="About ACCESS Department">About</a></li>
+				<li><a href="aoa.html" title="Association of Agencies">AOA</a></li>
+				<li><a href="contact.html" title="Contact">Contact</a></li>
+				<li><a href="studentinfo.html" title="Information for students">Student Information</a></li>
+				<li><a href="WBGallery.html" title="View the William Berger Gallery">William<br/>Berger Gallery</a></li>
+				<li><a href="mdts.html" title="MEED Digital Tech Studio">MDTS</a></li>
+            </ul>
+		</div>
+		<!-- End Sidebar -->
+		<!-- Begin Content -->
+		<div id="content">
+		<noscript>
+		<div id="NoScript">
+<h1> 
+<img src="images/Icons/Alert48.png" alt="Attentions your JavaScript is Disabled" style="vertical-align:middle"/>Your JavaScript is DISABLED</h1>
+	To view this page properly, your web browser needs to run JavaScript
+	<ul class="ULMetro">
+		<li>If your current browser settings do not allow Javascript, please 
+		change your browser settings.</li>
+		<li>If you have an older version of browser that does not support 
+		JavasScript, please download the latest version of it.</li>
+		<li>To learn more on how you can enable javascript for your browser 
+		please click this link <a href="http://www.activatejavascript.org/" title="Click here to learn how to activate javascript" target="_blank">here</a></li>
+	</ul>
+	</div></noscript>
+			<!-- #BeginEditable "content" -->
+			<h1 class="Page_Title">About ACCESS</h1>
+			<h2>What is ACCESS?</h2>
+			<p>ACCESS is the Wolfson Campus' disability service center staffed with six Resource Advisors who are specially trained to guide students through the registration process and develop a unique set of accommodations and services for each student that is built upon their strengths and abilities. Students are engaged regularly to become involved in the ACCESS sponsored student organization, an internship or opportunity with a community service agency. Through grants and work with the Center for Community Involvement, we have learned that these kinds of experiences can have a profound impact upon our student's academic success and lead to our outstanding record of student program completion.</p>
+			<h2>Who is eligible for services?</h2>
+			<p>Students who have a <strong>documented disability</strong> are eligible for services. A disability is a physical or mental impairment that substantially limits one or more of an individual’s major life activities. These may include visual, hearing, or speech impairment, others physical conditions, including cerebral palsy, epilepsy, cancer, heart disease, diabetes, HIV-related illness, and various chronic diseases. Other disabilities include learning disabilities, mental health or psychological disabilities, Attention Deficit Disorder (ADHD), and substance abuse disorders. 
+			<strong>Documentation</strong> should be provided by a licensed or certified professional, such as a physician, a psychologist, an audiologist, a learning disabilities specialist, etc., who has evaluated the individual within the past three years, or provided by an educational institution where services have been provided previously.</p>
+			<h2>What services are available?</h2>
+			<p>The ACCESS Staff serve as a <strong>Resource Advisors</strong> who guide students through their academic programs, train them in strategies and skills to enhance their academic performance, and work with faculty to provide 
+			<strong>accommodations</strong> or <strong>course modifications</strong> that allows students with disabilities to participate fully in the educational and social activities of the college. Depending on documentation, students may be eligible for testing accommodations, such as extra time in a quiet room, or 
+			<strong>in-class accommodations</strong>, such as note taker, a captionist, or a sign language interpreter. Our lab is equipped with the latest in adaptive technology to accommodate the needs of students with vision or hearing impairments or students with learning disabilities. Some students may be eligible for 
+			<strong>course substitutions</strong> or <strong>waivers</strong> of specific testing required for graduation.</p>
+			<h2>ACCESS Tutoring Program</h2>
+			<p>ACCESS provides tutorials in language and math for eligible students.</p>
+			<!-- #EndEditable --></div>
+		<!-- End Content --></div>
+	<!-- End Page Content -->
+	<!-- Begin Footer -->
+	<div id="footer">
+		<p><a href="default.html">Home</a> | <a href="about.html">About</a> 
+		| <a href="aoa.html">Association Of Agencies</a> |
+		<a href="contact.html">Contact</a> |
+		<a href="mdts.html">MDTS</a> |
+		<a href="studentinfo.html">Student Information</a> |
+		<a href="WBGallery.html">William Berger Gallery</a> |
+		<a href="https://spsd.mdc.edu/cwg/access/wolfson/default.aspx" target="_blank">Sharepoint</a><br />
+		<a href="http://www.mdc.edu/wolfson/">Wolfson Campus Home Page</a> |
+		<a href="http://www.mdc.edu">Miami Dade College Home Page</a><br />
+		Copyright &copy; 
+		<script type="text/javascript">
+		var currentTime = new Date()
+		var year = currentTime.getFullYear()
+		document.write(year)
+		</script> 
+		Miami Dade College. All Rights Reserved.</p>
+	</div>
+	<!-- End Footer --></div>
+<!-- End Container -->
+
+<!-- The Theme Drawer -->
+<div id="Toolbar-Wrapper">
+	<div class="tab-toggler">Accessibility Toolbar <span id="arrow-down">&or;</span><span id="arrow-up">&and;</span></div>
+	<div id="toolbar-drawer">
+	<div id="toolbar-frame">
+		<ul>
+			<li><a href="javascript:void(0)" id="largeFont" class="vtip" title="Increase font size"><img src="images/Icons/zoom_in.png" alt=""/><br/>Incease Text</a></li>
+			<li><a href="javascript:void(0)" id="smallFont" class="vtip" title="Decrease font size"><img src="images/Icons/zoom_out.png" alt=""/><br/>Decrease Text</a></li>
+			<li><a href="javascript:void(0)" id="defaultFont" class="vtip" title="Reset font size"><img src="images/Icons/zoom_reset.png" alt="" /><br />Reset Text</a></li>
+			<li><a href="javascript:void(0)" id="hideText"class="vtip" title="Hide images and show text only"><img src="images/Icons/text.png" alt=""  /><br />Text Only</a></li>
+			<li><a href="javascript:void(0)" id="Contrast" class="vtip" title="Change screen color"><img src="images/Icons/contrast.png" alt="" /><br/>Contrast</a></li>
+			<li><a href="javascript:void(0)" id="ASL" class="vtip" title="ASL Video"><img src="images/Icons/film.png" alt="" /><br />ASL Video</a></li>
+		</ul>
+	</div><!-- end themes-frame -->
+	</div><!-- end #theme-drawer -->
+</div><!-- end #theme-wrapper -->
+
+<!-- Begin Contrast Window -->
+<div class="jqmWindow" id="dialog">
+
+<a href="#" class="jqmClose">Close</a>
+ <h2>Choose which contrast setting suits you.</h2>
+ <div id="ContrastWrapper">
+ <div class="ContrastDefault" onclick="chooseStyle('Master', 60)">A</div>
+ <div class="ContrastSetting2" onclick="chooseStyle('BlackYellowTxt',60)">B</div>
+<div class="ContrastSetting3" onclick="chooseStyle('YellowBlackTxt',60)">C</div>
+</div>
+
+<p>Did you know there is an add-on for Firefox that lets you choose your own preferred reading contrast setting? You should check out <a href="https://addons.mozilla.org/en-US/firefox/addon/readability/">Readability</a> for Firefox. Don't have Firefox installed? No problem, you can visit <a href="http://readable.tastefulwords.com/">Readable</a> and read any article from any website with your preferred saved settings.</p>
+</div><!-- End Contrast Window -->
+
+<!-- Start of ASL Window -->
+<div class="jqmWindow" id="dialog2" style="width:645px">
+<a href="#" class="jqmClose">Close</a>
+<h2>ASL Video Message</h2><p style="text-align:center">
+<object width="640" height="510"><param name="movie" value="http://www.youtube.com/v/quNnu5K8pcw?version=3&amp;hl=en_US&amp;rel=0&amp;hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/quNnu5K8pcw?version=3&amp;hl=en_US&amp;rel=0&amp;hd=1" type="application/x-shockwave-flash" width="640" height="510" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+</p></div>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

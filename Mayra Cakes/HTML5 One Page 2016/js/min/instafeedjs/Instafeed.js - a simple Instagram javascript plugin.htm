@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  <title>Instafeed.js - a simple Instagram javascript plugin</title>
+  <meta name="description" content="Instafeed.js is a dead-simple way to add Instagram photos to your website. No jQuery required, just good 'ol plain javascript.">
+
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Stylsheets -->
+  <link rel="stylesheet" type="text/css" href="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/main.css">
+
+  <!-- Mixpanel -->
+  <script src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/track.js" data-site-id="50903eb1613f5d0a8a000097" id="gauges-tracker" async="" type="text/javascript"></script><script src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/mixpanel-2.js" async="" type="text/javascript"></script><script type="text/javascript">(function(c,a){window.mixpanel=a;var b,d,h,e;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src=("https:"===c.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.1.min.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d);a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?
+g=a[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.identify people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1})(document,window.mixpanel||[]);
+mixpanel.init("7656fd575d0c2636513b7bf5cddbbc90");</script>
+</head>
+<body>
+  <div class="wrapper-header">
+    <div id="instafeed"><a href="http://instagram.com/p/ugJoa5on4p/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10729243_582285995233191_993118318_s.jpg"></a><a href="http://instagram.com/p/ugJhRmBTSe/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10748545_495213030619037_1577992075_s.jpg"></a><a href="http://instagram.com/p/ugJEgLi30K/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10727285_1542021559362780_1191550011_s.jpg"></a><a href="http://instagram.com/p/ugJCFipr3-/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10448994_776747089054169_817139063_s.jpg"></a><a href="http://instagram.com/p/ugITtRGzeu/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10735189_341356766044621_2059387099_s.jpg"></a><a href="http://instagram.com/p/ugISpSAeAL/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10724221_737827436286020_618854289_s.jpg"></a><a href="http://instagram.com/p/ugIELqAePz/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10735106_725320330877058_1894833159_s.jpg"></a><a href="http://instagram.com/p/ugHeKON4Xk/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/928314_546648065481203_1534964494_s.jpg"></a><a href="http://instagram.com/p/ugHdpTSyCW/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10727809_941873479173586_1525901160_s.jpg"></a><a href="http://instagram.com/p/ugHUq8J93k/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10723695_314067812111261_1783506513_s.jpg"></a><a href="http://instagram.com/p/ugHOb9uTMv/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10729375_785470861524967_1447987571_s.jpg"></a><a href="http://instagram.com/p/ugHNWeuIsJ/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10724042_613568425419207_1288073621_s.jpg"></a><a href="http://instagram.com/p/ugHCt7uT2A/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/1725007_1485668305032496_1330546359_s.jpg"></a><a href="http://instagram.com/p/ugGoydyVuL/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10731991_301064206757631_245310146_s.jpg"></a><a href="http://instagram.com/p/ugGOWLioqN/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10723934_734034210012117_1835636640_s.jpg"></a><a href="http://instagram.com/p/ugFnuqwurF/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10747807_568022503343372_430544604_s.jpg"></a><a href="http://instagram.com/p/ugFSMauS61/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/1515852_1562206080676372_802736037_s.jpg"></a><a href="http://instagram.com/p/ugFOP3k_1I/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10005401_1487265688203477_1340073804_s.jpg"></a><a href="http://instagram.com/p/ugFJKaHPI2/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10748443_1653152704911261_1330216591_s.jpg"></a><a href="http://instagram.com/p/ugFBo7PI54/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10735534_1549900731891729_1811247126_s.jpg"></a><a href="http://instagram.com/p/ugE5B_lJ0E/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10735383_1484953628435930_2044127228_s.jpg"></a><a href="http://instagram.com/p/ugEfTeDkfw/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10723955_277450559121489_1333680218_s.jpg"></a><a href="http://instagram.com/p/ugD4vzwpLP/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10724999_1546820202199729_857261409_s.jpg"></a><a href="http://instagram.com/p/ugDfw9nSwp/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10735406_1520391244874529_1171956879_s.jpg"></a><a href="http://instagram.com/p/ugDbwWgaob/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10607949_1542940245941667_1309846815_s.jpg"></a><a href="http://instagram.com/p/ugDOWOuzS-/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10747913_1564012933828282_1614670430_s.jpg"></a><a href="http://instagram.com/p/ugDQRKJt6B/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10748403_808425655870276_1941157658_s.jpg"></a><a href="http://instagram.com/p/ugCLspHlrv/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10727316_818056671570376_1917928342_s.jpg"></a><a href="http://instagram.com/p/ugCH7QBpDn/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10725092_288605641330150_103441846_s.jpg"></a><a href="http://instagram.com/p/ugBcL9DNJv/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10727340_942013809146360_149445189_s.jpg"></a><a href="http://instagram.com/p/ugBebFuPCa/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10747910_1558684391013277_1340396956_s.jpg"></a><a href="http://instagram.com/p/ugBb4fPOcc/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10731904_345135325664746_226512808_s.jpg"></a><a href="http://instagram.com/p/ugA5tWLBfO/"><img src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/10731620_1480845508856013_909294865_s.jpg"></a></div>
+    <div class="shadow"></div>
+    <div class="wrapper-content">
+      <header>
+        Instafeed.js
+      </header>
+    </div>
+  </div>
+
+  <div class="wrapper-page">
+    <div role="main">
+
+      <div id="messages"></div>
+
+      <a name="intro"></a><h3>What is it?</h3>
+
+      <p>Instafeed.js is a dead-simple way to add Instagram photos to your website. No jQuery required, just plain 'ol javascript. <i class="light">(see ↑ there?)</i></p>
+      <p style="text-align:center;"><a onclick="mixpanel.track('Download')" href="https://raw.github.com/stevenschobert/instafeed.js/master/instafeed.min.js" target="_blank" class="button">download</a><a style="margin-left:20px;" href="https://github.com/stevenschobert/instafeed.js" class="button">check out the code</a></p>
+      <p style="margin-bottom:0;"><strong>Examples:</strong></p>
+      <ul>
+        <li><a href="http://hemeon.com/">Hemeon.com</a> by <a href="http://twitter.com/hemeon">Marc Hemeon</a></li>
+        <li><a href="http://manikrathee.com/is/a/mobile-photographer">Manik Rathee is a mobile photographer</a> by <a href="http://twitter.com/manikrathee">Manik Rathee</a></li>
+        <li><a href="http://vinthomas.com/">VinThomas.com</a> by <a href="https://twitter.com/vinthomas">Vin Thomas</a></li>
+        <li><a href="http://www.kozikcocoon.com/">The Kozik Cocoon</a> by <a href="http://twitter.com/dannyprose">Danny Palmer</a></li>
+      </ul>
+      <br>
+      <p><b>Buy Me a Coffee</b></p>
+      <p>
+        If you enjoy using Instafeed.js and want to say thanks, you can leave me a small tip using <a href="https://www.gittip.com/stevenschobert">Gittip</a>.
+      </p>
+      <br>
+
+      <a name="setup"></a><h3>Installation</h3>
+
+      <p>Setting up Instafeed.js is pretty straight-forward. Just download the script and include it in your HTML:</p>
+
+      <pre class=" language-markup"><code class=" language-markup"><span class="token script"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>"text/javascript"</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span>"path/to/instafeed.min.js"</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+
+      <br>
+
+      <a name="usage"></a><h3>Basic Usage</h3>
+
+      <p>Here's how easy it is to get all images tagged with <b>#awesome</b>:</p>
+
+      <pre class=" language-markup"><code class=" language-markup"><span class="token script"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>"text/javascript"</span><span class="token punctuation">&gt;</span></span>
+    <span class="token keyword">var</span> feed <span class="token operator">=</span> <span class="token keyword">new</span> Instafeed<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        get<span class="token punctuation">:</span> <span class="token string">'tagged'</span><span class="token punctuation">,</span>
+        tagName<span class="token punctuation">:</span> <span class="token string">'awesome'</span><span class="token punctuation">,</span>
+        clientId<span class="token punctuation">:</span> <span class="token string">'YOUR_CLIENT_ID'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    feed<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+
+      <p>Instafeed.js with automatically look for a <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span>"instafeed"</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code> and fill it with linked thumbnails. Of course, you can easily change this behavior using the <a href="#standard">standard options</a>. Also check out the <a href="#advanced">advanced options</a> and the section on <a href="#templating">templating</a> for additional customization.</p>
+
+      <br>
+
+      <a name="requirements"></a><h3>Requirements</h3>
+
+      <p>The only thing you'll need to get going is a valid <b>client id</b> from Instagram's API. You can easily register for one on <a href="http://instagram.com/developer/register/" target="_blank">Instagram's website</a>.</p>
+
+      <p class="light"><i>If you want to get images from a specific user, you will need a valid oAuth token. Using an oAuth token has security risks. <a href="#user">Read more here</a>.</i></p>
+      <br>
+
+      <a name="standard"></a><h3>Standard Options</h3>
+      <p>
+        </p><ul>
+          <li>
+            <code class=" language-javascript">clientId</code>
+            <small><span class="light">(string)</span> -
+              Your API client id from Instagram. <b>Required</b>.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">accessToken</code>
+            <small><span class="light">(string)</span> -
+              A valid oAuth token. Required to use <b>get: 'user'</b>.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">target</code>
+            <small><span class="light">(string)</span> - The ID of a DOM element you want to add the images to.</small>
+          </li>
+          <li>
+            <code class=" language-javascript">template</code>
+            <small><span class="light">(string)</span> - Custom HTML template to use for images. See <a href="#templating">templating</a>.</small>
+          </li>
+          <li>
+            <code class=" language-javascript">get</code>
+            <small><span class="light">(string)</span> -
+              Customize what Instafeed fetches. Available options are:
+              <ul>
+                <li><code class=" language-javascript">popular</code> <i class="light">(default)</i> -
+                  Images from the popular page.
+                </li>
+                <li><code class=" language-javascript">tagged</code> -
+                  Images with a specific tag. Use <b>tagName</b> to specify the tag.
+                </li>
+                <li><code class=" language-javascript">location</code> -
+                  Images from a location. Use <b>locationId</b> to specify the location.
+                </li>
+                <li><code class=" language-javascript">user</code> -
+                  Images with a user. Use <b>userId</b> to specify the user. More info <a href="#user">here</a>.
+                </li>
+              </ul>
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">tagName</code>
+            <small><span class="light">(string)</span> -
+              Name of the tag to get. Use with <b>get: 'tagged'</b>.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">locationId</code>
+            <small><span class="light">(number)</span> -
+              Unique id of a location to get. Use with <b>get: 'location'</b>.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">userId</code>
+            <small><span class="light">(number)</span> -
+              Unique id of a user to get. Use with <b>get: 'user'</b>.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">sortBy</code>
+            <small><span class="light">(string)</span> -
+              Sort the images in a set order. Available options are:
+              <ul>
+                <li><code class=" language-javascript">none</code> <i class="light">(default)</i> -
+                  As they come from Instagram.
+                </li>
+                <li><code class=" language-javascript">most<span class="token operator">-</span>recent</code> -
+                  Newest to oldest.
+                </li>
+                <li><code class=" language-javascript">least<span class="token operator">-</span>recent</code> -
+                  Oldest to newest.
+                </li>
+                <li><code class=" language-javascript">most<span class="token operator">-</span>liked</code> -
+                  Highest # of likes to lowest.
+                </li>
+                <li><code class=" language-javascript">least<span class="token operator">-</span>liked</code> -
+                  Lowest # likes to highest.
+                </li>
+                <li><code class=" language-javascript">most<span class="token operator">-</span>commented</code> -
+                  Highest # of comments to lowest.
+                </li>
+                <li><code class=" language-javascript">least<span class="token operator">-</span>commented</code> -
+                  Lowest # of comments to highest.
+                </li>
+                <li><code class=" language-javascript">random</code> -
+                  Random order.
+                </li>
+              </ul>
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">links</code>
+            <small><span class="light">(true/false)</span> -
+              Wrap the images with a link to the photo on Instagram.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">limit</code>
+            <small><span class="light">(number)</span> -
+              Maximum number of Images to add. <b>Max of 60</b>.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">resolution</code>
+            <small><span class="light">(string)</span> -
+              Size of the images to get. Available options are:
+              <ul>
+                <li><code class=" language-javascript">thumbnail</code> <i class="light">(default)</i> -
+                  150x150
+                </li>
+                <li><code class=" language-javascript">low_resolution</code> -
+                  306x306
+                </li>
+                <li><code class=" language-javascript">standard_resolution</code> -
+                  612x612
+                </li>
+              </ul>
+            </small>
+          </li>
+        </ul>
+      <p></p>
+      <br>
+
+      <a name="advanced"></a><h3>Advanced Options</h3>
+      <p>
+        </p><ul>
+          <li>
+            <code class=" language-javascript">before</code>
+            <small><span class="light">(function)</span> -
+              A callback function called before fetching images from Instagram.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">after</code>
+            <small><span class="light">(function)</span> -
+              A callback function called when images have been added to the page.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">success</code>
+            <small><span class="light">(function)</span> -
+              A callback function called when Instagram returns valid data. Takes the JSON data as an <b>object argument</b>.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">error</code>
+            <small><span class="light">(function)</span> -
+              A callback function called when there is an error fetching images.Takes an error message as a <b>string argument</b>.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">mock</code>
+            <small><span class="light">(true/false)</span> -
+              Fetch data without inserting images into DOM. Use with <b>success</b> callback.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript">filter</code>
+            <small><span class="light">(function)</span> -
+              A function used to exclude images from your results. The 
+function will be given the image data as an argument, and expects the 
+function to return a boolean. See the example below for more 
+information.
+            </small>
+          </li>
+        </ul>
+      <p></p>
+      <p><small><b>Example Filter (get username + tagged):</b></small></p>
+      <pre class=" language-markup"><code class=" language-markup"><span class="token script"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>"text/javascript"</span><span class="token punctuation">&gt;</span></span>
+<span class="token keyword">var</span> feed <span class="token operator">=</span> <span class="token keyword">new</span> Instafeed<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  get<span class="token punctuation">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span>
+  userId<span class="token punctuation">:</span> USER_ID<span class="token punctuation">,</span>
+  filter<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>image<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> image<span class="token punctuation">.</span>tags<span class="token punctuation">.</span>indexOf<span class="token punctuation">(</span><span class="token string">'TAG_NAME'</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span><span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+feed<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+      <p><small>To see a full list of properties that <code class=" language-javascript">image</code> has, see <a href="https://github.com/stevenschobert/instafeed.js/issues/21">this thread</a> on GitHub.</small></p>
+      <br>
+
+      <a name="templating"></a><h3>Templating</h3>
+      <p>
+        The easiest way to control the way Instafeed.js looks on your website is to use the <b>template</b> option. You can write your own HTML markup and it will be used for every image that Instafeed.js fetches.
+      </p>
+      <pre class=" language-markup"><code class=" language-markup"><span class="token script"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>"text/javascript"</span><span class="token punctuation">&gt;</span></span>
+    <span class="token keyword">var</span> feed <span class="token operator">=</span> <span class="token keyword">new</span> Instafeed<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        get<span class="token punctuation">:</span> <span class="token string">'tagged'</span><span class="token punctuation">,</span>
+        tagName<span class="token punctuation">:</span> <span class="token string">'awesome'</span><span class="token punctuation">,</span>
+        clientId<span class="token punctuation">:</span> <span class="token string">'YOUR_CLIENT_ID'</span><span class="token punctuation">,</span>
+        template<span class="token punctuation">:</span> <span class="token string">'&lt;a href="{{link}}"&gt;&lt;img src="{{image}}" /&gt;&lt;/a&gt;'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    feed<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+      <p>
+        Notice the <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>link<span class="token punctuation">}</span><span class="token punctuation">}</span></code> and <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>image<span class="token punctuation">}</span><span class="token punctuation">}</span></code>?
+ The templating option provides several tags for you to use to control 
+where variables are inserted into your HTML markup. Available keywords 
+are:
+      </p>
+      <p>
+        </p><ul>
+          <li>
+            <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>link<span class="token punctuation">}</span><span class="token punctuation">}</span></code>
+            <small> -
+              URL to view the image on Instagram's website.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>image<span class="token punctuation">}</span><span class="token punctuation">}</span></code>
+            <small> -
+              URL of the image source. The size is inherited from the <b>resolution</b> option.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>caption<span class="token punctuation">}</span><span class="token punctuation">}</span></code>
+            <small> -
+              Image's caption text. Defaults to empty string if there isn't one.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>likes<span class="token punctuation">}</span><span class="token punctuation">}</span></code>
+            <small> -
+              Number of likes the image has.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>comments<span class="token punctuation">}</span><span class="token punctuation">}</span></code>
+            <small> -
+              Number of comments the image has.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>location<span class="token punctuation">}</span><span class="token punctuation">}</span></code>
+            <small> -
+              Name of the location associated with the image. Defaults to empty string.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>id<span class="token punctuation">}</span><span class="token punctuation">}</span></code>
+            <small> -
+              Unique ID of the image. Useful if you want to use <a href="http://instagram.com/developer/iphone-hooks/">iPhone hooks</a> to open the images directly in the Instagram app.
+            </small>
+          </li>
+          <li>
+            <code class=" language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span>model<span class="token punctuation">}</span><span class="token punctuation">}</span></code>
+            <small> -
+              Full JSON object of the image. If you want to get a 
+property of the image that isn't listed above you access it using 
+dot-notation. (ex: <code class=" language-markup">{{model.filter}}</code> would get the filter used)
+            </small>
+          </li>
+        </ul>
+      <p></p>
+      <br>
+
+      <a name="pagination"></a><h3>Pagination</h3>
+      <p>
+        As of <b>v1.3</b>, Instafeed.js has a <code class=" language-javascript"><span class="token punctuation">.</span>next<span class="token punctuation">(</span><span class="token punctuation">)</span></code> method you can call to load more images from Instagram.
+        Under the hood, this uses the <i>pagination</i> data from the API. Additionall, there is a helper
+        <code class=" language-javascript"><span class="token punctuation">.</span>hasNext<span class="token punctuation">(</span><span class="token punctuation">)</span></code> method that you can use to check if pagination data is available.
+      </p>
+      <p>
+        Together these options can be used to create a "Load More" button:
+      </p>
+      <pre class=" language-markup"><code class=" language-markup"><span class="token script"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>"text/javascript"</span><span class="token punctuation">&gt;</span></span>
+<span class="token keyword">var</span> loadButton <span class="token operator">=</span> document<span class="token punctuation">.</span>getElementById<span class="token punctuation">(</span><span class="token string">'load-more'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> feed <span class="token operator">=</span> <span class="token keyword">new</span> Instafeed<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// every time we load more, run this function
+</span>  after<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// disable button if no more results to load
+</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>this<span class="token punctuation">.</span>hasNext<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      loadButton<span class="token punctuation">.</span>setAttribute<span class="token punctuation">(</span><span class="token string">'disabled'</span><span class="token punctuation">,</span> <span class="token string">'disabled'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// bind the load more button
+</span>loadButton<span class="token punctuation">.</span>addEventListener<span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  feed<span class="token punctuation">.</span>next<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// run our feed!
+</span>feed<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+      <br>
+
+      <a name="user"></a><h3>Getting images from your User Account</h3>
+
+      <p>With Instafeed, it is possible to get images from a specific user id:</p>
+
+      <pre class=" language-markup"><code class=" language-markup"><span class="token script"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span>"text/javascript"</span><span class="token punctuation">&gt;</span></span>
+    <span class="token keyword">var</span> userFeed <span class="token operator">=</span> <span class="token keyword">new</span> Instafeed<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        get<span class="token punctuation">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span>
+        userId<span class="token punctuation">:</span> YOUR_USER_ID<span class="token punctuation">,</span>
+        accessToken<span class="token punctuation">:</span> <span class="token string">'YOUR_ACCESS_TOKEN'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    userFeed<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+
+      <p>This setup requires an <b>accessToken</b>. Normally, using tokens like this in javascript would be <i>very bad</i>. However, since Instagram provides <a href="http://instagram.com/developer/authentication/">scoping</a> in their API, you can limit the risk of user impersonation.</p>
+
+      <p>Just always make sure your token is set to <b>basic authorization</b>, which only allows GET requests. If you aren't sure what scope your token has, check under your <a href="https://instagram.com/accounts/manage_access">account page</a>.</p>
+
+      <p><small><b>Don't know your user id or token?</b> <a href="https://instagram.com/oauth/authorize/?client_id=467ede5a6b9b48ae8e03f4e2582aeeb3&amp;redirect_uri=http://instafeedjs.com&amp;response_type=token">Click here</a> to get one.</small></p>
+      <br>
+
+      <a name="log"></a><h3>Change Log</h3>
+
+      <p>
+        </p><ul>
+          <li><small><b>(v1.3.2)</b>
+            <ul>
+              <li>Fixed the <code class=" language-javascript">useHttp</code> option when no template is set. Thanks <a href="https://github.com/bartekn">Bartek Nowotarski</a>!</li>
+            </ul>
+          </small></li>
+          <li><small><b>(v1.3.1)</b>
+            <ul>
+              <li>Fixed an issue where <code class=" language-javascript">sortBy<span class="token punctuation">:</span> <span class="token string">"most-recent"</span></code> did not always correctly sort the images. Thanks <a href="https://github.com/neilcampbell">Neil Campbell</a>!</li>
+              <li>Changed the default <code class=" language-javascript">sortBy</code> option to be <code class=" language-javascript">none</code>.</li>
+            </ul>
+          </small></li>
+          <li><small><b>(v1.3.0)</b>
+            <ul>
+              <li>Image URLs are now protocol-relative by default. Use the new <code class=" language-javascript">useHttp</code> option to disable.</li>
+              <li>Added the ability to filter out images using the <code class=" language-javascript">filter</code> option.</li>
+              <li>Added pagination support using <code class=" language-javascript"><span class="token punctuation">.</span>next<span class="token punctuation">(</span><span class="token punctuation">)</span></code> and <code class="language-javascrit">.hasNext()</code> methods.</li>
+              <li>Removed the default <code class=" language-javascript">limit</code> of 15 images. The limit option is still supported, but by default no limit is sent to the API.</li>
+            </ul>
+          </small></li>
+          <li><small><b>(v1.2.1)</b>
+            <ul>
+              <li>Fixed IE8 error "Object doesn't support this action".</li>
+            </ul>
+          </small></li>
+          <li><small><b>(v1.2.0)</b>
+            <ul>
+              <li>Added the ability to sort images! Use the <b>sortBy</b> option.</li>
+              <li>More template tags! You can now use <b>{{likes}}</b>, <b>{{comments}}</b>, <b>{{id}}</b>, <b>{{caption}}</b>, <b>{{location}}</b>, and <b>{{model}}</b>. Check the section on <a href="#templating">templating</a> for more info.</li>
+            </ul>
+          </small></li>
+          <li><small><b>(v1.1.0)</b>
+            <ul>
+              <li>Added option to use a custom html template with the <b>template</b> option.</li>
+              <li>Added ability to fetch several feeds at the same time (create separate instances).</li>
+              <li>Added <b>before</b>, <b>success</b>, <b>after</b>, and <b>error</b> callback options.</li>
+              <li>Added <b>mock</b> option. Use with <b>success</b> option for custom DOM manipulation.</li>
+            </ul>
+          </small></li>
+          <li><small><b>(v1.0.0)</b>
+            <ul>
+              <li>Initial release</li>
+            </ul>
+          </small></li>
+        </ul>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="wrapper-page">
+    <footer>
+      an <a href="https://github.com/stevenschobert/instafeed.js">open source</a> project by <a href="http://stevenschobert.com/">steven schobert</a>
+    </footer>
+  </div>
+
+  <!-- JavaScript includes -->
+  <script type="text/javascript" src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/prism.js"></script>
+  <script type="text/javascript" src="Instafeed.js%20-%20a%20simple%20Instagram%20javascript%20plugin_files/instafeed.js"></script>
+  <script type="text/javascript">
+    (function () {
+      var demoFeed, hash, hashParts, token, tokenParts, user, message;
+
+      // run instafeed
+      demoFeed = new Instafeed({
+        limit: 37,
+        get: 'tagged',
+        tagName: 'workspace',
+        clientId: '467ede5a6b9b48ae8e03f4e2582aeeb3'
+      }).run();
+
+      // show the user their token and hash
+      if(window.location.hash) {
+        // get the hash
+        hash = window.location.hash;
+
+        // get the access token
+        hashParts = hash.split('=');
+        token = hashParts[1];
+
+        // get the user
+        tokenParts = token.split('.');
+        user = tokenParts[0];
+
+        // show the message
+        if(typeof(user) === 'string' && typeof(token) === 'string') {
+          message = document.createElement('p');
+          message.className = 'flash good';
+          message.innerHTML = '<small>Success! Use the userId and token listed below to get your images:<br /><b>userId:</b> ' + user + '<br /><b>accessToken:</b> '  + token + '</small>';
+          document.getElementById('messages').appendChild(message);
+        }
+      }
+    })();
+  </script>
+
+  <!-- Gaug.es -->
+  <script type="text/javascript">
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '50903eb1613f5d0a8a000097');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+
+
+</body></html>

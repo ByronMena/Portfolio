@@ -1,0 +1,479 @@
+﻿@import url("layout.css");
+@font-face {
+	font-family: "Segoe UI";
+	src: url('SEGOEUI.TTF');
+}
+body {
+	font-family: "Segoe UI", "Arial Narrow", Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: black;
+	text-align:justify;
+	background-color:yellow;
+}
+p{
+	font-family: "Segoe UI";
+}
+#container {
+	width: 100%;
+	height: 100%;
+	/*background-color:#0066ff;  #cb8 */
+}
+#masthead {
+	width: 100%;
+	overflow: auto;
+	text-align: right;
+	background-color:#003366;
+	border-bottom:solid 5px #FFCC33;
+}
+#page_content {
+	position: relative;
+	background-color:yellow;
+	/*width:100%;*/
+}
+#sidebar {
+	position: relative;
+	float: left;
+	width: 150px; /* 140px This width Must be the same width as #content class */;
+	background-color: #000; /* #cb8*/;
+	border-right: solid 1px #0066ff;
+	border-right-color: #333333;
+}
+#Search-Bar{
+	float: right;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 30px;
+	background-color: #FFCC33;
+	/* margin-left:15px;margin-right: 0 15px;
+	padding-left:15px;padding-right:15px;
+ */
+}
+#Search-Bar input {
+	text-align:left;
+	border: 1px solid #0066FF;
+	cursor: text;
+	padding:0 5px;
+	height:24px;
+	font-size:14px;
+	position:relative;
+}
+
+#content {
+	margin-left: 150px; /* 140px THIS WIDTH MUST MATCH WITH THE #SIDEBAR CLASS*/;
+	padding: 10px;
+	background-color: yellow;
+	border-left: solid 1px #0066ff;
+	border-left-color: #333333;
+}
+#footer {
+	clear: both;
+	width: 99%;
+	overflow: hidden;
+	padding-top: 1%;
+	padding-right: 0;
+	padding-bottom: 1%;
+	padding-left: 1%;
+	background-color: #333333; /*#cdf*/
+	color: #FFFFFF;
+}
+#masthead img {
+	float: left;
+	border:none;
+}
+#masthead .swf{
+	float:right;
+	border:none;
+}
+#masthead p {
+	font-size: small;
+	margin: 0;
+	margin-right: 1%;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:xx-large;
+	color:black;
+	text-align:left;
+}
+.Page_Title{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 60px; 
+	border-left: solid 0px #000;
+	padding-left: 5px;
+	text-align:left;
+}
+h1 small{
+	font-size: 18px;
+	text-transform: uppercase;
+	color:black;
+}
+h2,h3,h4,h5,h6{
+	line-height: .5em;
+}
+.OLMetro {
+	font-size: x-large;
+	font-weight: bold;
+	font-style: italic;
+	color: black;
+}
+.OLMetro p{
+	font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size:medium;
+	font-style:normal;
+	font-weight:normal;
+	color:black;
+	line-height:1.5em;
+}
+.ULMetro,  .ULMetro li{
+	line-height:1.5em;
+	padding-bottom:10px;
+}
+#NoScript {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	/*font-family: "helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	text-align:justify;
+	width: 98%;
+	height: auto;
+	padding:15px;
+	top: 0px;
+	left: 0px;
+}
+#GalleryBox {
+background-color:yellow;
+color:black;
+}
+.NoteDiv {
+background-color:#FFCC33;
+}
+/* Styles for Accessible Toolbar */
+#Toolbar-Wrapper {
+	position: fixed;
+	bottom: 0px;
+	z-index: 900;
+	width: 100%;
+	border-bottom: 5px #000 solid;
+}
+.tab-toggler {
+	background: #000;
+	color: #FFCC33;
+	font-weight: 300; /*700*/
+	font-size:22px;
+	text-align: center;
+	cursor: pointer;
+	padding: 5px 0px;
+	width: 240px; /*140px*/
+	position: absolute;
+	top: -30px; /*-30px*/
+	right: 0;
+}
+@-moz-document url-prefix(){
+	.tab-toggler{
+	width:280px;
+	}
+	#Search-Bar{
+	width:350px;
+	}
+}
+#toolbar-drawer {
+	background: yellow;
+	color:black;
+	border-top: 5px solid black;
+	clear: both;
+	overflow: hidden;
+	position: relative;
+	z-index: 905;
+}
+#toolbar-frame {
+	overflow: hidden;
+	float: left;
+	width: 904px;
+}
+#toolbar-drawer ul {
+	position: relative;
+	padding: 0;
+	margin: 10px 0;
+	height: 50px; /* 71px */
+}
+
+#toolbar-drawer li {
+	list-style: none;
+	/*background: #666;*/
+	display: inline;
+	float: left;
+	margin-left: 22px;
+	width: 126px;
+	height: 50px; /* 71px */
+	text-align:center;
+}
+#toolbar-drawer li a{
+	text-decoration:none;
+}
+p#vtip{
+	background-color:yellow;
+	border: 1px solid black;
+}
+
+/* Styles for Navigation */
+#sidebar ul {
+	list-style-type: none;
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+	background-color:yellow;
+}
+#sidebar li {
+	display: block;
+	border: none;
+}
+#sidebar li:hover{
+	/*border-color:#fff;*/
+	color:black;
+}
+#sidebar a {
+	/*font-weight: bold;*/
+	text-decoration: none;
+	color: black;
+	padding: 5%;
+	display: block;
+	font-size:20px; /* Originally 24px */
+	/*border-bottom: 1px solid #f5f5f5;*/
+}
+#sidebar a:hover {
+	/* font-weight: 500; */
+	text-decoration: none;
+	color: yellow;
+	/*border-bottom: 1px solid #f5f5f5;*/
+	background-color: black;
+}
+/* Styles for Footer */
+#footer p {
+	font-size: small;
+}
+#footer a {
+	color: yellow;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: orange;
+	text-decoration: none;
+}
+a {
+	color: black;
+	text-decoration: underline;
+}
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+.style_bold {
+	font-weight: bold;
+}
+.style_italic {
+	font-style: italic;
+}
+
+/*-- jShowOff module styles --*/
+#features, #slidingFeatures, #labelFeatures, #basicFeatures, #thumbFeatures {
+	background: yellow;
+	position: relative;
+	overflow: hidden;
+	width: 100%; /*500px*/
+	height: 340px; /*250px*/
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+}
+.jshowoff {
+	width: 100%; /*500px*/
+	margin: 10px 0;
+}
+.jshowoff div {	
+	width: 100%; /*500px*/
+	height: 340px; /*250px*/
+}
+.jshowoff div, .jshowoff img, .jshowoff {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+}
+#basicFeatures, .jshowoff.basicFeatures, .jshowoff.basicFeatures img, .jshowoff.basicFeatures div {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+.jshowoff div p, .jshowoff div h2 {
+	background-color: yellow;
+	text-align:left;
+}
+.jshowoff h2{
+	color:black;
+	font-size:xx-large;
+	line-height:1em;
+}
+.jshowoff h2, .jshowoff p {
+	/*font-size: 18px;*/
+	padding: 15px 20px 0px;
+	margin: 0;
+}
+.jshowoff p {
+	font-size: 16px;
+	line-height: 1.1em;
+}
+.ImgRight {
+	float: right;
+	padding: 15px 20px 15px 20px;
+}
+.ImgLeft {
+	float:left;
+	padding: 15px 20px 15px 20px;
+}
+.jshowoff p.jshowoff-slidelinks {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	margin: 0;
+	padding: 0;
+}
+.jshowoff-slidelinks a, .jshowoff-controls a {
+	display: block;
+	background-color: #000;
+	color: #fff;
+	padding: 5px 7px 5px;
+	margin: 5px 0 0 5px;
+	float: left;
+	text-decoration: none;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	outline: none;
+	font-size: 11px;
+	line-height: 14px;
+}
+.jshowoff-slidelinks a:hover, .jshowoff-controls a:hover {
+	color: #fff;
+}
+.jshowoff-slidelinks a.jshowoff-active, .jshowoff-slidelinks a.jshowoff-active:hover {
+	background-color: yellow;
+	color: black;
+}
+p.jshowoff-controls {
+	background: #aaa;
+	overflow: auto;
+	height: 1%;
+	padding: 0 0 5px 5px;
+	margin: 0;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+}
+.jshowoff-controls a {
+	margin: 5px 5px 0 0;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 4px 8px 5px;
+}
+.jshowoff-pausetext {
+	color: #fff;
+}
+
+/* Misc */
+a img{
+	border:none;
+}
+
+/* CSS Scroll to top style */
+
+/* jqModal base Styling courtesy of;
+  Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+  the Window's z-index value will be set to 3000 by default (in jqModal.js). You
+  can change this value by either;
+    a) supplying one via CSS
+    b) passing the "zIndex" parameter. E.g.  (window).jqm({zIndex: 500}); */
+  
+.jqmWindow {
+    display: none;
+    
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    
+    margin-left: -300px;
+    width: 600px;
+    
+    background-color: yellow;
+    color: black;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.jqmOverlay { background-color: #000; }
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+.jqmClose{
+	float:right;
+}
+/*START OF CONTRAST STYLE*/
+#ContrastWrapper{
+  width:530px;
+  height:150px;
+  margin:0px auto;
+  text-align:center;
+  padding:15px 0;
+  border:1px dashed #333;
+  background-color:#eee;
+ }
+ .ContrastDefault{
+	border: 1px solid #d4d4d4;
+	background : #fff;
+	width: 140px;
+	height: 140px;
+	float:left;
+	margin: 0 15px;
+	margin-left:21px;
+	display: inline;/* ie double margin bug*/;
+	font-size: 120px;
+	text-align: center;
+	vertical-align: middle;
+	color:black;
+}
+.ContrastSetting2{
+  border: 1px solid #d4d4d4;
+  background : #000;
+  float:left;
+  width: 140px;
+  height:140px;
+  margin: 0 15px;
+  display:inline;/* ie double margin bug*/
+  font-size:120px;
+  color:yellow;
+  text-align: center;
+  vertical-align: middle;
+}
+.ContrastSetting3{
+  border: 1px solid #d4d4d4;
+  background : yellow;
+  width: 140px;
+  height:140px;
+  float:left;
+  margin: 0 15px;
+  display:inline;/* ie double margin bug*/
+  font-size:120px;
+  color:black;
+  text-align: center;
+  vertical-align: middle;
+}
+/*END OF CONTRAST STYLE*/

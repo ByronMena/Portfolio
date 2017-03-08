@@ -1,0 +1,48 @@
+﻿/*
+* Created By: MDC Web Services
+* Description: Template Stylesheet
+* Revised: 12/12/2012
+*/
+@media (min-width: 980px) {
+	.site-masthead {
+		background-image:url('../img/banner-wolfson.jpg');
+		background-repeat:no-repeat;
+		background-color:#222;
+		background-position:50%;
+		height:135px;
+	}
+	.site-masthead h1, .site-masthead h2 {
+		background-color:#000;
+		padding:0 10px;
+		width: auto;
+		display: table;
+	}
+	.site-masthead h1 {
+		color: white;		
+		padding-top:0;
+		margin:0;
+		font-size:34px;
+		padding-bottom: 2px;
+	}
+	.site-masthead h2 {
+		line-height:11px;
+		font-size:11px;
+		color: white;		
+		margin:0;
+		padding-top: 5px;
+	}
+	.site-masthead > .container {
+		height: 135px;
+		padding-top: 40px;
+	}
+}
+
+/* TO REMOVE, ALREADY ON MDC GLOBAL */
+.carousel-caption h4 a, .carousel-caption p a {
+	color:#FFF;
+	text-decoration:none;
+}
+.carousel-caption h4 a:hover, .carousel-caption p a:hover {
+
+	text-decoration:none;
+}

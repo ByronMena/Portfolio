@@ -1,0 +1,266 @@
+<!-- InstanceBegin template="/Templates/MayraCakes_Pages.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE HTML>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="keywords" content="Mayra Cakes, Mayra, Cakes, Byron Mena">
+    <meta name="description" content="Mayra Cakes we use the freshest and finest ingredient and bake them with love and care as if we’re baking it for ourselves. Our cakes are decorated from scratch and handmade edible decorations to your desire.">
+    <meta name="author" content="Byron Mena">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Mayra Cakes Shop</title>
+    <!-- InstanceEndEditable -->
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrapCrunched.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" type="text/css" rel="stylesheet">
+    <link href="css/Mayracakes.css" type="text/css" rel="stylesheet">
+    <!--<link href="../less/bootstrap.less" type="text/css" rel="stylesheet/less">-->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="../js/less.min.js"></script>-->
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="home.html"><img src="img/Mayra-Cakes.png" alt="Mayra Cakes" width="125" height="70"></a>
+            </div>
+            <div style="height: 1px;" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- InstanceBeginEditable name="Link" -->
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="active"><a href="shop.html" title="Start your order"><i class="fa fa-shopping-cart"></i></a></li>
+                    <!-- InstanceEndEditable -->
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="MainContent">
+            <div id="MarginHeader"></div>
+            <!--Fixes top margin-->
+            <!--<div style="padding-top:20px"></div>Header Paddings-->
+            <!-- InstanceBeginEditable name="BODY" -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">Shop</h1>
+                    </div>
+                </div>
+                <form role="form" method="post" action="OrderHandler.php">
+                    <div class="row">
+                        <h3>Contact Information</h3>
+                        <div class="col-md-4">
+                            <label for="fName">First Name*</label>
+                            <input name="fName" type="text" placeholder="Mayra" class="form-control" required>
+
+                            <label for="lName">Last Name*</label>
+                            <input name="lName" type="text" placeholder="Cakes" class="form-control" required>
+
+                        </div>
+                        <div class="col-md-4">
+                            <label for="email">E-mail*</label>
+                            <input name="email" type="email" placeholder="MayraCakes@example.com" class="form-control" required>
+
+                            <!--<label for="confirmemail">Confirm E-mail*</label>
+       		<input name="confirmemail" type="email" placeholder="MayraCakes@example.com" class="form-control" required>-->
+
+                            <label for="pCall">Phone number*</label>
+                            <input name="pCall" type="tel" placeholder="786-123-4567" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="timeCall">Best time to contact</label>
+                            <select name="timeCall" class="form-control">
+            		              <option value="Morning">Morning</option>
+                	            <option value="Afternoon">Afternoon</option>
+                	            <option value="Evening">Evening</option>
+		                        </select>
+                            <br>
+                            <label for="typeofContact">How would you like to be reached?</label>
+                            <select name="typeofContact" class="form-control">
+            		              <option value="E-mail">E-mail</option>
+                              <option value="Phone call">Phone call</option>
+            	              </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3>Cake Order</h3>
+                        <div class="col-md-4">
+                            <label>What would you like to order? (Choose one or more)</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                    	<input type="checkbox" value="CAKE" name="OrderType1">
+                    </span>
+                                <input type="text" class="form-control" value="CAKE" placeholder="CAKE" disabled>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                    	<input type="checkbox" value="CUPCAKE" name="OrderType2">
+                    </span>
+                                <input type="text" class="form-control" value="CUPCAKE" placeholder="CUPCAKE" disabled>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                    	<input type="checkbox" value="CAKE POP" name="OrderType3">
+                    </span>
+                                <input type="text" class="form-control" value="CAKE POP" placeholder="CAKE POP" disabled>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                    	<input type="checkbox" value="COOKIE" name="OrderType4">
+                    </span>
+                                <input type="text" class="form-control" value="COOKIE" placeholder="COOKIE" disabled>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                    	<input type="checkbox">
+                    </span>
+                                <input type="text" class="form-control" value="" name="OrderType5" placeholder="Other - Please Specify">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="servingSize">How many guest will the cake serve?*</label>
+                            <input name="servingSize" type="number" placeholder="1" min="1" max="150" pattern="\d*" class="form-control" required>
+
+                            <label for="dateofEvent">Date of Event* (01/01/2014)</label>
+                            <div class="form-group">
+                                <div class="input-group date" id="dateofEvent">
+                                    <input type="text" name="dateofEvent" class="form-control" placerholder="05/18/2014" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required>
+                                    <span class="input-group-addon"><span class="fa fa-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <label for="deliveryMethod">Delivery Method</label>
+                            <select name="deliveryMethod" class="form-control">
+     			<option value="Delivery">Delivery</option>
+          <option value="Pick-up">Pick-up</option>
+        	</select>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="typeofIcing">Type of icing</label>
+                            <select name="typeofIcing" class="form-control">
+            	<option value="Fondant">Fondant</option>
+              <option value="Buttercream with fondant decorations">Buttercream with fondant decorations</option>
+              <option value="Not sure">Not sure</option>
+		    </select>
+
+                            <label for="typeofFlavor">Type of flavor</label>
+                            <select name="typeofFlavor" class="form-control">
+        		<option value="Vanilla">Vanilla</option>
+                <option value="Vanilla Chocolate Chips">Vanilla Chocolate Chips</option>
+				<option value="Chocolate">Chocolate</option>
+        		<option value="Chocolate Fudge">Chocolate Fudge</option>
+				<option value="Marble">Marble</option>
+		        <option value="Red Velvet">Red Velvet</option>
+        		<option value="Red Velvet with Chocolate Chips">Red Velvet with Chocolate Chips</option>
+            <option value="Red Velvet with White Chocolate Chips">Red Velvet with White Chocolate Chips</option>
+		        <option value="Guava">Guava</option>
+        		<option value="Vanilla Rum">Vanilla Rum</option>
+                <option value="Coconut">Coconut</option>
+		        <option value="Strawberry">Strawberry</option>
+        		<option value="Carrot">Carrot</option>
+                <option value="Strawberry White Chocolate Chips">Strawberry White Chocolate Chips</option>
+		        <option value="Pumpkin Spice">Pumpkin Spice</option>
+        		<option value="Dominican">Dominican</option>
+                <option value="Confetti">Confetti</option>
+		        <option value="Pineapple Turnover">Pineapple Turnover</option>
+        		<option value="Yellow">Yellow</option>
+                <option value="Coconut Rum">Coconut Rum</option>
+		        <option value="Lemon">Lemon</option>
+        		<option value="Key West Lime">Key West Lime</option>
+                <option value="Cinnamon">Cinnamon</option>
+         	</select>
+
+                            <label for="typeofFilling">Cake Filling</label>
+                            <select name="typeofFilling" class="form-control">
+				<option value="None">None</option>
+				<option value="Buttercream">Buttercream</option>
+				<option value="Dulce De Leche">Dulce De Leche</option>
+				<option value="Guava">Guava</option>
+				<option value="Chocolate Mousse">Chocolate Mousse</option>
+				<option value="Triple Chocolate Chips">Triple Chocolate Chips</option>
+				<option value="Cookie and Cream">Cookie and Cream</option>
+				<option value="Mint Chocolate Chips">Mint Chocolate Chips</option>
+				<option value="Coconut">Coconut</option>
+				<option value="Cream Cheese">Cream Cheese</option>
+				<option value="Custard">Custard</option>
+				<option value="Raspberry Jelly">Raspberry Jelly</option>
+				<option value="Pineapple Jelly">Pineapple Jelly</option>
+				<option value="Strawberry Jelly">Strawberry Jelly</option>
+			</select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="cakeDescription">Cake Descrition | Cookie Description*</label>
+                            <textarea class="form-control" name="cakeDescription" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>I VERIFY THAT ALL THE INFORMATION ABOVE IS CORRECT*</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><input type="checkbox" value="AGREE" name="AGREED" required></span>
+                                <input type="text" class="form-control" value="AGREE" placeholder="I VERIFY THAT ALL THE INFORMATION ABOVE IS CORRECT" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div style="padding-top:20px"></div>
+                            <!--Header Paddings-->
+                            <p><cite>* Must fill out</cite></p>
+                            <button type="reset" class="btn btn-danger btn-lg">Reset</button>
+                            <button id="send" type="submit" class="btn btn-primary btn-lg">Send</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <!-- InstanceEndEditable -->
+        </div>
+        <!--/ .MainContent-->
+
+        <div id="footer">
+            <div class="container">
+                <p>
+                    <a href="javascript:void()"><img src="img/MDSmallLogo.png" alt="Designed by Byron Mena"></a>
+                </p>
+                <p>Created by <a href="javascript:void()">Byron Mena.</a></p>
+            </div>
+        </div>
+
+    </div>
+    <!--/ .Container-->
+
+</body>
+<!-- InstanceEnd -->
+
+</HTML>

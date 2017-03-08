@@ -1,0 +1,81 @@
+﻿/*
+ * SimpleModal OSX Style Modal Dialog
+ * http://www.ericmmartin.com/projects/simplemodal/
+ * http://code.google.com/p/simplemodal/
+ *
+ * Copyright (c) 2010 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Revision: $Id: osx.css 254 2010-07-23 05:14:44Z emartin24 $
+ */
+
+#osx-modal-content, #osx-modal-datam, #Search, #Contrast, #HideImg, #News {
+	display:none;
+}
+/* Overlay */
+#osx-overlay {
+	background-color:#000; 
+}
+/* Container */
+#osx-container {
+	background-color:#eee;
+	color:#000;
+	font: 16px/24px "Lucida Grande", Arial, sans-serif;
+	padding-bottom:4px;
+	width:700px;
+	-moz-border-radius-bottomleft:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	-webkit-border-bottom-right-radius:6px;
+	border-radius:0 0 6px 6px;
+	-moz-box-shadow:0 0 64px #000;
+	-webkit-box-shadow:0 0 64px #000;
+	box-shadow:0 0 64px #000;
+	overflow:hidden;
+}
+#osx-container a {
+	color:#06F;
+}
+#osx-container #osx-modal-title {
+	color:#000;
+	background-color:#ddd;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	padding:6px 10px;
+	text-shadow:0 1px 0 #f4f4f4;
+}
+#osx-container .close {
+	display:none;
+	position:absolute;
+	right:0;
+	top:0;
+}
+#osx-container .close a {
+	display:block;
+	color:#777;
+	font-weight:bold;
+	padding:6px 12px 0;
+	text-decoration:none;
+	text-shadow:0 1px 0 #f4f4f4;
+	font-size:24px;
+/*	background: url(../../Images/icons/close_pop.png) no-repeat; width:50px; height:50px; display:inline; z-index:3200; position:absolute; top:0px; right:-25px; cursor:pointer;
+*/}
+#osx-container .close a:hover {
+	color:#000;
+}
+#osx-container #osx-modal-data {
+	font-size:14px;
+	padding:0px 0px; /*Height 6px || Width 12px*/
+	overflow:hidden !important;
+}
+#osx-container h2 {
+	margin:10px 0 6px;
+}
+#osx-container p {
+	margin-bottom:10px;
+}
+#osx-container span {
+	color:#777;
+}

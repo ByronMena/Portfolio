@@ -1,0 +1,99 @@
+/*
+* Created By: MDC Web Services
+* Description: Campus Print Style 
+* Revised: 1/25/2013
+*/
+
+/* STILL IN PROGRESS
+	* remove global nav
+	* remove links from showing on page
+	* remove footer block
+	* remove social media iframe
+	* review bootstrap carousel 
+	* review images
+	* review media objects
+	* review bootstrap tabs
+	* review bootstrap collapse
+    * review general font size
+*/
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * { background: transparent !important; color: #000 !important; /* Black prints faster: h5bp.com/s */ box-shadow: none !important; text-shadow: none !important; }
+
+    a,
+    a:visited { text-decoration: underline; }
+
+    /* To print the href and title from anchor tags (links)
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; } */
+
+    /* DONOT print the href and title from anchor tags */
+    a[href]:after { content: ""; }
+    abbr[title]:after { content: ""; }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after { content: ""; }
+
+    pre,
+    blockquote { border: 1px solid #999; page-break-inside: avoid; }
+
+    thead { display: table-header-group; /* h5bp.com/t */ }
+
+    tr,
+    img { page-break-inside: avoid; }
+
+    img { max-width: 100% !important; display: none !important}
+
+    @page { margin: 0.5cm; }
+
+    p,
+    h2,
+    h3 { orphans: 3; widows: 3; }
+
+    h2,
+    h3 { page-break-after: avoid; }
+
+    /* ==========================================================================
+   Print styles.
+   Fixes to our bootstrap templates
+   ========================================================================== */
+    /* site masthead style */    
+    .site-masthead { padding: 0; }
+    .site-masthead h1 { text-transform: capitalize !important; }
+    /* hide left nav for print */
+    .nav-module { display: none; }
+    /* show phone numbers table */
+	.featured-well table { display: table; }
+    /* hide global navigation */
+    .navbar { display: none; }
+    /* hide global footer */
+    .mdcfooter { display: none; }
+    /* hide share this block */
+    .share-this { display: none; }
+    /* hide all small media buttons */
+    button.section-menu { display: none !important; }
+    button.btn-search { display: none !important; }
+    button.btn-footer { display: none !important; }
+    /* do not print facebook or any other iframe */
+    iframe {display: none; }
+    /* be green, allow only 250px max for images 
+    img { max-width: 250px !important; }*/
+    /* display all accordion body content */
+    .accordion-body { height: auto !important; }
+	#myCarousel { display: none !important; }
+	#AccessibilityTB { display: none !important; }
+	.print-preview{ display: none !important; }
+}

@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.content {
+	background-color:#003366;
+	padding:0px;
+/*	border-top:0px;
+*/	border-right:1px solid #464c54;
+	font-family:Arial, Helvetica, sans-serif;
+	width:160px;
+	/* [disabled]background-image:url(../Minimal%20MDC/css/images/content_bottom.jpg); */
+	/* [disabled]background-repeat:repeat-x; */
+	/* [disabled]background-position:bottom; */
+}
+/*.content a:hover{
+	background-color:#fff;
+	}*/
+#content_2, #content_3 {
+	/* [disabled]display:none; */
+}
+
+.content ul {
+	margin:0px;
+/*	padding:0px 5px 0px 5px;*/
+	padding:0px 5px 0px 5px;
+	list-style:none;
+}
+/*.content ul a:hover{
+	background-color:#ffffff;
+	}*/
+.content ul li {
+/**/	
+	display:block;
+	list-style:none;
+	border-bottom:1px solid #d6dde0;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:14px;
+	color:#fff;
+}
+/*.content ul li:hover{
+	background-color:#FC0;
+	color:#000;
+	}*/
+	
+.content ul li:last-child {
+	border-bottom:none;
+}
+/*Styles for the links and text size*/
+.content ul li a {
+	display:block;
+	/* [disabled]font-size:12px; */
+	font-weight:bold;
+	text-decoration:none;
+	/**/color:#FFF;
+}
+.content ul li a small {
+	color:#8b959c;
+	font-size:9px;
+	text-transform:uppercase;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	position:relative;
+	left:4px;
+	top:0px;
+}
+.content ul li a:hover {
+	/*background-color:#FC0;*/
+	color:#FC0;
+	padding-left: 5px;
+}
+.content ul li a:hover small {
+	color:#baae8e;
+}

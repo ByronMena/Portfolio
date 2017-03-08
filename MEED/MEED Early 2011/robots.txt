@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /ie6/
+Disallow: /Images/
+Disallow: /Scripts/
+Disallow: /Styles/
+Disallow: /Templates/
+

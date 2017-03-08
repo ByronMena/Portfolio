@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*STYLE FOR TOP HORIZONTAL NAV BAR===================================================================*/
+.NavBarBKGDColor{
+	background-color:#0066ff;
+}
+.jqueryslidemenu{
+	width:960px;
+	background-color: #36f;
+	font-family: Verdana;
+	font-size: 10px;
+	font-weight: bold;
+	white-space:nowrap;
+}
+
+.jqueryslidemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a{
+	display: block; /*background of tabs (default state)*/
+	color: white;
+	text-decoration: none;
+	background-color: #0066ff;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFF;
+	padding-top: 3px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	text-align: center;
+}
+
+* html .jqueryslidemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+color: white;
+}
+
+.jqueryslidemenu ul li a:hover{
+	/* [disabled]background: black; */ /*tab link background during hover state*/
+	color: white;
+	background-color: #dd0606;
+	font-weight: bold;
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+position: absolute;
+left: 0;
+display: block;
+visibility: hidden;
+/*z-index:1;Prevents from underlapping with other divs*/
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+	width: 160px; /*width of sub menus*/
+	padding: 5px;
+	margin: 0;
+	border-top-width: 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFF;
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+.jqueryslidemenuz ul li ul li a:hover{ /*sub menus hover style*/
+	/* [disabled]background: #eff9ff; */
+	/* [disabled]color: black; */
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+	/* [disabled]position: absolute; */
+	/* [disabled]top: 12px; */
+	/* [disabled]right: 7px; */
+}
+
+.rightarrowclass{
+	/* [disabled]position: absolute; */
+	/* [disabled]top: 6px; */
+	/* [disabled]right: 5px; */
+}

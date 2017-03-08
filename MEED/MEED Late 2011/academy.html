@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<!-- #BeginEditable "doctitle" -->
+<title>MEED Academy</title>
+<!-- #EndEditable -->
+
+<!-- ***StyleSheets*** -->
+<link href="styles/Master.css" rel="stylesheet" type="text/css" />
+<link href="styles/BlackYellowTxt.css" rel="alternate stylesheet" type="text/css" media="screen" title="BlackYellowTxt" />
+<link href="styles/YellowBlackTxt.css" rel="alternate stylesheet" type="text/css" media="screen" title="YellowBlackTxt" /> 
+
+<!-- ***Javascripts*** -->
+<script src="scripts/jquery-1.6.2.min.js" type="text/javascript" language="javascript"></script>
+<script src="scripts/jquery-ui-1.8.13.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="scripts/PopupHint.js" type="text/javascript" language="javascript"></script>
+<script src="scripts/AccessTB.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+$(document).ready(function () {
+		
+		 /*Sidebar FX*/			
+		$("#sidebar li a").hover(function(){
+			$(this).stop().animate({ paddingLeft: '8%', /*backgroundColor: '#fff', color : '#0066FF'*/ }, 500);	
+			}, function() {
+				$(this).stop().animate({ paddingLeft: '5%', /*backgroundColor: '#0066FF', color : '#fff'*/ }, 500);
+		});
+				
+		/* Search Engine */		
+		 $(".searchbox").val("Search MDC...").css("color", "#A9A9A9").focus(function() {
+   		 $(this).css("color", "black");
+    			if ($(this).val() == "Search MDC...") {
+        			$(this).val("");
+    			}
+		}).blur(function() {
+    		$(this).css("color", "#A9A9A9");
+    			if ($(this).val() == "") {
+       				 $(this).val("Search MDC...");
+    		}
+		});
+			
+		/* Accessible Toolbar */
+		/*$('#toolbar-drawer').hide();*/
+		$(".tab-toggler").effect("pulsate", {times:5}, 3000);
+		$(".tab-toggler").click(function() {
+		hideToolbar();
+		});
+		
+		$('.tab-toggler').hover(function(){
+			$(this).stop().animate({color:'black', backgroundColor:'#FFCC33'},500);
+			}, function(){
+			$(this).stop().animate({color:'#FFCC33', backgroundColor:'black'},500);
+		});
+		
+		/* Font Sizer [target, Minimum Size, Default Size, Maximum Size]*/
+		fontSize("#content,.ULMetro,.OLMetro,.OLMetro p", 12, 16, 30);
+		
+		$("#hideText").click(function(){
+		hideText();
+		});
+		
+		/* Jqm Modal WIndows */
+		$().ready(function() {
+  		$('#dialog').jqm();
+  		$('#dialog2').jqm({
+  		trigger:'#ASL',
+  		});
+});
+		 		
+});
+//]]>
+</script>
+<!-- <script src="scripts/jquery.jshowoff.js" type="text/javascript" language="javascript"></script> --><!--SlideShow-->
+<!-- <script src="scripts/scroll-to-top.js" type="text/javascript" language="javascript"></script> --><!-- jQuery Scroll to Top -->
+</head>
+
+<body>
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<a href="http://www.mdc.edu/main/">
+		<img alt="Miami Dade College" height="73" src="images/MDC_LogoDB.gif" width="320" /></a>	
+<object class="swf" data="images/student.swf" type="application/x-shockwave-flash" width="400" height="73">
+	<param name="movie" value ="images/student.swf" />
+</object>
+</div>
+	<!-- End Masthead -->
+	<!-- Begin Page Content -->
+	<div id="page_content">
+		<div id="Search-Bar">
+			<form action="http://www.google.com/u/mdc" method="get" name="form1">
+					<div style="text-align:center">
+						<input name="q" type="text" class="searchbox" size="30" maxlength="100" />
+						<label><input name="SUBMIT" type="submit" class="textbutton" id="go" value="GO!" /></label>
+						</div>
+				</form>
+		</div>
+		<!-- Begin Sidebar -->
+		<div id="sidebar">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">History</a></li>
+				<li><a href="americorps.html">Americorps</a></li>
+				<li><a href="aoa.html">AOA</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="JobAssistance.html">Job Assistance</a></li>
+				<li><a href="internship.html">Internships</a></li>
+				<!-- <li><a href="academy.html">Meed Academy</a></li> -->
+				<!-- <li><a href="staff.html">Staff</a></li> -->
+			</ul>
+		</div>
+		<!-- End Sidebar -->
+		<!-- Begin Content -->
+		<div id="content">
+		<noscript>
+		<div id="NoScript">
+<h1> 
+<img src="images/Icons/Alert48.png" alt="Attentions your JavaScript is Disabled" style="vertical-align:middle"/>Your JavaScript is DISABLED</h1>
+	To view this page properly, your web browser needs to run JavaScript
+	<ul class="ULMetro">
+		<li>If your current browser settings do not allow Javascript, please 
+		change your browser settings.</li>
+		<li>If you have an older version of browser that does not support 
+		JavasScript, please download the latest version of it.</li>
+		<li>To learn more on how you can enable javascript for your browser 
+		please click this link <a href="http://www.activatejavascript.org/" title="Click here to learn how to activate javascript" target="_blank">here</a></li>
+	</ul>
+	</div></noscript>
+			<!-- #BeginEditable "content" -->
+			<a name="top"></a><h1 class="Page_Title">The MEED Academy</h1>
+			<p>Today the MEED Program continues to provide academic support 
+			(e.g., program monitoring, mentoring, career mapping, etc.) for 
+			students in diverse technical certificate and degree programs, but 
+			has now returned to its original model of emphasizing training in 
+			advanced technology and has added an Academy in which students apply 
+			academic training in service and internship experiences and a 
+			Professional Studies Institute in which students master 
+			employability skills and receive professional skills training from 
+			experts in business and industry. Those who complete the MEED 
+			Academy will receive a MEED Endorsement, awarded to students who 
+			have not only completed Program components but who have mastered 
+			technical and professional skills and are recommended for 
+			competitive employment. </p>
+			<p>Originally MEED was an acronym for "Microcomputer Education for 
+			the Employment of the Disabled;" however, some of these terms now 
+			need to be updated, and we now refer to the MEED Program as a "Model 
+			for Enhanced Employment Development." This designation points to the 
+			Program's advanced approach to professional development and its 
+			potential to become a national model employment program for 
+			individuals with disabilities, and indeed anyone who wants a 
+			comprehensive and advanced professional skills training program. The 
+			MEED Program is now constructed upon the principles of universal 
+			design and therefore intended to be a program that is accessible to 
+			any adult looking for advanced employment/professional training 
+			experiences and opportunities. MEED-sponsored seminars and courses 
+			may be available to individuals without disabilities when space is 
+			available. The MEED Program works with a community network of 
+			agencies including the Business Leadership Network (BLN) and all 
+			South Florida AmeriCorps agencies and the Association of Agencies 
+			(AOA) to improve awareness of 
+			the abilities of persons with disabilities and develop a new climate 
+			of employment opportunities in our community. </p>
+			<p>The MEED Program works with a community network of agencies 
+			including the Business Leadership Network (BLN) and all South 
+			Florida AmeriCorps agencies and the Association of Agencies (AOA) to improve awareness of the 
+			abilities of persons with disabilities and develop a new climate of 
+			employment opportunities in our community.</p>
+			<ul class="ULMetro">
+				<li><a href="#eligibility">Eligibility</a></li>
+				<li><a href="#fees">Fees</a></li>
+				<li><a href="#referral">Referral and Academic Program Placement</a></li>
+				<li><a href="#advisement">Advisement, Registration and Accommodations</a></li>
+				<li><a href="#meed_academy_components">The MEED Academy Components</a></li>
+				<li><a href="#mentoring">Mentoring</a></li>
+				<li><a href="#service_learning">Service Learning</a></li>
+				<li><a href="#internships">Internships</a></li>
+				<li><a href="#service_learning">Special Activities</a></li>
+				<li><a href="#The_Professional_Studies_Institute">The Professional Studies Institute</a></li>
+				<li><a href="#Digital_Technology_and_the_Academy">Digital Technology and the Academy</a></li>
+				<li><a href="#Personal_Development_Recreation_and_Leisure">
+				Personal Development Recreation and Leisure</a></li>
+				<li><a href="#The_Employment_Assistance_Program">The Employment Assistance Program</a></li>
+				<li><a href="#The_MEED_Program_and_the_Community">The MEED Program and the Community</a></li>
+				<li><a href="#The_Business_Advisory_Council_BAC">The Business Advisory Council (BAC)</a></li>
+				<li><a href="#The_Association_of_Agencies_AOA">The Association of Agencies (AOA)</a></li>
+				<li><a href="#Commitment_to_the_Principles_of_Universal_Design">Commitment to the Principles of Universal Design</a></li>
+				<li><a href="#The_MEED_Staff">The MEED Staff</a></li>
+			</ul>
+			<a href="#top">Back to top</a>
+			<h2><a name="eligibility"></a>Eligibility</h2>
+			<p>Individuals who are eligible for the MEED Program must be (1) adults 
+			with a documented disability, who (2) function independently and are 
+			personally committed to obtaining employment with advanced technical 
+			training, and (3) are otherwise qualified for advanced vocational or 
+			college-level training (minimum achievement levels meet the entry 
+			requirements for academic programs - minimum 6th grade in reading, 
+			language, and mathematics for vocational programs; completion of all 
+			college prep courses for students in college-level programs), (4) 
+			agree to participate in at least one service learning course per 
+			academic year as well as internship experiences (paid or unpaid), 
+			and (5) agree to participate in professional and technological 
+			skills training, as well as campus and off-campus experiences and 
+			training supported or sponsored by the MEED Program until completion 
+			of a vocational or college credit certificate or an associate of 
+			science degree. Additionally, prospective students will be required 
+			to obtain background checks at their expense. Any psychological 
+			disorder that could affect performance in the work environment must 
+			be under professional management, and students may be asked to 
+			provide medical documentation to that effect. Individuals with 
+			disabilities who are not immediately eligible may enroll at the 
+			College through the ACCESS Department and register for those 
+			programs for which the student is eligible to receive skills 
+			training, adult basic education, a GED program, or Community 
+			Education courses that can prepare the student to eventually meet 
+			the eligibility requirements of the MEED Program.</p>
+			<p>Students for Whom the MEED Program May be Appropriate</p>
+			<ul class="ULMetro">
+				<li>Individuals who have been employed or have degrees but may need 
+				re-training due to an acquired disability</li>
+				<li>Individuals who are college-ready but may have been receiving 
+				Social Security benefits</li>
+				<li>Individuals who are college-ready but may be a returning veteran 
+				with a disability</li>
+				<li>Individuals with disabilities who are college-ready and who have 
+				demonstrated potential in advanced technology areas. </li>
+			</ul>
+			<a href="#top">Back to top</a>
+			<h2><a name="fees"></a>Fees</h2>
+			<p>Students who are eligible for the MEED Program must work with a 
+			referring agency to obtain all necessary financial aid necessary to 
+			complete an academic program unless they are able to find 
+			scholarships or other financial resources to meet course, books and 
+			materials as well as Program fees. The MEED Program does not process 
+			financial aid or financial aid documents unless a student needs an 
+			accommodation (e.g., a sign language interpreter) for any part of 
+			financial aid assistance through Miami Dade College. There is an 
+			additional fee attached to all courses for which students are 
+			registered. These fees are standard for one academic year but are 
+			subject to change with each new academic year. </p>
+			<p>Some College scholarships may be available to students, and 
+			eligibility must be processed through the financial aid office at 
+			the local campus.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="referral"></a>Referral and Academic Program Placement</h2>
+			<p>Once a student has been referred to the MEED Program by a referring 
+			agency (e.g., the Division of Vocational Rehabilitation, the 
+			Division of Blind Services, etc.), the MEED Program staff work with 
+			the referring agency to determine the most appropriate academic 
+			program. Students may register for courses on any of the eight 
+			campuses.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="advisement"></a>Advisement, Registration and Accommodations</h2>
+			<p>Students with disabilities first meet with an advisor from the 
+			ACCESS Department and receive assistance with registration and 
+			accommodations. The MEED Program will provide additional academic 
+			support services once a student has been determined eligible and has 
+			signed the MEED Program Agreement for Participation. This agreement 
+			allows the student to be fully aware of all the additional 
+			requirements that are above and beyond the academic program.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="meed_academy_components"></a>The MEED Academy Components</h2>
+			<p>The MEED Academy program includes the following components:</p>
+			<h2><a name="mentoring"></a>Mentoring</h2>
+			<p>Upon enrollment in the MEED Academy, students are assigned a mentor 
+			who will become very knowledgeable regarding the student’s abilities 
+			and assist the student to determine how these can be used to enhance 
+			success in the Program as well as improve personal employability and 
+			professionalism. Mentors will work with Program instructors, ACCESS 
+			resource advisors and the Internship Coordinator to ensure that the 
+			mentee is able to maintain progress and make personal growth.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="service_learning"></a>Service Learning</h2>
+			<p>Students will be registered through a campus ACCESS Advisor who will 
+			work with the student to determine accommodations, and during an 
+			academic year assist MEED students to register for at least one 
+			course that incorporates service learning as part of the curriculum. 
+			The MEED Program recognizes that service-learning experiences are 
+			uniquely valuable in motivating and preparing students with 
+			disabilities and broadens personal, social, and professional skills 
+			and abilities that can lead to important employment possibilities.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="internships"></a>Internships</h2>
+			<p>All MEED students will be required to participate in at least one 
+			unpaid internship whether or not it is part of their academic 
+			program; however, they will also be encouraged to participate in 
+			additional internships paid or unpaid if appropriate to the training 
+			needs of the student and the requirements of the academic program. 
+			Student will work with an Internship Coordinator who will develop 
+			the internship assignment with the student. The MEED Program is 
+			committed to the value of experience in fully preparing students 
+			with disabilities for competitive employment opportunities.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="special_activities"></a>Special Activities</h2>
+			<p>MEED Program students are encouraged to become active in campus and 
+			community organizations that address disability issues and promote 
+			awareness of the abilities of all individuals with disabilities. 
+			Students may join the Abilities Awareness &amp; Recognition Council 
+			(AARC) on the Wolfson Campus or another student organization at 
+			their respective campus, visit the Commission on Disability Issues 
+			(CODI) or the Association of Agencies Serving Persons with 
+			Disabilities (AASPD) or become a member of these. Each of these 
+			organizations provides opportunities to learn about diverse 
+			community resources and programs and allows the student to become 
+			engaged in community service projects.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="The_Professional_Studies_Institute"></a>The Professional Studies Institute</h2>
+			<p>Each semester, the MEED Academy will sponsor a Professional Skills 
+			Institute which can include a series of workshops or seminars 
+			sponsored by College faculty and staff or representatives from 
+			business and industry in the community. In some cases, the series 
+			will include courses for which the student will need to register.</p>			
+			<a href="#top">Back to top</a>
+			<h2><a name="Digital_Technology_and_the_Academy"></a>Digital Technology and the Academy</h2>						
+			<p>As part of the Professional Skills Institute, all MEED Academy 
+			students will be required to participate in a digital technology 
+			training program to integrate this technology within professional 
+			skills learned through the Professional Skills Institute (e.g., 
+			students will use iPods as essential devices for organizing 
+			schedules, contacts, and maintaining priorities as well as download 
+			informational and skill modules through iTunesU; all students will 
+			use MacBook laptops to create presentations and build portfolios as 
+			well as connect with internet resources related to career and 
+			employment opportunities and much more). Additionally, students will 
+			need to be trained to take advantage of the accessibility features 
+			of this technology as a means of improving professional performance 
+			for employment purposes.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="Personal_Development_Recreation_and_Leisure"></a>Personal Development, Recreation and Leisure</h2>
+			<p>All MEED Program students will be encouraged to participate in 
+			campus organizations on their respective campuses. This 
+			participation can be with either a disabilities or other student 
+			organization. </p>
+			<p>To assist students to balance the comprehensive training needs of 
+			the MEED Program with personal and social development issues that 
+			also support improved employability skills, students will also be 
+			assisted to develop a recreation/leisure component of their 
+			training. This component can include participation at Shake-a-Leg 
+			Miami, a recreation and leisure program sponsored by the City or 
+			County Parks and Recreation Department, or other special 
+			recreation/leisure experience sponsored by the Campus or College. 
+			All recreation and leisure components will be developed with a view 
+			to accessibility.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="The_Employment_Assistance_Program"></a>The Employment Assistance Program</h2>
+			<p>Enrolled students will be able to take advantage of the Employment 
+			Assistance staff who will meet with students from the beginning of 
+			their program to access employment and professional skills as well 
+			as broad assistance to address issues that affect employment. The 
+			MEED Program works closely with many business and industry leaders 
+			to continue to develop new opportunities for the highly trained MEED 
+			graduate.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="The_MEED_Program_and_the_Community"></a>The MEED Program and the Community</h2>
+			<p>As it prepares individuals with disabilities for competitive 
+			employment opportunities, the MEED Program will work closely with 
+			the community to build awareness of the abilities of individuals 
+			with disabilities and help create new employment opportunities 
+			whenever possible.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="The_Business_Advisory_Council_BAC"></a>The Business Advisory Council (BAC)</h2>
+			<p>Members of business and industry have been selected by Miami Dade 
+			College to advise the MEED Program staff and link program 
+			effectiveness to the needs of employers throughout the community.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="The_Association_of_Agencies_AOA"></a>The Association of Agencies (AOA)</h2>
+			<p>Each month the MEED Program hosts a meeting of over 35 different 
+			community agencies that either directly or indirectly provides 
+			services to persons with disabilities. Many of these agencies are 
+			committed to improving employment opportunities and sharing 
+			knowledge that also address diverse issues that can affect 
+			employment (e.g., transportation, housing, medical benefits, etc.). 
+			All South Florida AmeriCorps agencies are invited to participate and 
+			partner with these agencies and work with us to develop 
+			inclusiveness of opportunities in the South Florida market.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="Commitment_to_the_Principles_of_Universal_Design"></a>Commitment to the Principles of Universal Design</h2>
+			<p>The MEED Program and many similar programs are possible because of 
+			the federal, state, and local laws as well as College initiatives 
+			that promote accessibility. However, the MEED Program is also 
+			committed to the principles of universal design which address much 
+			broader issues that improve employment and other life opportunities 
+			by considering the diverse needs of individuals whether those 
+			diverse needs are a result of disability, age, or many other factors 
+			that affect full inclusion in life’s most important opportunities. 
+			Universal design principles promote not only accessibility for all 
+			but flexible and sustainable environments and experiences that 
+			significantly address diversity.</p>
+			<a href="#top">Back to top</a>
+			<h2><a name="The_MEED_Staff"></a>The MEED Staff</h2>
+			<p>The MEED staff includes a Director, an Academic Support 
+			Coordinator, an Employment Outreach Coordinator, an Employment 
+			Assistance Specialist, an Internship Coordinator, as well as 
+			technical support staff. The MEED staff work closely with the ACCESS 
+			Department to address accommodations and other accessibility issues 
+			and works closely with the MDC Employment and Career areas and many 
+			other Student Services Departments. Staff also collaborates with MDC 
+			faculty to develop special learning materials and resources. 
+			Eventually, it is proposed that the MEED Academy will sponsor 
+			selected courses that will be infused with additional training 
+			opportunities to further develop employment opportunities.</p>
+			<a href="#top">Back to top</a>
+			<div id="message"><a href="#top">Back to top</a></div>		
+			<!-- #EndEditable --></div>
+		<!-- End Content --></div>
+	<!-- End Page Content -->
+	<!-- Begin Footer -->
+	<div id="footer">
+		<p><a href="index.html">Home</a> | <a href="about.html">History</a> 
+		| <a href="americorps.html">Americorps</a> |
+		<a href="aoa.html">Association Of Agencies</a> |
+		<a href="contact.html">Contact</a> |
+		<a href="internship.html">Internships</a> |
+		<!-- <a href="employees/default.html">Employees</a> | 
+		<a href="academy.html">Meed Academy</a> |-->
+		<a href="JobAssistance.html">Meed Employment Assistance</a> |
+		<a href="staff.html">Staff</a> |
+		<a href="sitemap.html">Site Map</a> |
+		<a href="https://spsd.mdc.edu/cwg/access/wolfson/default.aspx" target="_blank">Sharepoint</a><br />
+		<a href="http://www.mdc.edu/wolfson/">Wolfson Campus Home Page</a> |
+		<a href="http://www.mdc.edu">Miami Dade College Home Page</a><br />
+		Copyright &copy; 
+		<script type="text/javascript">
+		var currentTime = new Date()
+		var year = currentTime.getFullYear()
+		document.write(year)
+		</script> 
+		Miami Dade College. All Rights Reserved.</p>
+	</div>
+	<!-- End Footer --></div>
+<!-- End Container -->
+
+<!-- The Theme Drawer -->
+<div id="Toolbar-Wrapper">
+	<div class="tab-toggler">Accessibility Toolbar <span id="arrow-down">&or;</span><span id="arrow-up">&and;</span></div>
+	<div id="toolbar-drawer">
+	<div id="toolbar-frame">
+		<ul>
+			<li><a href="javascript:void(0)" id="largeFont" class="vtip" title="Increase font size"><img src="images/Icons/zoom_in.png" alt=""/><br/>Incease Text</a></li>
+			<li><a href="javascript:void(0)" id="smallFont" class="vtip" title="Decrease font size"><img src="images/Icons/zoom_out.png" alt=""/><br/>Decrease Text</a></li>
+			<li><a href="javascript:void(0)" id="defaultFont" class="vtip" title="Reset font size"><img src="images/Icons/zoom_reset.png" alt="" /><br />Reset Text</a></li>
+			<li><a href="javascript:void(0)" id="hideText"class="vtip" title="Hide images and show text only"><img src="images/Icons/text.png" alt=""  /><br />Text Only</a></li>
+			<li><a href="javascript:void(0)" id="Contrast" class="vtip" title="Change screen color"><img src="images/Icons/contrast.png" alt="" /><br/>Contrast</a></li>
+			<li><a href="javascript:void(0)" id="ASL" class="vtip" title="ASL Video"><img src="images/Icons/film.png" alt="" /><br />ASL Video</a></li>
+		</ul>
+	</div><!-- end themes-frame -->
+	</div><!-- end #theme-drawer -->
+</div><!-- end #theme-wrapper -->
+
+<!-- Begin Contrast Window -->
+<div class="jqmWindow" id="dialog">
+
+<a href="#" class="jqmClose">Close</a>
+ <h2>Choose which contrast setting suits you.</h2>
+ <div id="ContrastWrapper">
+ <div class="ContrastDefault" onclick="chooseStyle('Master', 60)">A</div>
+ <div class="ContrastSetting2" onclick="chooseStyle('BlackYellowTxt',60)">B</div>
+<div class="ContrastSetting3" onclick="chooseStyle('YellowBlackTxt',60)">C</div>
+</div>
+
+<p>Did you know there is an add-on for Firefox that lets you choose your own preferred reading contrast setting? You should check out <a href="https://addons.mozilla.org/en-US/firefox/addon/readability/">Readability</a> for Firefox. Don't have Firefox installed? No problem, you can visit <a href="http://readable.tastefulwords.com/">Readable</a> and read any article from any website with your preferred saved settings.</p>
+</div><!-- End Contrast Window -->
+
+<!-- Start of ASL Window -->
+<div class="jqmWindow" id="dialog2" style="width:645px">
+<a href="#" class="jqmClose">Close</a>
+<h2>ASL Video Message</h2><p style="text-align:center">
+<object width="640" height="510"><param name="movie" value="http://www.youtube.com/v/quNnu5K8pcw?version=3&amp;hl=en_US&amp;rel=0&amp;hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/quNnu5K8pcw?version=3&amp;hl=en_US&amp;rel=0&amp;hd=1" type="application/x-shockwave-flash" width="640" height="510" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+</p></div>
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

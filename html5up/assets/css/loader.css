@@ -1,0 +1,43 @@
+/* Full Width Progress Bar */
+
+#loader { 
+	width:80%; 
+	height:5px; 
+	margin:10px auto;
+	background: transparent;
+    text-align: left;
+}
+
+.fullwidth .expand { 
+	width:80%; 
+	height:1px; 
+	margin:2px 0; 
+	/*background:#2187e7; 
+	position:absolute;
+	box-shadow:0px 0px 10px 1px rgba(0,198,255,0.7);*/
+    background: #FF5757;
+    position: absolute;
+    box-shadow:0 0 10px 1px rgba(255,87,87,0.7);
+    -moz-animation:fullexpand 15s ease-out;
+	-webkit-animation:fullexpand 15s ease-out;
+}
+
+/* Full Width Animation Bar */
+@-moz-keyframes fullexpand {
+    0%  { width: 0px;
+}
+
+80% {
+    width: 80%;
+}	
+}
+
+@-webkit-keyframes fullexpand {
+    0% {
+        width: 0px;
+    }
+
+    80% {
+        width: 80%;
+    };
+}

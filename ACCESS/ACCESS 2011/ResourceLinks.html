@@ -1,106 +1,132 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/UNIVERSALTEMPLATE.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/UNIVERSALTEMPLATE.dwt" codeOutsideHTMLIsLocked="false" -->
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="ACCESS assists students with disabilities to utilize resources, accommodations and the technologies that ensure equal access and equal educational opportunity at Miami Dade College" />
-<meta name="keywords" content="access, disability services, wolfson access, access department, " />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description"
+		content="ACCESS assists students with disabilities to utilize resources, accommodations and the technologies that ensure equal access and equal educational opportunity at Miami Dade College" />
+	<meta name="keywords" content="access, disability services, wolfson access, access department, " />
 
-<!--STYLE SHEETS GROUPS GOES HERE-->
-<link rel="stylesheet" type="text/css" href="css/UNIVERSALCSS.css" media="all"/>
-<link rel="alternate stylesheet" type="text/css" media="screen" title="UNIVERSALCSS_2" href="css/UNIVERSALCSS_2.CSS" /><!--Black bkgd yellow text-->
-<link rel="alternate stylesheet" type="text/css" media="screen" title="UNIVERSALCSS_3" href="css/UNIVERSALCSS_3.CSS" /><!--Yellow bkgd black text-->
+	<!--STYLE SHEETS GROUPS GOES HERE-->
+	<link rel="stylesheet" type="text/css" href="css/UNIVERSALCSS.css" media="all" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="UNIVERSALCSS_2"
+		href="css/UNIVERSALCSS_2.CSS" />
+	<!--Black bkgd yellow text-->
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="UNIVERSALCSS_3"
+		href="css/UNIVERSALCSS_3.CSS" />
+	<!--Yellow bkgd black text-->
 
-<!--JAVASCRIPTS GROUPS-->
-<script language="javascript" type="text/javascript" src="scripts/jquery-1.4.3.min.js"></script><!--DO NOT REMOVE THIS SCRIPT-->
-<script language="javascript" type="text/javascript" src="scripts/jqueryslidemenu.js"></script><!--HORIZONTAL MENU-->
-<script language="javascript" type="text/javascript" src="scripts/styleswitch.js"></script><!--CONTRAST CHANGER SCRIPT-->
-<script language="javascript" type="text/javascript" src="scripts/jquery.orbit.min.js"></script><!--JQUERY SLIDESHOW-->
-<script language="javascript" type="text/javascript" src="scripts/jquery.orbit.js"></script><!--JQUERY SLIDESHOW CONFIG-->
-<script language="javascript1.1" type="text/javascript" src="scripts/warning.js"></script><!--IE UPGRADE NOTIFIER -->
-<!-- Run the jQuery slideshow plugin -->
-<script type="text/javascript">
-			$(window).load(function() {
-				$('#featured').orbit({
-					'bullets': true,
-					'timer' : true,
-					'animation' : 'fade'
-				});
+	<!--JAVASCRIPTS GROUPS-->
+	<script language="javascript" type="text/javascript" src="scripts/jquery-1.4.3.min.js"></script>
+	<!--DO NOT REMOVE THIS SCRIPT-->
+	<script language="javascript" type="text/javascript" src="scripts/jqueryslidemenu.js"></script>
+	<!--HORIZONTAL MENU-->
+	<script language="javascript" type="text/javascript" src="scripts/styleswitch.js"></script>
+	<!--CONTRAST CHANGER SCRIPT-->
+	<script language="javascript" type="text/javascript" src="scripts/jquery.orbit.min.js"></script>
+	<!--JQUERY SLIDESHOW-->
+	<script language="javascript" type="text/javascript" src="scripts/jquery.orbit.js"></script>
+	<!--JQUERY SLIDESHOW CONFIG-->
+	<script language="javascript1.1" type="text/javascript" src="scripts/warning.js"></script>
+	<!--IE UPGRADE NOTIFIER -->
+	<!-- Run the jQuery slideshow plugin -->
+	<script type="text/javascript">
+		$(window).load(function () {
+			$('#featured').orbit({
+				'bullets': true,
+				'timer': true,
+				'animation': 'fade'
 			});
-</script>
-        
-<!--jQuery behavior for the ACCESSIBLE TOOLBAR-->
-<script type="text/javascript"> 
-$(document).ready(function(){
-	
-	//Adjust panel height
-	$.fn.adjustPanel = function(){ 
-		$(this).find("ul, .subpanel").css({ 'height' : 'auto'}); //Reset subpanel and ul height
-		
-		var windowHeight = $(window).height(); //Get the height of the browser viewport
-		var panelsub = $(this).find(".subpanel").height(); //Get the height of subpanel	
-		var panelAdjust = windowHeight - 100; //Viewport height - 100px (Sets max height of subpanel)
-		var ulAdjust =  panelAdjust - 25; //Calculate ul size after adjusting sub-panel (27px is the height of the base panel)
-		
-		if ( panelsub >= panelAdjust ) {	 //If subpanel is taller than max height...
-			$(this).find(".subpanel").css({ 'height' : panelAdjust }); //Adjust subpanel to max height
-			$(this).find("ul").css({ 'height' : ulAdjust}); //Adjust subpanel ul to new size
-		}
-		else if ( panelsub < panelAdjust ) { //If subpanel is smaller than max height...
-			$(this).find("ul").css({ 'height' : 'auto'}); //Set subpanel ul to auto (default size)
-		}
-	};
-	
-	//Execute function on load
-	$("#chatpanel").adjustPanel(); //Run the adjustPanel function on #chatpanel
-	$("#alertpanel").adjustPanel(); //Run the adjustPanel function on #alertpanel
-	
-	//Each time the viewport is adjusted/resized, execute the function
-	$(window).resize(function () { 
-		$("#chatpanel").adjustPanel();
-		$("#alertpanel").adjustPanel();
-	});
-	
-	//Click event on Chat Panel + Alert Panel	
-	$("#chatpanel a:first, #alertpanel a:first").click(function() { //If clicked on the first link of #chatpanel and #alertpanel...
-		if($(this).next(".subpanel").is(':visible')){ //If subpanel is already active...
-			$(this).next(".subpanel").hide(); //Hide active subpanel
-			$("#footpanel li a").removeClass('active'); //Remove active class on the subpanel trigger
-		}
-		else { //if subpanel is not active...
-			$(".subpanel").hide(); //Hide all subpanels
-			$(this).next(".subpanel").toggle(); //Toggle the subpanel to make active
-			$("#footpanel li a").removeClass('active'); //Remove active class on all subpanel trigger
-			$(this).toggleClass('active'); //Toggle the active class on the subpanel trigger
-		}
-		return false; //Prevent browser jump to link anchor
-	});
-	
-	//Click event outside of subpanel
-	$(document).click(function() { //Click anywhere and...
-		$(".subpanel").hide(); //hide subpanel
-		$("#footpanel li a").removeClass('active'); //remove active class on subpanel trigger
-	});
-	$('.subpanel ul').click(function(e) { 
-		e.stopPropagation(); //Prevents the subpanel ul from closing on click
-	});
-	
-	//Delete icons on Alert Panel
-	$("#alertpanel li").hover(function() {
-		$(this).find("a.delete").css({'visibility': 'visible'}); //Show delete icon on hover
-	},function() {
-		$(this).find("a.delete").css({'visibility': 'hidden'}); //Hide delete icon on hover out
-	});
+		});
+	</script>
+
+	<!--jQuery behavior for the ACCESSIBLE TOOLBAR-->
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			//Adjust panel height
+			$.fn.adjustPanel = function () {
+				$(this).find("ul, .subpanel").css({
+					'height': 'auto'
+				}); //Reset subpanel and ul height
+
+				var windowHeight = $(window).height(); //Get the height of the browser viewport
+				var panelsub = $(this).find(".subpanel").height(); //Get the height of subpanel	
+				var panelAdjust = windowHeight - 100; //Viewport height - 100px (Sets max height of subpanel)
+				var ulAdjust = panelAdjust -
+				25; //Calculate ul size after adjusting sub-panel (27px is the height of the base panel)
+
+				if (panelsub >= panelAdjust) { //If subpanel is taller than max height...
+					$(this).find(".subpanel").css({
+						'height': panelAdjust
+					}); //Adjust subpanel to max height
+					$(this).find("ul").css({
+						'height': ulAdjust
+					}); //Adjust subpanel ul to new size
+				} else if (panelsub < panelAdjust) { //If subpanel is smaller than max height...
+					$(this).find("ul").css({
+						'height': 'auto'
+					}); //Set subpanel ul to auto (default size)
+				}
+			};
+
+			//Execute function on load
+			$("#chatpanel").adjustPanel(); //Run the adjustPanel function on #chatpanel
+			$("#alertpanel").adjustPanel(); //Run the adjustPanel function on #alertpanel
+
+			//Each time the viewport is adjusted/resized, execute the function
+			$(window).resize(function () {
+				$("#chatpanel").adjustPanel();
+				$("#alertpanel").adjustPanel();
+			});
+
+			//Click event on Chat Panel + Alert Panel	
+			$("#chatpanel a:first, #alertpanel a:first").click(
+		function () { //If clicked on the first link of #chatpanel and #alertpanel...
+				if ($(this).next(".subpanel").is(':visible')) { //If subpanel is already active...
+					$(this).next(".subpanel").hide(); //Hide active subpanel
+					$("#footpanel li a").removeClass('active'); //Remove active class on the subpanel trigger
+				} else { //if subpanel is not active...
+					$(".subpanel").hide(); //Hide all subpanels
+					$(this).next(".subpanel").toggle(); //Toggle the subpanel to make active
+					$("#footpanel li a").removeClass('active'); //Remove active class on all subpanel trigger
+					$(this).toggleClass('active'); //Toggle the active class on the subpanel trigger
+				}
+				return false; //Prevent browser jump to link anchor
+			});
+
+			//Click event outside of subpanel
+			$(document).click(function () { //Click anywhere and...
+				$(".subpanel").hide(); //hide subpanel
+				$("#footpanel li a").removeClass('active'); //remove active class on subpanel trigger
+			});
+			$('.subpanel ul').click(function (e) {
+				e.stopPropagation(); //Prevents the subpanel ul from closing on click
+			});
+
+			//Delete icons on Alert Panel
+			$("#alertpanel li").hover(function () {
+				$(this).find("a.delete").css({
+					'visibility': 'visible'
+				}); //Show delete icon on hover
+			}, function () {
+				$(this).find("a.delete").css({
+					'visibility': 'hidden'
+				}); //Hide delete icon on hover out
+			});
 
 
 
 
 
-	
-});
-</script>
 
-<!--Image Hide Script-->
-<!--<script type="text/javascript">
+		});
+	</script>
+
+	<!--Image Hide Script-->
+	<!--<script type="text/javascript">
 
     function toggle_visibility(id) {
        var e = document.getElementById(id);
@@ -112,520 +138,637 @@ $(document).ready(function(){
 
 </script>//-->
 
-<script>
+	<script>
+		function changeme(id, action) {
+			if (action == "hide") {
+				document.getElementById(id).style.display = "none";
+			} else {
+				document.getElementById(id).style.display = "block";
+			}
+		}
+	</script>
 
-function changeme(id, action) {
-       if (action=="hide") {
-            document.getElementById(id).style.display = "none";
-       } else {
-            document.getElementById(id).style.display = "block";
-       }
-}
+	<!--Text Resizer-->
+	<script type="text/javascript">
+		// Document Text Sizer
 
-</script>
+		//Specify affected tags. Add or remove from list:
+		var tgs = new Array('div', 'td');
 
-<!--Text Resizer-->
-<script type="text/javascript">
-// Document Text Sizer
+		//Specify spectrum of different font sizes:
+		var szs = new Array('xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large');
+		var startSz = 2;
 
-//Specify affected tags. Add or remove from list:
-var tgs = new Array( 'div','td');
+		function ts(trgt, inc) {
+			if (!document.getElementById) return
+			var d = document,
+				cEl = null,
+				sz = startSz,
+				i, j, cTags;
 
-//Specify spectrum of different font sizes:
-var szs = new Array( 'xx-small','x-small','small','medium','large','x-large','xx-large' );
-var startSz = 2;
+			sz += inc;
+			if (sz < 0) sz = 0;
+			if (sz > 6) sz = 6;
+			startSz = sz;
 
-function ts( trgt,inc ) {
-	if (!document.getElementById) return
-	var d = document,cEl = null,sz = startSz,i,j,cTags;
-	
-	sz += inc;
-	if ( sz < 0 ) sz = 0;
-	if ( sz > 6 ) sz = 6;
-	startSz = sz;
-		
-	if ( !( cEl = d.getElementById( trgt ) ) ) cEl = d.getElementsByTagName( trgt )[ 0 ];
+			if (!(cEl = d.getElementById(trgt))) cEl = d.getElementsByTagName(trgt)[0];
 
-	cEl.style.fontSize = szs[ sz ];
+			cEl.style.fontSize = szs[sz];
 
-	for ( i = 0 ; i < tgs.length ; i++ ) {
-		cTags = cEl.getElementsByTagName( tgs[ i ] );
-		for ( j = 0 ; j < cTags.length ; j++ ) cTags[ j ].style.fontSize = szs[ sz ];
-	}
-}
-</script>
+			for (i = 0; i < tgs.length; i++) {
+				cTags = cEl.getElementsByTagName(tgs[i]);
+				for (j = 0; j < cTags.length; j++) cTags[j].style.fontSize = szs[sz];
+			}
+		}
+	</script>
 
-<!--jQuery inline popup window-->
-<script>
-$(document).ready(function() {	
-
-
-	//select all the a tag with name equal to modal
-	$('a[name=modal]').click(function(e) {
-		//Cancel the link behavior
-		e.preventDefault();
-		//Get the A tag
-		var id = $(this).attr('href');
-	
-		//Get the screen height and width
-		var maskHeight = $(document).height();
-		var maskWidth = $(window).width();
-	
-		//Set height and width to mask to fill up the whole screen
-		$('#mask').css({'width':maskWidth,'height':maskHeight});
-		
-		//transition effect		
-		$('#mask').fadeIn(1000);	
-		$('#mask').fadeTo("fast",0.8);	
-	
-		//Get the window height and width
-		var winH = $(window).height();
-		var winW = $(window).width();
-              
-		//Set the popup window to center
-		
-		//$(id).css('top', (winH/2-$(id).height()) + $(window).scrollTop());
-		//$(id).css('left', (winW/2-$(id).width()/2) + $(window).scrollLeft());
-		
-		$(id).css('top', Math.max(winH/2-$(id).height()/2 + $(window).scrollTop(),0));
-		$(id).css('left', Math.max(winW/2-$(id).width()/2 + $(window).scrollLeft(),0)); 
-		
-		$(window).bind('resize', function(e) {
-		var maskHeight = $(document).height();
-		var maskWidth = $(window).width();
-
-		//Set height and width to mask to fill up the whole screen
-		$('#modalMask').css({'width':maskWidth,'height':maskHeight});
-		}); 
-	
-		//transition effect
-		$(id).fadeIn(2000); 
-	
-	});
-	
-	//if close button is clicked
-	$('.window .close').click(function (e) {
-		//Cancel the link behavior
-		e.preventDefault();
-		$('#mask, .window').hide();
-	});		
-	
-	//if mask is clicked
-	$('#mask').click(function () {
-		$(this).hide();
-		$('.window').hide();
-	});			
-	
-});
-
-</script>
-
-<!--Clears out the text on the search form when user click on it-->
-<script type="text/javascript">
-function clickclear(thisfield, defaulttext) {
-if (thisfield.value == defaulttext) {
-thisfield.value = "";
-}
-}
-function clickrecall(thisfield, defaulttext) {
-if (thisfield.value == "") {
-thisfield.value = defaulttext;
-}
-}
-</script>
-<script type="text/javascript">
-$(document).ready(function(){
-	
-//Set default open/close settings
-$('.acc_container').hide(); //Hide/close all containers
-$('.acc_trigger:first').addClass('active').next().show(); //Add "active" class to first trigger, then show/open the immediate next container
-
-//On Click
-$('.acc_trigger').click(function(){
-	if( $(this).next().is(':hidden') ) { //If immediate next container is closed...
-		$('.acc_trigger').removeClass('active').next().slideUp(); //Remove all .acc_trigger classes and slide up the immediate next container
-		$(this).toggleClass('active').next().slideDown(); //Add .acc_trigger class to clicked trigger and slide down the immediate next container
-	}
-	return false; //Prevent the browser jump to the link anchor
-});
-
-});
-</script>
+	<!--jQuery inline popup window-->
+	<script>
+		$(document).ready(function () {
 
 
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Resource Links</title>
+			//select all the a tag with name equal to modal
+			$('a[name=modal]').click(function (e) {
+				//Cancel the link behavior
+				e.preventDefault();
+				//Get the A tag
+				var id = $(this).attr('href');
 
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+				//Get the screen height and width
+				var maskHeight = $(document).height();
+				var maskWidth = $(window).width();
+
+				//Set height and width to mask to fill up the whole screen
+				$('#mask').css({
+					'width': maskWidth,
+					'height': maskHeight
+				});
+
+				//transition effect		
+				$('#mask').fadeIn(1000);
+				$('#mask').fadeTo("fast", 0.8);
+
+				//Get the window height and width
+				var winH = $(window).height();
+				var winW = $(window).width();
+
+				//Set the popup window to center
+
+				//$(id).css('top', (winH/2-$(id).height()) + $(window).scrollTop());
+				//$(id).css('left', (winW/2-$(id).width()/2) + $(window).scrollLeft());
+
+				$(id).css('top', Math.max(winH / 2 - $(id).height() / 2 + $(window).scrollTop(), 0));
+				$(id).css('left', Math.max(winW / 2 - $(id).width() / 2 + $(window).scrollLeft(), 0));
+
+				$(window).bind('resize', function (e) {
+					var maskHeight = $(document).height();
+					var maskWidth = $(window).width();
+
+					//Set height and width to mask to fill up the whole screen
+					$('#modalMask').css({
+						'width': maskWidth,
+						'height': maskHeight
+					});
+				});
+
+				//transition effect
+				$(id).fadeIn(2000);
+
+			});
+
+			//if close button is clicked
+			$('.window .close').click(function (e) {
+				//Cancel the link behavior
+				e.preventDefault();
+				$('#mask, .window').hide();
+			});
+
+			//if mask is clicked
+			$('#mask').click(function () {
+				$(this).hide();
+				$('.window').hide();
+			});
+
+		});
+	</script>
+
+	<!--Clears out the text on the search form when user click on it-->
+	<script type="text/javascript">
+		function clickclear(thisfield, defaulttext) {
+			if (thisfield.value == defaulttext) {
+				thisfield.value = "";
+			}
+		}
+
+		function clickrecall(thisfield, defaulttext) {
+			if (thisfield.value == "") {
+				thisfield.value = defaulttext;
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			//Set default open/close settings
+			$('.acc_container').hide(); //Hide/close all containers
+			$('.acc_trigger:first').addClass('active').next()
+		.show(); //Add "active" class to first trigger, then show/open the immediate next container
+
+			//On Click
+			$('.acc_trigger').click(function () {
+				if ($(this).next().is(':hidden')) { //If immediate next container is closed...
+					$('.acc_trigger').removeClass('active').next()
+				.slideUp(); //Remove all .acc_trigger classes and slide up the immediate next container
+					$(this).toggleClass('active').next()
+				.slideDown(); //Add .acc_trigger class to clicked trigger and slide down the immediate next container
+				}
+				return false; //Prevent the browser jump to the link anchor
+			});
+
+		});
+	</script>
+
+
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>Resource Links</title>
+
+	<!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="head" -->
+	<!-- InstanceEndEditable -->
 </head>
 
 
 <body>
-<!--[if lte IE 7]><script type="text/javascript" language="javascript">window.onload=function(){e("ie6/")}</script><![endif]-->
-<!--TOP SECTION TABLE-->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#003366">
-  <tr >
-    <td width="31%"><img src="img/logo_73.gif" name="MDClogo" width="320" height="73" align="left" id="MDClogo"/></td>
-	<td width="69%">
-    <!--STUDENT LIFE FLASH IMAGE-->
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="73" align="right" id="FlashID"><param name="movie" value="img/student.swf" /><param name="quality" value="high" /><param name="wmode" value="opaque" /><param name="swfversion" value="6.0.65.0" /><!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don't want users to see the prompt. --><param name="expressinstall" value="scripts/expressInstall.swf" /><!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. --><!--[if !IE]>--><object data="img/student.swf" type="application/x-shockwave-flash" width="400" height="73" align="right"><!--<![endif]--><param name="quality" value="high" /><param name="wmode" value="opaque" /><param name="swfversion" value="6.0.65.0" /><param name="expressinstall" value="scripts/expressInstall.swf" /><!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --><div><h4>Content on this page requires a newer version of Adobe Flash Player.</h4><p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p><!--[if !IE]>--></object><!--<![endif]--></object>
-    <!--END OF FLASH IMAGE CODE-->
-  </td>
-  </tr>
-  <tr>
-    <td colspan="2" bgcolor="#0066FF">
-    <!--Horizontal Navigation starts here-->
-<div class="jqueryslidemenu" id="myslidemenu">        
-        <ul>
-       		 <li><a href="http://www.mdc.edu/main/">MDC Home</a></li></ul>
+	<!--[if lte IE 7]><script type="text/javascript" language="javascript">window.onload=function(){e("ie6/")}</script><![endif]-->
+	<!--TOP SECTION TABLE-->
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#003366">
+		<tr>
+			<td width="31%"><img src="img/logo_73.gif" name="MDClogo" width="320" height="73" align="left" id="MDClogo" />
+			</td>
+			<td width="69%">
+				<!--STUDENT LIFE FLASH IMAGE-->
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="73" align="right" id="FlashID">
+					<param name="movie" value="img/student.swf" />
+					<param name="quality" value="high" />
+					<param name="wmode" value="opaque" />
+					<param name="swfversion" value="6.0.65.0" />
+					<!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don't want users to see the prompt. -->
+					<param name="expressinstall" value="scripts/expressInstall.swf" />
+					<!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+					<!--[if !IE]>--><object data="img/student.swf" type="application/x-shockwave-flash" width="400" height="73"
+						align="right">
+						<!--<![endif]-->
+						<param name="quality" value="high" />
+						<param name="wmode" value="opaque" />
+						<param name="swfversion" value="6.0.65.0" />
+						<param name="expressinstall" value="scripts/expressInstall.swf" />
+						<!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+						<div>
+							<h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+							<p><a href="http://www.adobe.com/go/getflashplayer"><img
+										src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+										alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+							<!--[if !IE]>-->
+					</object>
+					<!--<![endif]--></object>
+				<!--END OF FLASH IMAGE CODE-->
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" bgcolor="#0066FF">
+				<!--Horizontal Navigation starts here-->
+				<div class="jqueryslidemenu" id="myslidemenu">
+					<ul>
+						<li><a href="http://www.mdc.edu/main/">MDC Home</a></li>
+					</ul>
 
-		<ul>
-			<li><a href="">Students</a>
-		
-        		<ul>
+					<ul>
+						<li><a href="">Students</a>
 
-					<li><a href="http://www.mdc.edu/current/">Current</a></li>
-					<li><a href="http://www.mdc.edu/prospective/">Prospective &raquo;</a>
-						<ul>
-							<li><a href="https://sisvsr.mdc.edu/admission2/default.aspx">Admission</a></li>
-							<li><a href="http://www.mdc.edu/catalog/">College Catalog</a></li>
-							<li><a href="http://www.mdc.edu/course_catalog/">Course Catalog</a></li>
+							<ul>
 
-           					<li><a href="https://sisvsr.mdc.edu/catalog/">Course by discipline</a></li>
-							<li><a href="http://www.mdc.edu/ce/">Non-Credit Courses</a></li>
-							<li><a href="http://www.mdc.edu/ce/">Non-Credit Registration</a></li>
-							<li><a href="http://www.mdc.edu/testing_information/testmain.asp">Placement Testing</a></li>
-							<li><a href="http://www.mdc.edu/tuition/">Tuition and Fees</a></li>
-							<li><a href="http://www.mdc.edu/financial_aid/">Financial Aid</a></li>
+								<li><a href="http://www.mdc.edu/current/">Current</a></li>
+								<li><a href="http://www.mdc.edu/prospective/">Prospective &raquo;</a>
+									<ul>
+										<li><a href="https://sisvsr.mdc.edu/admission2/default.aspx">Admission</a></li>
+										<li><a href="http://www.mdc.edu/catalog/">College Catalog</a></li>
+										<li><a href="http://www.mdc.edu/course_catalog/">Course Catalog</a></li>
 
-						</ul>	
-                  </li>
-				</ul>
-         	</li>
+										<li><a href="https://sisvsr.mdc.edu/catalog/">Course by discipline</a></li>
+										<li><a href="http://www.mdc.edu/ce/">Non-Credit Courses</a></li>
+										<li><a href="http://www.mdc.edu/ce/">Non-Credit Registration</a></li>
+										<li><a href="http://www.mdc.edu/testing_information/testmain.asp">Placement Testing</a></li>
+										<li><a href="http://www.mdc.edu/tuition/">Tuition and Fees</a></li>
+										<li><a href="http://www.mdc.edu/financial_aid/">Financial Aid</a></li>
 
-<li><a href="https://sisvsr.mdc.edu/ps/sheet.aspx">Programs</a>
-	<ul>
-		<li><a href="https://sisvsr.mdc.edu/ps/sheet.aspx">Credit Programs</a></li>
-    	<li><a href="" >Distance Education &raquo;</a>
+									</ul>
+								</li>
+							</ul>
+						</li>
 
-    		<ul>
-            	<li><a href="http://www.vcollege.org/portal/index.aspx" target="_blank">Virtual College</a></li>
-            	<li><a href="http://virtual.mdc.edu/portal/opencollege.aspx" target="_blank">Open College</a></li>
-            	<li><a href="http://www.mdc.edu/kendall/independent/" target="_blank">Independant Studies</a></li>
-            </ul>
-        </li>
-		<li><a href="http://www.mdc.edu/ce/" target="_new">Non-Credit Programs</a></li>
+						<li><a href="https://sisvsr.mdc.edu/ps/sheet.aspx">Programs</a>
+							<ul>
+								<li><a href="https://sisvsr.mdc.edu/ps/sheet.aspx">Credit Programs</a></li>
+								<li><a href="">Distance Education &raquo;</a>
 
-		<li><a href="http://www.mdc.edu/honorsCollege/" target="_blank">Honors College</a></li>
-	</ul>
-</li>
+									<ul>
+										<li><a href="http://www.vcollege.org/portal/index.aspx" target="_blank">Virtual College</a></li>
+										<li><a href="http://virtual.mdc.edu/portal/opencollege.aspx" target="_blank">Open College</a></li>
+										<li><a href="http://www.mdc.edu/kendall/independent/" target="_blank">Independant Studies</a></li>
+									</ul>
+								</li>
+								<li><a href="http://www.mdc.edu/ce/" target="_new">Non-Credit Programs</a></li>
 
-<li><a href="http://mdcalumni.com/">Alumni Foundation</a></li>
+								<li><a href="http://www.mdc.edu/honorsCollege/" target="_blank">Honors College</a></li>
+							</ul>
+						</li>
 
-<li><a href="https://www.mdc.edu/employees">Employees</a></li>
+						<li><a href="http://mdcalumni.com/">Alumni Foundation</a></li>
 
-<li><a href="http://www.mdc.edu/main/retirees/">Retirees</a></li>
+						<li><a href="https://www.mdc.edu/employees">Employees</a></li>
 
-<li><a href="http://www.mdc.edu/main/campus_finder/default.asp">Campuses</a>
+						<li><a href="http://www.mdc.edu/main/retirees/">Retirees</a></li>
 
-	<ul>
-		<li><a href="http://www.mdc.edu/hialeah/">Hialeah Campus</a></li>
-		<li><a href="http://www.mdc.edu/homestead/">Homestead Campus</a></li>
-		<li><a href="http://www.mdc.edu/iac/">InterAmerican Campus</a></li>
-        <li><a href="http://www.mdc.edu/kendall/">Kendall Campus</a></li>
-        <li><a href="http://www.mdc.edu/medical/">Medical Center Campus</a></li>
+						<li><a href="http://www.mdc.edu/main/campus_finder/default.asp">Campuses</a>
 
-        <li><a href="http://www.mdc.edu/north/">North Campus</a></li>
-        <li><a href="http://www.mdc.edu/west/">West Campus</a></li>
-        <li><a href="http://www.mdc.edu/wolfson/">Wolfson Campus</a></li>
-	</ul>
-</li>
+							<ul>
+								<li><a href="http://www.mdc.edu/hialeah/">Hialeah Campus</a></li>
+								<li><a href="http://www.mdc.edu/homestead/">Homestead Campus</a></li>
+								<li><a href="http://www.mdc.edu/iac/">InterAmerican Campus</a></li>
+								<li><a href="http://www.mdc.edu/kendall/">Kendall Campus</a></li>
+								<li><a href="http://www.mdc.edu/medical/">Medical Center Campus</a></li>
 
-<li><a href="http://www.mdc.edu/askmdc/" target="_blank">Help/Ask MDC</a></li>
+								<li><a href="http://www.mdc.edu/north/">North Campus</a></li>
+								<li><a href="http://www.mdc.edu/west/">West Campus</a></li>
+								<li><a href="http://www.mdc.edu/wolfson/">Wolfson Campus</a></li>
+							</ul>
+						</li>
 
-<li><a href="http://www.mdc.edu/main/safety/" target="_blank">Public Safety</a></li>
+						<li><a href="http://www.mdc.edu/askmdc/" target="_blank">Help/Ask MDC</a></li>
 
-</ul>
-</div>
-	<!--END OF HORIZONTAL NAV-->
-    </td>
-</table>
-<!--END OF TOP SECTION-->
+						<li><a href="http://www.mdc.edu/main/safety/" target="_blank">Public Safety</a></li>
 
-<!--START OF BODY SECTION TABLE-->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0">
-	<tr valign="top">
-    	<td width="160px" class="bluebackground">
-        	<!--UL LEFT SIDEBAR NAVBAR-->
-			<div id="content_1" class="content">
-        	<ul>
-            	<li><a href="Home.html">ACCESS Home</a></li>
-            	<li><a href="javascript:void()">ACCESS-MEED</a></li>
-            	<li><a href="AOA.html">AOA</a></li>
-                <li><a href="MDTS.html">MDTS</a></li>
-<!--	     		<li><a href="javascript:void()">Staff</a></li>
--->            	<li><a href="StudentInfo.html">Student Information</a></li>
-                <li><a href="Location.html">Location/Directions</a></li>
-                <li><a href="WBG.html">William Berger<br /> Gallery</a></li>
-                <li><a href="ResourceLinks.html">Resource Links</a></li>
-<!--                <li><a href="AdvisorTools.html">Resource Advisor Tools</a></li>-->
-			</ul>  
-          </div>
-            <!--END OF UL SIDEBAR BAR-->
-        </td>
-        <td class="TDBODYCONTENT">
-        
-        <!--START OF BODY CONTENTS-->
-        <!-- InstanceBeginEditable name="BODY CONTENTS" -->
-<h1>Resource Links</h1>
-<h2 id="JobCategory">Student Resource Links</h2>
-<p>The Links below are categorized for each type of </p>
-<div class="container">
+					</ul>
+				</div>
+				<!--END OF HORIZONTAL NAV-->
+			</td>
+	</table>
+	<!--END OF TOP SECTION-->
 
-	<h2 class="acc_trigger"><a href="#">ACCESS FORMS</a></h2>
-	<div class="acc_container">
-		<div class="block">
-<p><a href="downloads/Accomodations%20Agreement%20Form.pdf" title="Accomodations Form" target="_blank">Accomodations Form</a></p>
-<p><a href="downloads/eligibility.pdf" title="Eligibility Policies and Procedures" target="_blank">Eligibility Policies and Procedures</a></p>
-<p><a href="downloads/ExternalInfoRelease.pdf" title="External Release of Information" target="_blank">External Release of Information</a></p>
-<p><a href="downloads/privacy.pdf" title="Privacy Policy &amp; Emergency Contact Information" target="_blank">Privacy Policy &amp; Emergency Contact Information</a></p>
-<p><a href="downloads/Testing%20Form.pdf" title="Testing Form" target="_blank">Testing Form</a></p>
+	<!--START OF BODY SECTION TABLE-->
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0">
+		<tr valign="top">
+			<td width="160px" class="bluebackground">
+				<!--UL LEFT SIDEBAR NAVBAR-->
+				<div id="content_1" class="content">
+					<ul>
+						<li><a href="index.html">ACCESS Home</a></li>
+						<li><a href="javascript:void()">ACCESS-MEED</a></li>
+						<li><a href="aoa.html">AOA</a></li>
+						<li><a href="mdts.html">MDTS</a></li>
+						<li><a href="studentinfo.html">Student Information</a></li>
+						<li><a href="location.html">Location/Directions</a></li>
+						<li><a href="wbg.html">William Berger<br /> Gallery</a></li>
+						<li><a href="resourcelinks.html">Resource Links</a></li>
+					</ul>
+				</div>
+				<!--END OF UL SIDEBAR BAR-->
+			</td>
+			<td class="TDBODYCONTENT">
 
-		</div>
+				<!--START OF BODY CONTENTS-->
+				<!-- InstanceBeginEditable name="BODY CONTENTS" -->
+				<h1>Resource Links</h1>
+				<h2 id="JobCategory">Student Resource Links</h2>
+				<p>The Links below are categorized for each type of </p>
+				<div class="container">
+
+					<h2 class="acc_trigger"><a href="#">ACCESS FORMS</a></h2>
+					<div class="acc_container">
+						<div class="block">
+							<p><a href="downloads/Accomodations%20Agreement%20Form.pdf" title="Accomodations Form"
+									target="_blank">Accomodations Form</a></p>
+							<p><a href="downloads/eligibility.pdf" title="Eligibility Policies and Procedures"
+									target="_blank">Eligibility Policies and Procedures</a></p>
+							<p><a href="downloads/ExternalInfoRelease.pdf" title="External Release of Information"
+									target="_blank">External Release of Information</a></p>
+							<p><a href="downloads/privacy.pdf" title="Privacy Policy &amp; Emergency Contact Information"
+									target="_blank">Privacy Policy &amp; Emergency Contact Information</a></p>
+							<p><a href="downloads/Testing%20Form.pdf" title="Testing Form" target="_blank">Testing Form</a></p>
+
+						</div>
+					</div>
+
+					<h2 class="acc_trigger"><a href="#">Accessibility Projects</a></h2>
+					<div class="acc_container">
+						<div class="block">
+							<p><a href="http://www.htctu.net/publications/guidelines/distance_ed/disted.htm"
+									title="Distance Education: Access Guidelines for Students with Disabilities" target="_blank">Distance
+									Education: Access Guidelines for Students with Disabilities</a></p>
+							<p><a href="http://accessproject.colostate.edu/"
+									title="ACCESS to Postsecondary Education through Universal Design for Learning" target="_blank">ACCESS
+									to Postsecondary Education through Universal Design for Learning</a></p>
+							<p><a href="http://www.jimthatcher.com/sidebyside.htm" title="Comparison WCAG and Section 508 Web"
+									target="_blank">Comparison WCAG and Section 508 Web</a></p>
+
+						</div>
+					</div>
+
+					<h2 class="acc_trigger"><a href="#">Blind / Low Vision Links</a></h2>
+
+					<div class="acc_container">
+						<div class="block">
+							<p><a href="http://clickspeak.clcworld.net/index.html"
+									title="CLiCk, Speak: A Talking Extension for Firefox" target="_blank">CLiCk, Speak Update</a></p>
+							<p><a href="http://www.tsbvi.edu/Outreach/seehear/summer02/books.htm" title="Accessible Books"
+									target="_blank">Accessible Books</a></p>
+							<p><a href="http://www.audio-studio.org/ " title="Audio Studio for the Reading Impaired"
+									target="_blank">Audio Studio for the Reading Impaired</a></p>
+							<p><a href="http://en.wikibooks.org/wiki/Main_Page"
+									title="Wikibooks, the open-content textbooks collection that anyone can edit."
+									target="_blank">Wikibooks</a></p>
+							<p><a href="http://spot.colorado.edu/~dubin/bookmarks/b/1240.html"
+									title="Online Science and Math Textbooks" target="_blank">Online Science and Math Textbooks</a></p>
+							<p><a href="http://onlinebooks.library.upenn.edu/"
+									title="Online Book Page Listing over 40,000 free books on the Web" target="_blank">Online Books
+									Page</a></p>
+							<p><a href="http://www.wowio.com/index.asp"
+									title="WOWIO is today the only source where readers can legally access high-quality copyrighted ebooks from leading publishers for free: comic books, classic literature, college textbooks, popular fiction and non-fiction books, and more."
+									target="_blank">WOWIO: eBooks, Comics and Graphic Novels | Books Evolved</a></p>
+							<p><a href="http://www.gutenberg.org/wiki/Main_Page"
+									title="Project Gutenberg - free ebooks online download for iPad, Kindle, Nook, Andriod, iPhone, iPod Touch, Sony Reader"
+									target="_blank">Project Gutenberg</a></p>
+							<p><a href="http://www.cde.state.co.us/CTBL/" title="Colorado Talking Book Library"
+									target="_blank">Colorado Talking Book Library</a></p>
+							<p><a href="http://www.bookshare.org/web/Welcome.html"
+									title="Accessible Books and Periodicals for Readers with Print Disabilities - Bookshare - Accessible Books for Individuals with Print Disabilities"
+									target="_blank">Bookshare - Accessible Books for Individuals with Print Disabilities</a></p>
+							<p><a href="http://www.rfbd.org"
+									title="RFB&amp;D: Accessible materials for individuals with visual and learning disabilities | Recording for the Blind &amp; Dyslexic"
+									target="_blank">RFB&D - Recording for the Blind & Dyslexic Home Page</a></p>
+							<p><a href="http://www.bibliovault.org/BV.accessibility.epl"
+									title="BiblioVault: A Scholarly Book Repository" target="_blank">BiblioVault: A Scholarly Book
+									Repository</a></p>
+							<p><a href="http://www.bu.edu/disability/resources/alternative.html"
+									title="Boston University - Office of Disability Services - Related Resources - Alternative Text Resources"
+									target="_blank">Alternative Text Resources</a></p>
+							<p><a href="http://www.publisherlookup.org/"
+									title="The Publisher Look-Up Service is a joint initiative of the Association of American Publishers and the AccessText Network. It was established to help college and university Disability Support Services (DSS) professionals find the correct publisher contact from whom to request electronic files of textbooks in order to support students with print-related disabilities."
+									target="_blank">Association of American Publishers</a></p>
+
+						</div>
+
+					</div>
+
+					<h2 class="acc_trigger"><a href="#">Campus Map</a></h2>
+					<div class="acc_container">
+						<div class="block">
+							<p><a href="http://www.mdc.edu/wolfson/generalInfo/campus_map.asp"
+									title="Campus Map with Parking Lot Locations" target="_blank">Campus Map with Parking Lot
+									Locations</a></p>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="acc_trigger"><a href="#">Deaf / Hard of Hearing Links</a></h2>
+				<div class="acc_container">
+					<div class="block">
+						<p><a href="http://deafness.about.com/" title="Deafness &amp; Hard of Hearing Information"
+								target="_blank">Deaf / Hard of Hearing Information Page</a></p>
+						<p><a href="http://www.sorensonvrs.com/enhanced_911" title="Enhanced 911 Sorenson VRS" target="_blank"
+								class="style1">Enhanced 911 (E911) | Sorenson VRS&reg;</a></p>
+						<p><a href="http://www.fccdhh.org/" title="Florida Coordinating Council for the Deaf and Hard of Hearing"
+								target="_blank">Florida Coordinating Council for the Deaf and Hard of Hearing</a></p>
+
+					</div>
+				</div>
+
+				<h2 class="acc_trigger"><a href="#">Legal Rights</a></h2>
+				<div class="acc_container">
+					<div class="block">
+						<p><a href="http://www.adabasics.org/"
+								title="&quot;ADA Basic Building Blocks&quot; is an introductory webcourse on the Americans with Disabilities Act of 1990 (ADA) that explores the legal requirements and spirit of the ADA."
+								target="_blank"> ADA Basic Building Blocks</a></p>
+						<p><a href="http://www.usdoj.gov/crt/ada/pcatoolkit/toolkitmain.htm"
+								title="ADA Best Practices Tool Kit for State and Local Governments" target="_blank">ADA Best Practices
+								Tool Kit for State and Local Governments</a></p>
+						<p><a href="http://www.ada.gov/pubs/ada.htm" title="Americans With Disabilities Act of 1990"
+								target="_blank">Americans With Disabilities Act of 1990</a></p>
+						<p><a href="http://www.fctd.info/resources/ATlaws_print.pdf" title="ASSISTIVE TECHNOLOGY ACT OF 1998"
+								target="_blank">ASSISTIVE TECHNOLOGY ACT OF 1998</a></p>
+						<p><a href="http://www.ed.gov/policy/gen/guid/fpco/ferpa/index.html"
+								title="Family Educational Rights and Privacy Act (FERPA)" target="_blank">Family Educational Rights and
+								Privacy Act (FERPA)</a></p>
+						<p><a href="http://users.aristotle.net/~hantley/hiedlegl/statutes/rehab73.htm"
+								title="Rehabilitation Act of 1973, Section 504" target="_blank">Rehabilitation Act of 1973, Section
+								504</a></p>
+						<p><a href="http://nfbflorida.org/legislation/floridastatute41308.htm"
+								title="Rights of a disabled individual in Florida regarding the use of a service animal"
+								target="_blank">Rights of a disabled individual in Florida regarding the use of a service animal</a></p>
+
+					</div>
+				</div>
+
+				<h2 class="acc_trigger"><a href="#">Policies and Procedures</a></h2>
+				<div class="acc_container">
+					<div class="block">
+						<p align="center"><a href="http://www.mdc.edu/policy/" title="Miami Dade College Manual of Policy"
+								target="_blank">Miami Dade College Manual of Policy</a></p>
+						<p align="center"><a href="http://www.mdc.edu/procedures/" title="Miami Dade College Manual of Procedures"
+								target="_blank">Miami Dade College Manual of Procedures</a></p>
+						<p align="center"><a href="https://www.mdc.edu/prospective/orientationhandbook.pdf"
+								title="Miami Dade College Orientation Handbook" target="_blank">Miami Dade College Orientation
+								Handbook</a></p>
+						<p align="center"><a href="http://www.mdc.edu/catalog/" title="Miami Dade College Catalog"
+								target="_blank">Miami Dade College Catalog</a></p>
+						<p><a href="http://www.mdc.edu/course_catalog/" title="Miami Dade College Course Offerings"
+								target="_blank">Miami Dade College Course Offerings</a></p>
+
+					</div>
+				</div>
+
+				<h2 class="acc_trigger"><a href="#">Scholarships</a></h2>
+				<div class="acc_container">
+					<div class="block">
+						<p><a href="http://www.mdc.edu/scholarships/" title="MDC Web Scholarships Site" target="_blank">MDC Web
+								Scholarships Site</a></p>
+						<p><a href="http://www.mdc.edu/scholarships/essay_tips.asp" title="Tips for Writing Your Scholarship Essay"
+								target="_blank">Tips for Writing Your Scholarship Essay</a></p>
+
+					</div>
+				</div>
+
+				<h2 class="acc_trigger"><a href="#">Tips for Student Success</a></h2>
+				<div class="acc_container">
+					<div class="block">
+						<p><a href="http://www.fyitransition.com/"
+								title="This is the portal to F Y I transition, a web site designed for older students with disabilities, their families, and professionals in the field of transition from school to work."
+								target="_blank">FYI Transition</a></p>
+						<p><a href="http://www.mdc.edu/testing_information/CPT_CLAST/aaasdegree.asp"
+								title="Miami Dade College College Placement Testing Information" target="_blank">CPT Testing Information
+							</a></p>
+						<p><a href="http://www.bu.edu/cpr/jobschool/index.html"
+								title="An interactive and informative web site for people with a psychiatric condition that addresses issues and  reasonable accommodations related to work and school."
+								target="_blank">Living Well with a Psychiatric Disability in Work and School </a></p>
+						<p><a href="http://www.mdc.edu/wolfson/generalInfo/campus_map.asp"
+								title="Campus Map with Parking Lot Locations" target="_blank">Campus Map with Parking Lot Locations</a>
+						</p>
+						<p><a href="http://ese.dadeschools.net/TRANSITION1/index.htm"
+								title="Transition focuses on developing an Individual Educational Plan (IEP) that promotes movement from school to post-school activities."
+								target="_blank">Transition focuses on developing an Individual Educational Plan (IEP) that promotes
+								movement from school to post-school activities.</a></p>
+
+					</div>
+				</div>
+
+				<h2 class="acc_trigger"><a href="#">Web Accessibility Standards</a></h2>
+				<div class="acc_container">
+					<div class="block">
+						<p><a href="http://webstandards.org/action/edutf/" title="Web Standards Project" target="_blank">Web
+								Standards Project</a></p>
+						<p><a href="http://www.w3.org/WAI/gettingstarted/Overview.html"
+								title="WAI Resources on Introducing Web Accessibility" target="_blank">WAI Resources on Introducing Web
+								Accessibility</a></p>
+
+					</div>
+				</div>
+
+				</div>
+
+				<!-- InstanceEndEditable -->
+				<!--END OF BODY CONTENTS-->
+			</td>
+		</tr>
+	</table>
+	<!--END OF BODY SECTION TABLE-->
+
+	<!--FOOTER SECTION BEGINS HERE-->
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr align="center" valign="middle" bgcolor="#FFCC33">
+			<td width="100%" height="12" nowrap="nowrap" class="footer">
+				<a href="http://www.mdc.edu/home/">MDC Home</a> |
+				<a href="http://www.mdc.edu/sis/">Current Students</a> |
+				<a href="http://www.mdc.edu/prospective/">Prospective Students</a> |
+				<a href="http://www.mdc.edu/programs/">Programs</a> |
+				<a target="_blank" href="http://www.miamidade.onlinecommunity.com/">Alumni</a>
+				| <a href="https://www.mdc.edu/employees/">Employees</a> |
+				<a href="http://www.mdc.edu/college_wide/campus_finder/">Campuses</a> |
+				<a href="http://www.mdc.edu/Home/about/">About MDC</a> |
+				<a href="http://mdcc.custhelp.com/">Help/Ask MDC</a>
+			</td>
+		</tr>
+		<tr align="center">
+			<td width="100%" height="48" class="bottomenu">Copyright
+				© &lt;%= year((now)) %&gt; Miami Dade College.<br>
+				Miami Dade College is an equal access/equal opportunity institution and does not discriminate on the basis of
+				gender, race, color, marital status, age, religion, national origin,
+				disability, veteran's status, sexual orientation, or genetic information. Contact the Office of Equal
+				Opportunity Programs/ADA Coordinator, at 305.237.2577 for information.</td>
+		</tr>
+		<tr align="center">
+			<td width="100%" nowrap="nowrap"><a href="http://www.mdc.edu/directory/" target="_blank" class="bottomenu"
+					style="font-size: 12px;">MDC Website
+					Directory</a></td>
+		</tr>
+	</table>
+	<br /><br />
+	<!--ACCESSIBLE TOOLBAR-->
+	<div id="footpanel">
+		<ul id="mainpanel">
+			<li><a href="index.html" title="MDC MEED Homepage" class="home">Home</a></li>
+			<li><a href="javascript:ts('body',1)" class="zoomin">Zoom In<small>Increase Text</small></a></li>
+			<li><a href="javascript:ts('body',-1)" class="zoomout">Zoom Out <small>Decrease Text</small></a></li>
+			<li><a href="#dialog" name="modal" class="film">ASL Video<small>Watch ASL Video</small></a></li>
+			<li><a href="#dialog2" name="modal" class="speaker">Audio<small>Play Audio</small></a></li>
+			<li><a href="#dialog1" name="modal" class="contrast">Contrast<small>Change Contrast</small></a></li>
+			<li><a href="#dialog4" name="modal" class="textonly">Text Only<small>Hide Images</small></a></li>
+			<li><a href="#dialog3" name="modal" class="search">Search<small>Search MDC</small></a></li>
+			<li id="alertpanel">
+				<a href="#" class="alerts">Alerts</a>
+				<div class="subpanel">
+					<h3><span> &ndash; </span>Notifications</h3>
+					<ul>
+						<li class="view"><a href="#">View All</a></li>
+						<li>
+							<a href="#" class="delete">X</a>
+							<p>Don't Forget to register for summer! Call your counselor for an appointment.</p>
+						</li>
+					</ul>
+				</div>
+
+			</li>
+			<li id="chatpanel"><a href="#" class="chat">Staff</a>
+				<div class="subpanel">
+					<h3><span> &ndash; </span>Staff</h3>
+					<ul>
+						<li><span>Directors</span></li>
+						<li><a href="Staff.html#Administrator"><img src="img/icons/user-business.png" alt="" /> Dr. Ken M</a></li>
+						<li><a href="Staff.html#Administrator"><img src="img/icons/user-business.png" alt="" /> J.C.</a></li>
+						<li><span>Resource Advisors</span></li>
+						<li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Ms. Esperanza P</a>
+						</li>
+						<li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Mrs. Eunice Z</a>
+						</li>
+						<li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Mr. J. Michael G</a>
+						</li>
+						<li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Ms. Tracy B</a></li>
+						<li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Ms. Lucy M</a></li>
+						<li><a href="Staff.html"><img src="img/icons/user-business.png" alt="" />View all</a></li>
+					</ul>
+				</div>
+
+			</li>
+		</ul>
 	</div>
-	
-	<h2 class="acc_trigger"><a href="#">Accessibility Projects</a></h2>
-	<div class="acc_container">
-		<div class="block">
-		  <p><a href="http://www.htctu.net/publications/guidelines/distance_ed/disted.htm" title="Distance Education: Access Guidelines for Students with Disabilities" target="_blank">Distance Education: Access Guidelines for Students with Disabilities</a></p>
-<p><a href="http://accessproject.colostate.edu/" title="ACCESS to Postsecondary Education through Universal Design for Learning" target="_blank">ACCESS to Postsecondary Education through Universal Design for Learning</a></p>
-<p><a href="http://www.jimthatcher.com/sidebyside.htm" title="Comparison WCAG and Section 508 Web" target="_blank">Comparison WCAG and Section 508 Web</a></p>
-
+	<!--END OF ACCESSIBLE TOOLBAR-->
+	<!-- InstanceBeginEditable name="PopUpWindow" -->
+	<div id="boxes">
+		<!-- #customize your modal aka popup window here -->
+		<div id="dialog" class="window"> <b>ASL Video Message</b> |
+			<!-- close button is defined as close class -->
+			<a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
+			<p align="center">ASL VIDEO GOES HERE</p>
 		</div>
-	</div>
-	
-	<h2 class="acc_trigger"><a href="#">Blind / Low Vision Links</a></h2>
-
-	<div class="acc_container">
-		<div class="block">
-<p><a href="http://clickspeak.clcworld.net/index.html" title="CLiCk, Speak: A Talking Extension for Firefox" target="_blank">CLiCk, Speak Update</a></p>
-<p><a href="http://www.tsbvi.edu/Outreach/seehear/summer02/books.htm" title="Accessible Books" target="_blank">Accessible Books</a></p>
-<p><a href="http://www.audio-studio.org/ " title="Audio Studio for the Reading Impaired" target="_blank">Audio Studio for the Reading Impaired</a></p>
-<p><a href="http://en.wikibooks.org/wiki/Main_Page" title="Wikibooks, the open-content textbooks collection that anyone can edit." target="_blank">Wikibooks</a></p>
-<p><a href="http://spot.colorado.edu/~dubin/bookmarks/b/1240.html" title="Online Science and Math Textbooks" target="_blank">Online Science and Math Textbooks</a></p>
-<p><a href="http://onlinebooks.library.upenn.edu/" title="Online Book Page Listing over 40,000 free books on the Web" target="_blank">Online Books Page</a></p>
-<p><a href="http://www.wowio.com/index.asp" title="WOWIO is today the only source where readers can legally access high-quality copyrighted ebooks from leading publishers for free: comic books, classic literature, college textbooks, popular fiction and non-fiction books, and more." target="_blank">WOWIO: eBooks, Comics and Graphic Novels | Books Evolved</a></p>
-<p><a href="http://www.gutenberg.org/wiki/Main_Page" title="Project Gutenberg - free ebooks online download for iPad, Kindle, Nook, Andriod, iPhone, iPod Touch, Sony Reader" target="_blank">Project Gutenberg</a></p>
-<p><a href="http://www.cde.state.co.us/CTBL/" title="Colorado Talking Book Library" target="_blank">Colorado Talking Book Library</a></p>
-<p><a href="http://www.bookshare.org/web/Welcome.html" title="Accessible Books and Periodicals for Readers with Print Disabilities - Bookshare - Accessible Books for Individuals with Print Disabilities" target="_blank">Bookshare - Accessible Books for Individuals with Print Disabilities</a></p>
-<p><a href="http://www.rfbd.org" title="RFB&amp;D: Accessible materials for individuals with visual and learning disabilities | Recording for the Blind &amp; Dyslexic" target="_blank">RFB&D - Recording for the Blind & Dyslexic Home Page</a></p>
-<p><a href="http://www.bibliovault.org/BV.accessibility.epl" title="BiblioVault: A Scholarly Book Repository" target="_blank">BiblioVault: A Scholarly Book Repository</a></p>
-<p><a href="http://www.bu.edu/disability/resources/alternative.html" title="Boston University - Office of Disability Services - Related Resources - Alternative Text Resources" target="_blank">Alternative Text Resources</a></p>
-<p><a href="http://www.publisherlookup.org/" title="The Publisher Look-Up Service is a joint initiative of the Association of American Publishers and the AccessText Network. It was established to help college and university Disability Support Services (DSS) professionals find the correct publisher contact from whom to request electronic files of textbooks in order to support students with print-related disabilities." target="_blank">Association of American Publishers</a></p>
-
+		<div id="dialog1" class="window"> <b>Contrast Picker</b>
+			<!-- close button is defined as close class -->
+			<a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
+			<p align="justify">Select your preference.<br />
+			</p>
+			<form id="switchform">
+				<input type="radio" name="choice" value="UNIVERSALCSS" onclick="chooseStyle(this.value, 60)" />
+				Default style<br />
+				<input type="radio" name="choice" value="UNIVERSALCSS_2" onclick="chooseStyle(this.value, 60)" />
+				<span style="background-color:black; color:yellow;"><b>Black background and yellow text</b></span><br />
+				<input type="radio" name="choice" value="UNIVERSALCSS_3" onclick="chooseStyle(this.value, 60)" />
+				<span style="background-color:yellow; color:black;"><b>Yellow background and black text</b></span>
+			</form>
+			<p></p>
 		</div>
-
-	</div>
-	
-	<h2 class="acc_trigger"><a href="#">Campus Map</a></h2>
-	<div class="acc_container">
-		<div class="block">
-<p><a href="http://www.mdc.edu/wolfson/generalInfo/campus_map.asp" title="Campus Map with Parking Lot Locations" target="_blank">Campus Map with Parking Lot Locations</a></p></div>
+		<div id="dialog2" class="window"> <b>Audio Transcription</b>
+			<!-- close button is defined as close class -->
+			<a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
+			<p align="center">Media Player Goes here</p>
 		</div>
-	</div>
-    
-    <h2 class="acc_trigger"><a href="#">Deaf / Hard of Hearing Links</a></h2>
-	<div class="acc_container">
-		<div class="block">
-<p><a href="http://deafness.about.com/" title="Deafness &amp; Hard of Hearing Information" target="_blank">Deaf / Hard of Hearing Information Page</a></p>
-<p><a href="http://www.sorensonvrs.com/enhanced_911" title="Enhanced 911 Sorenson VRS" target="_blank" class="style1">Enhanced 911 (E911) | Sorenson VRS&reg;</a></p>
-<p><a href="http://www.fccdhh.org/" title="Florida Coordinating Council for the Deaf and Hard of Hearing" target="_blank">Florida Coordinating Council for the Deaf and Hard of Hearing</a></p>
-										
+		<div id="dialog3" class="window"> <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right"
+					alt="Close" /></a><br />
+			<form id="searchform" name="form1" method="get" action="http://www.google.com/u/mdc">
+				<input name="q" type="text" id="xSearchBar" value="Search MDC" size="25" lable="query"
+					onclick="clickclear(this, 'Search MDC')" onblur="clickrecall(this,'Search MDC')" />
+				<input type="submit" name="xSearchButton" id="xSearchButton" value="Search" />
+			</form>
 		</div>
-	</div>
-    
-    <h2 class="acc_trigger"><a href="#">Legal Rights</a></h2>
-	<div class="acc_container">
-		<div class="block">
-<p><a href="http://www.adabasics.org/" title="&quot;ADA Basic Building Blocks&quot; is an introductory webcourse on the Americans with Disabilities Act of 1990 (ADA) that explores the legal requirements and spirit of the ADA." target="_blank"> ADA Basic Building Blocks</a></p>
-<p><a href="http://www.usdoj.gov/crt/ada/pcatoolkit/toolkitmain.htm" title="ADA Best Practices Tool Kit for State and Local Governments" target="_blank">ADA Best Practices Tool Kit for State and Local Governments</a></p>
-<p><a href="http://www.ada.gov/pubs/ada.htm" title="Americans With Disabilities Act of 1990" target="_blank">Americans With Disabilities Act of 1990</a></p>
-<p><a href="http://www.fctd.info/resources/ATlaws_print.pdf" title="ASSISTIVE TECHNOLOGY ACT OF 1998" target="_blank" >ASSISTIVE TECHNOLOGY ACT OF 1998</a></p>
-<p><a href="http://www.ed.gov/policy/gen/guid/fpco/ferpa/index.html" title="Family Educational Rights and Privacy Act (FERPA)" target="_blank">Family Educational Rights and Privacy Act (FERPA)</a></p>
-<p><a href="http://users.aristotle.net/~hantley/hiedlegl/statutes/rehab73.htm" title="Rehabilitation Act of 1973, Section 504" target="_blank">Rehabilitation Act of 1973, Section 504</a></p>
-<p><a href="http://nfbflorida.org/legislation/floridastatute41308.htm" title="Rights of a disabled individual in Florida regarding the use of a service animal" target="_blank">Rights of a disabled individual in Florida regarding the use of a service animal</a></p>
-				                
+		<div id="dialog4" class="window"> <b>Hide Images</b>
+			<!-- close button is defined as close class -->
+			<a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
+			<p align="center">This option is not available for this page.</p>
 		</div>
+		<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
+		<div id="mask"></div>
 	</div>
-    
-    <h2 class="acc_trigger"><a href="#">Policies and Procedures</a></h2>
-	<div class="acc_container">
-		<div class="block">
-<p align="center"><a href="http://www.mdc.edu/policy/" title="Miami Dade College Manual of Policy" target="_blank">Miami Dade College Manual of Policy</a></p>
-<p align="center"><a href="http://www.mdc.edu/procedures/" title="Miami Dade College Manual of Procedures" target="_blank">Miami Dade College Manual of Procedures</a></p>
- <p align="center"><a href="https://www.mdc.edu/prospective/orientationhandbook.pdf" title="Miami Dade College Orientation Handbook" target="_blank">Miami Dade College Orientation Handbook</a></p>
-<p align="center"><a href="http://www.mdc.edu/catalog/" title="Miami Dade College Catalog" target="_blank">Miami Dade College Catalog</a></p>
-<p><a href="http://www.mdc.edu/course_catalog/" title="Miami Dade College Course Offerings" target="_blank">Miami Dade College Course Offerings</a></p>
-								      
-		</div>
-	</div>
-    
-    <h2 class="acc_trigger"><a href="#">Scholarships</a></h2>
-	<div class="acc_container">
-		<div class="block">
-<p><a href="http://www.mdc.edu/scholarships/" title="MDC Web Scholarships Site" target="_blank">MDC Web Scholarships Site</a></p>
-<p><a href="http://www.mdc.edu/scholarships/essay_tips.asp" title="Tips for Writing Your Scholarship Essay" target="_blank">Tips for Writing Your Scholarship Essay</a></p>
-
-		</div>
-	</div>
-    
-    <h2 class="acc_trigger"><a href="#">Tips for Student Success</a></h2>
-	<div class="acc_container">
-		<div class="block">
-<p><a href="http://www.fyitransition.com/" title="This is the portal to F Y I transition, a web site designed for older students with disabilities, their families, and professionals in the field of transition from school to work." target="_blank">FYI Transition</a></p>
-<p><a href="http://www.mdc.edu/testing_information/CPT_CLAST/aaasdegree.asp" title="Miami Dade College College Placement Testing Information" target="_blank">CPT  Testing Information </a></p>
-<p><a href="http://www.bu.edu/cpr/jobschool/index.html" title="An interactive and informative web site for people with a psychiatric condition that addresses issues and  reasonable accommodations related to work and school." target="_blank">Living Well with a Psychiatric Disability in Work and School </a></p>
-<p><a href="http://www.mdc.edu/wolfson/generalInfo/campus_map.asp" title="Campus Map with Parking Lot Locations" target="_blank">Campus Map with Parking Lot Locations</a></p>
-<p><a href="http://ese.dadeschools.net/TRANSITION1/index.htm" title="Transition focuses on developing an Individual Educational Plan (IEP) that promotes movement from school to post-school activities." target="_blank">Transition focuses on developing an Individual Educational Plan (IEP) that promotes movement from school to post-school activities.</a></p>
-									  
-		</div>
-	</div>
-    
-    <h2 class="acc_trigger"><a href="#">Web Accessibility Standards</a></h2>
-	<div class="acc_container">
-		<div class="block">
-		  <p><a href="http://webstandards.org/action/edutf/" title="Web Standards Project" target="_blank">Web Standards Project</a></p>
-<p><a href="http://www.w3.org/WAI/gettingstarted/Overview.html" title="WAI Resources on Introducing Web Accessibility" target="_blank">WAI Resources on Introducing Web Accessibility</a></p>
-							      
-		</div>
-	</div>
-	
-</div>
-
-        <!-- InstanceEndEditable -->
-        <!--END OF BODY CONTENTS-->
-      </td>
-  </tr>
-</table>
-<!--END OF BODY SECTION TABLE-->
-
-<!--FOOTER SECTION BEGINS HERE-->
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr align="center" valign="middle" bgcolor="#FFCC33">
-	<td width="100%" height="12" nowrap="nowrap" class="footer">
-    	<a href="http://www.mdc.edu/home/">MDC Home</a> |
-		<a href="http://www.mdc.edu/sis/">Current Students</a> |
-		<a href="http://www.mdc.edu/prospective/">Prospective Students</a> |
-		<a href="http://www.mdc.edu/programs/">Programs</a> |
-		<a target="_blank" href="http://www.miamidade.onlinecommunity.com/">Alumni</a> 
-		| <a href="https://www.mdc.edu/employees/">Employees</a> |
-		<a href="http://www.mdc.edu/college_wide/campus_finder/">Campuses</a> |
-		<a href="http://www.mdc.edu/Home/about/">About MDC</a> |
-		<a href="http://mdcc.custhelp.com/">Help/Ask MDC</a>
-    </td>
-  </tr>
-  <tr align="center">
-    <td width="100%" height="48" class="bottomenu">Copyright 
-		© &lt;%= year((now)) %&gt; Miami Dade College.<br>
-		Miami Dade College is an equal access/equal opportunity institution and does not discriminate on the basis of gender, race, color, marital status, age, religion, national origin,
-disability, veteran's status, sexual orientation, or genetic information. Contact the Office of Equal Opportunity Programs/ADA Coordinator, at 305.237.2577 for information.</td>
-  </tr>
-  <tr align="center">
-    <td width="100%" nowrap="nowrap"><a href="http://www.mdc.edu/directory/" target="_blank" class="bottomenu" style="font-size: 12px;">MDC Website
-		Directory</a></td>
-  </tr>
-</table>
-<br /><br />
-<!--ACCESSIBLE TOOLBAR-->
-<div id="footpanel">
-    <ul id="mainpanel">
-        <li><a href="Home.html" title="MDC MEED Homepage" class="home">Home</a></li>
-        <li><a href="javascript:ts('body',1)" class="zoomin">Zoom In<small>Increase Text</small></a></li>
-        <li><a href="javascript:ts('body',-1)" class="zoomout">Zoom Out <small>Decrease Text</small></a></li>
-        <li><a href="#dialog" name="modal" class="film">ASL Video<small>Watch ASL Video</small></a></li>
-        <li><a href="#dialog2" name="modal" class="speaker">Audio<small>Play Audio</small></a></li>
-        <li><a href="#dialog1" name="modal" class="contrast">Contrast<small>Change Contrast</small></a></li>
-        <li><a href="#dialog4" name="modal" class="textonly">Text Only<small>Hide Images</small></a></li>
-        <li><a href="#dialog3" name="modal" class="search">Search<small>Search MDC</small></a></li>        
-        <li id="alertpanel">
-        <a href="#" class="alerts">Alerts</a>
-         <div class="subpanel">
-        <h3><span> &ndash; </span>Notifications</h3>
-        <ul>
-            <li class="view"><a href="#">View All</a></li>
-            <li>
-                <a href="#" class="delete">X</a>
-                <p>Don't Forget to register for summer! Call your counselor for an appointment.</p>
-            </li>
-        </ul>
-    </div>
-
-        </li>
-        <li id="chatpanel"><a href="#" class="chat">Staff</a>
-        <div class="subpanel">
-        <h3><span> &ndash; </span>Staff</h3>
-        <ul>
-            <li><span>Directors</span></li>
-            <li><a href="Staff.html#Administrator"><img src="img/icons/user-business.png" alt="" /> Dr. Ken M</a></li>
-            <li><a href="Staff.html#Administrator"><img src="img/icons/user-business.png" alt="" /> J.C.</a></li>
-            <li><span>Resource Advisors</span></li>
-            <li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Ms. Esperanza P</a></li>
-            <li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Mrs. Eunice Z</a></li>
-            <li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Mr. J. Michael G</a></li>
-            <li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Ms. Tracy B</a></li>
-            <li><a href="Staff.html#Coordinators"><img src="img/icons/user-business.png" alt="" /> Ms. Lucy M</a></li>
-            <li><a href="Staff.html"><img src="img/icons/user-business.png" alt="" />View all</a></li>
-        </ul>
-    </div>
-
-        </li>
-    </ul>
-</div>
-<!--END OF ACCESSIBLE TOOLBAR--><!-- InstanceBeginEditable name="PopUpWindow" -->
-<div id="boxes">
-  <!-- #customize your modal aka popup window here -->
-  <div id="dialog" class="window"> <b>ASL Video Message</b> |
-    <!-- close button is defined as close class -->
-    <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
-    <p align="center">ASL VIDEO GOES HERE</p>
-  </div>
-  <div id="dialog1" class="window"> <b>Contrast Picker</b>
-    <!-- close button is defined as close class -->
-    <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
-    <p align="justify">Select your preference.<br />
-    </p>
-    <form id="switchform">
-      <input type="radio" name="choice" value="UNIVERSALCSS" onclick="chooseStyle(this.value, 60)" />
-      Default style<br />
-      <input type="radio" name="choice" value="UNIVERSALCSS_2" onclick="chooseStyle(this.value, 60)" />
-      <span style="background-color:black; color:yellow;"><b>Black background and yellow text</b></span><br />
-      <input type="radio" name="choice" value="UNIVERSALCSS_3" onclick="chooseStyle(this.value, 60)" />
-      <span style="background-color:yellow; color:black;"><b>Yellow background and black text</b></span>
-    </form>
-    <p></p>
-  </div>
-  <div id="dialog2" class="window"> <b>Audio Transcription</b>
-    <!-- close button is defined as close class -->
-    <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
-    <p align="center">Media Player Goes here</p>
-  </div>
-  <div id="dialog3" class="window"> <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a><br />
-    <form id="searchform" name="form1" method="get" action="http://www.google.com/u/mdc">
-      <input name="q" type="text" id="xSearchBar" value="Search MDC" size="25" lable="query" onclick="clickclear(this, 'Search MDC')" onblur="clickrecall(this,'Search MDC')" />
-      <input type="submit" name="xSearchButton" id="xSearchButton" value="Search" />
-    </form>
-  </div>
-  <div id="dialog4" class="window"> <b>Hide Images</b>
-    <!-- close button is defined as close class -->
-    <a href="#" class="close"><img src="img/icons/close_icon1.gif" align="right" alt="Close" /></a>
-        <p align="center">This option is not available for this page.</p>
-  </div>
-  <!-- Do not remove div#mask, because you'll need it to fill the whole screen -->
-  <div id="mask"></div>
-</div>
-<!-- InstanceEndEditable --><!--END OF FOOTER-->
+	<!-- InstanceEndEditable -->
+	<!--END OF FOOTER-->
 
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

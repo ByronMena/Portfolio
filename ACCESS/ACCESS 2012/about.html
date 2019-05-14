@@ -3,49 +3,59 @@
 <!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class=""><!-- InstanceBegin template="/Templates/CMS.dwt" codeOutsideHTMLIsLocked="false" -->
+<html class="">
 <!--<![endif]-->
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Miami Dade College Wolfson Campus - ACCESS &amp; MEED Department</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Miami Dade College Wolfson Campus - ACCESS &amp; MEED Department</title>
 
-<!--CSS STYLES AND JAVASCRIPTS-->
-<link href="css/boilerplate.css" rel="stylesheet" type="text/css" />
-<link href="css/FluidGridLayout.css" rel="stylesheet" type="text/css" />
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-<link href="css/BlackYellowTxt.css" rel="alternate stylesheet" type="text/css" media="screen" title="BlackYellowTxt" />
-<link href="css/YellowBlackTxt.css" rel="alternate stylesheet" type="text/css" media="screen" title="YellowBlackTxt" />
+	<!--CSS STYLES AND JAVASCRIPTS-->
+	<link href="css/boilerplate.css" rel="stylesheet" type="text/css" />
+	<link href="css/FluidGridLayout.css" rel="stylesheet" type="text/css" />
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/base/jquery-ui.css" rel="stylesheet"
+		type="text/css" />
+	<link href="css/BlackYellowTxt.css" rel="alternate stylesheet" type="text/css" media="screen"
+		title="BlackYellowTxt" />
+	<link href="css/YellowBlackTxt.css" rel="alternate stylesheet" type="text/css" media="screen"
+		title="YellowBlackTxt" />
 
-<script src="scripts/respond.min.js"></script>
-<script src="scripts/jquery-1.7.2.min.js"></script>
-<!--<script src="../scripts/jquery-ui-1.8.20.custom.min.js"></script>-->
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.js"></script>
-<script src="scripts/AccessTB.js"></script>
-<script>
-$(document).ready(function () {
+	<script src="scripts/respond.min.js"></script>
+	<script src="scripts/jquery-1.7.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.js"></script>
+	<script src="scripts/AccessTB.js"></script>
+	<script>
+		$(document).ready(function () {
 
-/* Font Sizer [target, Minimum Size, Default Size, Maximum Size]*/
-fontSize("#contentwrapper", 12, 16, 30);	
-	
-$("#hideText").click(function(){
-		hideText();
-		});		
-		
-$("#Contrast").click(function(){
-	
-		$("#ContrastStyles").dialog({modal:true, width: 600, title:"Contrast Setting"});		
-	});
-	
-$("#ASL").click(function(){
-	
-		$("#ASLPOPUP").dialog({width:'auto', title:"ASL Video Message"});
-	});	
-		
-});
-</script>
-<!-- 
+			/* Font Sizer [target, Minimum Size, Default Size, Maximum Size]*/
+			fontSize("#contentwrapper", 12, 16, 30);
+
+			$("#hideText").click(function () {
+				hideText();
+			});
+
+			$("#Contrast").click(function () {
+
+				$("#ContrastStyles").dialog({
+					modal: true,
+					width: 600,
+					title: "Contrast Setting"
+				});
+			});
+
+			$("#ASL").click(function () {
+
+				$("#ASLPOPUP").dialog({
+					width: 'auto',
+					title: "ASL Video Message"
+				});
+			});
+
+		});
+	</script>
+	<!-- 
 To learn more about the conditional comments around the html tags at the top of the file:
 paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 
@@ -55,135 +65,162 @@ Do the following if you're using your customized build of modernizr (http://www.
 * add the "no-js" class to the html tags at the top
 * you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
 -->
-<!--[if lt IE 9]>
+	<!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
 </head>
+
 <body>
-<div class="gridContainer clearfix">
-  <div id="LayoutDiv1"><!--Use Insert Panel for additional Fluid Grid Layout Div tags. Note: All Layout Div tags must be inserted directly inside the "gridContainer" div tag. Nested Layout Div tags are not currently supported. -->
-  
-<div id="topsection">
-	
-    <div id="search">
-		<fieldset>
-			<form>
-			<input class="textfield" type="text" alt="Search text" maxlength="100" size="22" name="q">
-			<input class="button" type="submit" value="Search" name="sa">
-			</form>
-		</fieldset>
-		<ul>
-			<li><a href="http://www.mdc.edu/main/campus_finder/default.asp">Campuses</a> | </li>
-			<li><a href="http://www.mdc.edu/main/contacts/default.asp">Contact 
-			Us</a> | </li>
-			<li><a href="http://support.mdc.edu">Get Help</a></li>
-		</ul>
+	<div class="gridContainer clearfix">
+		<div id="LayoutDiv1">
+			<!--Use Insert Panel for additional Fluid Grid Layout Div tags. Note: All Layout Div tags must be inserted directly inside the "gridContainer" div tag. Nested Layout Div tags are not currently supported. -->
+
+			<div id="topsection">
+
+				<div id="search">
+					<fieldset>
+						<form>
+							<input class="textfield" type="text" alt="Search text" maxlength="100" size="22" name="q">
+							<input class="button" type="submit" value="Search" name="sa">
+						</form>
+					</fieldset>
+					<ul>
+						<li><a href="http://www.mdc.edu/main/campus_finder/default.asp">Campuses</a> | </li>
+						<li><a href="http://www.mdc.edu/main/contacts/default.asp">Contact
+								Us</a> | </li>
+						<li><a href="http://support.mdc.edu">Get Help</a></li>
+					</ul>
+				</div>
+
+
+				<a class="logo" title="Miami Dade College Homepage" href="http://www.mdc.edu/main/"></a>
+				<h2 class="MDC">Miami Dade College
+					<em>Wolfson Campus</em>
+				</h2>
+			</div>
+
+			<div id="contentwrapper">
+				<div id="contentcolumn">
+					<div class="innertube">
+						<h1>About ACCESS</h1>
+						<h2>What is ACCESS?</h2>
+						<p>ACCESS is the Wolfson Campus' disability service center staffed with six Resource Advisors who are
+							specially trained to guide students through the registration process and develop a unique set of
+							accommodations and services for each student that is built upon their strengths and abilities. Students
+							are engaged regularly to become involved in the ACCESS sponsored student organization, an internship or
+							opportunity with a community service agency. Through grants and work with the Center for Community
+							Involvement, we have learned that these kinds of experiences can have a profound impact upon our student's
+							academic success and lead to our outstanding record of student program completion.</p>
+
+						<h2>Who is eligible for services?</h2>
+						<p>Students who have a <strong>documented disability</strong> are eligible for services. A disability is a
+							physical or mental impairment that substantially limits one or more of an individual’s major life
+							activities. These may include visual, hearing, or speech impairment, others physical conditions, including
+							cerebral palsy, epilepsy, cancer, heart disease, diabetes, HIV-related illness, and various chronic
+							diseases. Other disabilities include learning disabilities, mental health or psychological disabilities,
+							Attention Deficit Disorder (ADHD), and substance abuse disorders. <strong>Documentation</strong> should be
+							provided by a licensed or certified professional, such as a physician, a psychologist, an audiologist, a
+							learning disabilities specialist, etc., who has evaluated the individual within the past three years, or
+							provided by an educational institution where services have been provided previously.</p>
+
+						<h2>What services are available?</h2>
+						<p>The ACCESS Staff serve as a <strong>Resource Advisors</strong> who guide students through their academic
+							programs, train them in strategies and skills to enhance their academic performance, and work with faculty
+							to provide <strong>accommodations</strong> or <strong>course modifications</strong> that allows students
+							with disabilities to participate fully in the educational and social activities of the college. Depending
+							on documentation, students may be eligible for testing accommodations, such as extra time in a quiet room,
+							or in-class accommodations, such as note taker, a captionist, or a sign language interpreter. Our lab is
+							equipped with the latest in adaptive technology to accommodate the needs of students with vision or
+							hearing impairments or students with learning disabilities. Some students may be eligible for
+							<strong>course substitutions</strong> or <strong>waivers</strong> of specific testing required for
+							graduation.</p>
+
+						<h2>ACCESS Tutoring Program</h2>
+						<p>ACCESS provides tutorials in language and math for eligible students.</p>
+						<!-- InstanceEndEditable -->
+					</div>
+				</div>
+			</div>
+
+			<div id="rightcolumn">
+
+				<nav id="MenuR">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="studentinfo.html">Student Information</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="studio.html">Studio</a></li>
+						<li><a href="wbgallery.html">William Berger Gallery</a></li>
+						<li><a href="aoa.html">AOA</a></li>
+						<li><a href="location.html">Location / Map</a></li>
+					</ul>
+				</nav>
+
+				<nav id="aTool">
+					<ul>
+						<li><a id="largeFont" href="javascript:void()">Increase Font</a></li>
+						<li><a id="smallFont" href="javascript:void()">Decrease font</a></li>
+						<li><a id="defaultFont" href="javascript:void()">Reset font</a></li>
+						<li><a id="hideText" href="javascript:void()">Text Only</a></li>
+						<li><a id="Contrast" href="javascript:void()">Contrast</a></li>
+						<li><a id="ASL" href="javascript:void()">ASL</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div id="footer">
+				<ul class="address">
+					<li>Copyright Miami Dade College - </li>
+					<li>300 NW 2nd Ave - </li>
+					<li>Miami, FL 33132-2204 - </li>
+					<li>305-237-8888</li>
+				</ul>
+				<ul id="footerlinks">
+					<li><a href="#">Privacy Policy</a> - </li>
+					<li><a href="#">Site Directory</a> - </li>
+					<li><a href="#">Web en Espanol</a> - </li>
+					<li><a href="#">Campuses</a></li>
+				</ul>
+			</div>
+
+		</div>
 	</div>
 
-    
-    <a class="logo" title="Miami Dade College Homepage" href="http://www.mdc.edu/main/"></a>
-	<h2 class="MDC">Miami Dade College
-	<em>Wolfson Campus</em>
-	</h2>
-</div>
 
-<div id="contentwrapper">
-<div id="contentcolumn">
-  <div class="innertube"><!-- InstanceBeginEditable name="EditableRegionContent" -->
-<h1>About ACCESS</h1>
-<h2>What is ACCESS?</h2>
-<p>ACCESS is the Wolfson Campus' disability service center staffed with six Resource Advisors who are specially trained to guide students through the registration process and develop a unique set of accommodations and services for each student that is built upon their strengths and abilities. Students are engaged regularly to become involved in the ACCESS sponsored student organization, an internship or opportunity with a community service agency. Through grants and work with the Center for Community Involvement, we have learned that these kinds of experiences can have a profound impact upon our student's academic success and lead to our outstanding record of student program completion.</p>
-        
-<h2>Who is eligible for services?</h2>
-<p>Students who have a <strong>documented disability</strong> are eligible for services. A disability is a physical or mental impairment that substantially limits one or more of an individual’s major life activities. These may include visual, hearing, or speech impairment, others physical conditions, including cerebral palsy, epilepsy, cancer, heart disease, diabetes, HIV-related illness, and various chronic diseases. Other disabilities include learning disabilities, mental health or psychological disabilities, Attention Deficit Disorder (ADHD), and substance abuse disorders. <strong>Documentation</strong> should be provided by a licensed or certified professional, such as a physician, a psychologist, an audiologist, a learning disabilities specialist, etc., who has evaluated the individual within the past three years, or provided by an educational institution where services have been provided previously.</p>
-        
-<h2>What services are available?</h2>
-<p>The ACCESS Staff serve as a <strong>Resource Advisors</strong> who guide students through their academic programs, train them in strategies and skills to enhance their academic performance, and work with faculty to provide <strong>accommodations</strong> or <strong>course modifications</strong> that allows students with disabilities to participate fully in the educational and social activities of the college. Depending on documentation, students may be eligible for testing accommodations, such as extra time in a quiet room, or in-class accommodations, such as note taker, a captionist, or a sign language interpreter. Our lab is equipped with the latest in adaptive technology to accommodate the needs of students with vision or hearing impairments or students with learning disabilities. Some students may be eligible for <strong>course substitutions</strong> or <strong>waivers</strong> of specific testing required for graduation.</p>
+	<p id="equalop">Miami Dade College is an equal access/equal opportunity institution and does not discriminate on the
+		basis of gender, race, color, marital status, age, religion, national origin, disability, veteran’s status, sexual
+		orientation, or genetic information. Contact the Office of Equal Opportunity Programs/ADA Coordinator, at
+		305.237.2577 for information.</p>
 
-<h2>ACCESS Tutoring Program</h2>
-<p>ACCESS provides tutorials in language and math for eligible students.</p>
-          <!-- InstanceEndEditable -->
-  </div>
-</div>
-</div>
+	<div id="ContrastStyles" style="display:none">
+		<h2>Choose which contrast setting suits you.</h2>
+		<div id="ContrastWrapper">
+			<div class="ContrastDefault" onclick="chooseStyle('Master', 60)">A</div>
+			<div class="ContrastSetting2" onclick="chooseStyle('BlackYellowTxt',60)">B</div>
+			<div class="ContrastSetting3" onclick="chooseStyle('YellowBlackTxt',60)">C</div>
+		</div>
 
-<div id="rightcolumn">
+		<p>Did you know there is an add-on for Firefox that lets you choose your own preferred reading contrast setting? You
+			should check out <a href="https://addons.mozilla.org/en-US/firefox/addon/readability/">Readability</a> for
+			Firefox. Don't have Firefox installed? No problem, you can visit <a
+				href="http://readable.tastefulwords.com/">Readable</a> and read any article from any website with your preferred
+			saved settings.</p>
+	</div>
+	<div id="ASLPOPUP" style="display:none">
+		<p style="text-align:center">
+			<object height="510" width="640">
+				<param name="movie" value="http://www.youtube.com/v/quNnu5K8pcw?version=3&amp;hl=en_US&amp;rel=0&amp;hd=1">
+				<param name="allowFullScreen" value="true">
+				<param name="allowscriptaccess" value="always"><embed
+					src="http://www.youtube.com/v/quNnu5K8pcw?version=3&amp;hl=en_US&amp;rel=0&amp;hd=1"
+					type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="510"
+					width="640"></object>
+		</p>
 
-<nav id="MenuR">
-	<ul>
-	<li><a href="index.html">Home</a></li>
-	<li><a href="about.html">About</a></li>
-    <li><a href="studentinfo.html">Student Information</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <!--<li><a href="../staff.html">Staff</a></li>
-    <li><a href="http://www.mdc.edu/meed" target="_blank">MEED Center</a></li>-->
-    <li><a href="studio.html">Studio</a></li>
-    <li><a href="WBGallery.html">William Berger Gallery</a></li>
-    <li><a href="aoa.html">AOA</a></li>
-    <li><a href="location.html">Location / Map</a></li>
-    </ul>
-</nav>
-
-<nav id="aTool">
-	<ul>
-    <li><a id="largeFont" href="javascript:void()">Increase Font</a></li>
-    <li><a id="smallFont" href="javascript:void()">Decrease font</a></li>
-    <li><a id="defaultFont" href="javascript:void()">Reset font</a></li>
-    <li><a id="hideText" href="javascript:void()">Text Only</a></li>
-    <li><a id="Contrast" href="javascript:void()">Contrast</a></li>
-    <li><a id="ASL" href="javascript:void()">ASL</a></li>
-	</ul>
-</nav>
-
-<!--
-
-<div>
-Hello
-
-</div>
-
-
--->
-</div>
-
-<div id="footer">
- <ul class="address">
-	<li>Copyright Miami Dade College - </li>
-	<li>300 NW 2nd Ave - </li>
-	<li>Miami, FL 33132-2204 - </li>
-	<li>305-237-8888</li>
-</ul>
-<ul id="footerlinks">
-	<li><a href="#">Privacy Policy</a> - </li>
-	<li><a href="#">Site Directory</a> - </li>
-	<li><a href="#">Web en Espanol</a> - </li>
-	<li><a href="#">Campuses</a></li>
-</ul>
-</div>
-
-  </div>
-</div>
-
-
-<p id="equalop" >Miami Dade College is an equal access/equal opportunity institution and does not discriminate on the basis of gender, race, color, marital status, age, religion, national origin, disability, veteran’s status, sexual orientation, or genetic information. Contact the Office of Equal Opportunity Programs/ADA Coordinator, at 305.237.2577 for information.</p>
-
-<div id="ContrastStyles" style="display:none">
- <h2>Choose which contrast setting suits you.</h2>
- <div id="ContrastWrapper">
- <div class="ContrastDefault" onclick="chooseStyle('Master', 60)">A</div>
- <div class="ContrastSetting2" onclick="chooseStyle('BlackYellowTxt',60)">B</div>
-<div class="ContrastSetting3" onclick="chooseStyle('YellowBlackTxt',60)">C</div>
-</div>
-
-<p>Did you know there is an add-on for Firefox that lets you choose your own preferred reading contrast setting? You should check out <a href="https://addons.mozilla.org/en-US/firefox/addon/readability/">Readability</a> for Firefox. Don't have Firefox installed? No problem, you can visit <a href="http://readable.tastefulwords.com/">Readable</a> and read any article from any website with your preferred saved settings.</p>
-</div>
-<div id="ASLPOPUP" style="display:none">
-<p style="text-align:center">
-<object height="510" width="640"><param name="movie" value="http://www.youtube.com/v/quNnu5K8pcw?version=3&amp;hl=en_US&amp;rel=0&amp;hd=1"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><embed src="http://www.youtube.com/v/quNnu5K8pcw?version=3&amp;hl=en_US&amp;rel=0&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="510" width="640"></object>
-</p>
-
-</div>
+	</div>
 
 </body>
-<!-- InstanceEnd --></html>
+
+</html>

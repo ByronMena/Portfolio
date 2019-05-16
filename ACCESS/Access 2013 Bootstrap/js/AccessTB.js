@@ -1,23 +1,17 @@
 //Hides all images, header, search bar, and sidebar
 function hideText(){
-
-	//$('#footer').toggle();
-	//$('#topsection').toggle();	
-	//$('.rslides').toggle();
-		
-	if( $("#topsection").css("display") == "block") {
-		$('#topsection').toggle();
-		$('#footer').toggle();
-		$('.rslides').hide(); 
-		$('img').hide();
+	if ( $(".site-masthead").css("display") == "block" ) {
+		$(".site-masthead").toggle();
+		$("#myCarousel").toggle();
+		$("#footer").toggle();
+		$("img").hide();
 				
 	}
 	else{
-		$('#topsection').toggle();
-		$('#footer').toggle();
-		$('.rslides').show(); 
-		$('img').show();
-	
+		$(".site-masthead").toggle();
+		$("#myCarousel").toggle();
+		$("#footer").toggle();
+		$("img").show();
 		}
 }
 /**
@@ -85,10 +79,27 @@ function fontSize(/*container,*/ target, minSize, defSize, maxSize) {
 		
 	});
 
+	$('#smallFont2').click(function(){	
+		curSize = parseInt($(target).css("font-size"));
+		newSize = curSize - 1;
+		if (newSize >= minSize) {
+			$(target).css('font-size', newSize);
+		} 
+		if (newSize <= minSize) {
+			$( " #smallFont2").addClass("sdisabled");/*container +*/
+		}
+		if (newSize < maxSize) {
+			$(" #largeFont").removeClass("ldisabled");/*container +*/ 
+		}
+		updatefontCookie(target, newSize); //sets the cookie 
+		
+	});
+
 	//on clicking default font size button, font size is reset
-	$(" #defaultFont").click(function(){/*container + */
+	$(" #resetFont").click(function(){/*container + */
 		$(target).css('font-size', defSize);
 		$(" #smallFont").removeClass("sdisabled");/*container + */
+		$(" #smallFont2").removeClass("sdisabled");/*container + */
 		$(" #largeFont").removeClass("ldisabled");/*container + */
 		updatefontCookie(target, defSize);
 	});
@@ -102,6 +113,9 @@ function fontSize(/*container,*/ target, minSize, defSize, maxSize) {
 		} 
 		if (newSize > minSize) {
 			$(" #smallFont").removeClass("sdisabled");/*container + */
+		}
+		if (newSize > minSize) {
+			$(" #smallFont2").removeClass("sdisabled");/*container + */
 		}
 		if (newSize >= maxSize) {
 			$(" #largeFont").addClass("ldisabled");/*container + */
@@ -273,14 +287,14 @@ close:function(s){var h=H[s];if(!h.a)return F;h.a=F;
  if(h.c.onHide)h.c.onHide(h);else{h.w.hide();if(h.o)h.o.remove();} return F;
 },
 params:{}};
-var s=0,H=$.jqm.hash,A=[],ie6=$.browser.msie&&($.browser.version == "6.0"),F=false,
-i=$('<iframe src="javascript:false;document.write(\'\');" class="jqm"></iframe>').css({opacity:0}),
-e=function(h){if(ie6)if(h.o)h.o.html('<p style="width:100%;height:100%"/>').prepend(i);else if(!$('iframe.jqm',h.w)[0])h.w.prepend(i); f(h);},
-f=function(h){try{$(':input:visible',h.w)[0].focus();}catch(_){}},
-L=function(t){$()[t]("keypress",m)[t]("keydown",m)[t]("mousedown",m);},
-m=function(e){var h=H[A[A.length-1]],r=(!$(e.target).parents('.jqmID'+h.s)[0]);if(r)f(h);return !r;},
-hs=function(w,t,c){return w.each(function(){var s=this._jqm;$(t).each(function() {
- if(!this[c]){this[c]=[];$(this).click(function(){for(var i in {jqmShow:1,jqmHide:1})for(var s in this[i])if(H[this[i][s]])H[this[i][s]].w[i](this);return F;});}this[c].push(s);});});};
+// var s=0,H=$.jqm.hash,A=[],ie6=$.browser.msie&&($.browser.version == "6.0"),F=false,
+// i=$('<iframe src="javascript:false;document.write(\'\');" class="jqm"></iframe>').css({opacity:0}),
+// e=function(h){if(ie6)if(h.o)h.o.html('<p style="width:100%;height:100%"/>').prepend(i);else if(!$('iframe.jqm',h.w)[0])h.w.prepend(i); f(h);},
+// f=function(h){try{$(':input:visible',h.w)[0].focus();}catch(_){}},
+// L=function(t){$()[t]("keypress",m)[t]("keydown",m)[t]("mousedown",m);},
+// m=function(e){var h=H[A[A.length-1]],r=(!$(e.target).parents('.jqmID'+h.s)[0]);if(r)f(h);return !r;},
+// hs=function(w,t,c){return w.each(function(){var s=this._jqm;$(t).each(function() {
+//  if(!this[c]){this[c]=[];$(this).click(function(){for(var i in {jqmShow:1,jqmHide:1})for(var s in this[i])if(H[this[i][s]])H[this[i][s]].w[i](this);return F;});}this[c].push(s);});});};
 })(jQuery);
 
 //Style Sheet Switcher version 1.1 Oct 10th, 2006

@@ -22,6 +22,8 @@ This is a portfolio of all my work since 2010.
 - Mayra Cakes
 	- [2014](https://byronmena.github.io/Portfolio/Mayra%20Cakes/Mayra%20Cakes%202014/)
 	- [2016](https://byronmena.github.io/Portfolio/Mayra%20Cakes/HTML5%20One%20Page%202016/)
+- Zoli Party & Events
+	- [2018-2019](https://byronmena.github.io/Portfolio/Zoli%20Party%20%26%20Events/)
 - [Portfolio site](https://byronmena.github.io/)
 
 	

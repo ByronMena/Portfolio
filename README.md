@@ -37,7 +37,7 @@ This is a portfolio of all my work since 2010.
 
 -	[FCC Portfolio - 07.07.2018](https://codepen.io/ByronM/full/PaMOpb)
 - 	[FCC Build a Technical Documentation Page Project - 06.27.2018](https://codepen.io/ByronM/full/yERQJX)
--  [FCC Product Landing Page - 6.15.2018](https://codepen.io/ByronM/full/LrOYXo)
+-  [FCC Product Landing Page - 06.15.2018](https://codepen.io/ByronM/full/LrOYXo)
 -  [FCC Survey Form - 06.07.2018](https://codepen.io/ByronM/full/ERgeOz)
 -  [FCC Keep Calm Poster - 03.16.17](https://codepen.io/ByronM/full/YZrLVa)
 -  [FCC Portfolio - 01.12.2017](https://codepen.io/ByronM/full/ZLWeKw)

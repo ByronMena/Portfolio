@@ -1,0 +1,276 @@
+:root {
+
+    /* COLORS */
+    --dark-pink: #ff8ea0;
+    --light-pink: #ffdae0;
+    --nav-pink: #ff4260;
+
+
+    /* CHEYLLA'S FAV COLOR */
+
+    --cs-light-white: #E7E7E7;
+    --cs-light-gray: #CACACA;
+    --cs-mid-gray: #969696;
+    --cs-light-pink: #FFCCDF;
+    --cs-dark-pink: #F5AFC8;
+
+    /* 2nd Favorite */
+
+    --cs2-light-pink: #f2b3bd;
+    --cs2-mid-pink: #e16176;
+    --cs2-light-gray: #E3dfdd;
+    --cs2-dark-pink: #c84861;
+
+    /* The Pink Palette */
+
+    --skinny-dip: #faeaed;
+    --rosy-cheeks: #f3a5bf;
+    --kiss-kiss: #f5ccd4;
+    --nude-blush: #f4e7e4;
+}
+
+.underline:hover {
+    color: var(--dark-pink) !important;
+    /* background-color: var(--dark-pink); */
+}
+
+.highlight-left::after,
+.highlight-right::after {
+    /* background: var(--cs-light-pink); */
+    background-color: var(--nav-pink);
+}
+
+.number days,
+.title,
+.number {
+    color: white !important;
+}
+
+.dropcap {
+    background: var(--cs2-mid-pink)
+}
+
+/* 
+#MENU SECTION
+*/
+
+.dark h5,
+p {
+    color: #2e2e2e;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    color: #2e2e2e;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-active a,
+.themecolor {
+    color: var(--nav-pink);
+}
+
+.dark .ui-tabs .ui-tabs-panel {
+    color: var(--nav-pink);
+}
+
+#Top_bar .responsive-menu-toggle,
+#Header_creative .creative-menu-toggle,
+#Header_creative .responsive-menu-toggle {
+    color: var(--cs-light-white);
+    background: var(--nav-pink);
+}
+
+#Side_slide {
+    background-color: var(--cs2-dark-pink);
+}
+
+
+/* END OF MENU SECTION */
+
+
+
+/* SLIDER PAGINATION */
+
+.slider_pagination {
+    color: var(--cs-light-white) !important;
+    background: var(--cs2-mid-pink) !important;
+}
+
+.offer a.slider_prev,
+.offer a.slider_next {
+    background: var(--cs2-mid-pink) !important;
+}
+
+/* SERVICES SECTION */
+
+#gallery-1 {
+    margin: auto;
+}
+
+#gallery-1 .gallery-item {
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    width: 24.99%;
+}
+
+#gallery-1 img {
+    border: 2px solid #cfcfcf;
+}
+
+#gallery-1 .gallery-caption {
+    margin-left: 0;
+}
+
+
+/* 
+CONTACT SECTION
+*/
+.hotPink {
+    color: var(--nav-pink) !important;
+}
+
+h4,
+h5 {
+    color: #2e2e2e;
+}
+
+
+.social a {
+    color: var(--cs-mid-gray) !important;
+}
+
+.facebook:hover {
+    color: #3b5998 !important;
+}
+
+.instagram:hover {
+    color: #e95950;
+}
+
+.mail:hover {
+    color: var(--light-pink);
+}
+
+.copyright a:hover {
+    color: crimson !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TOP MENU */
+
+#Top_bar {
+
+    background-color: var(--cs-light-pink) !important;
+}
+
+#Top_bar #menu>li>a {
+
+    color: var(--cs-light-pink) !important;
+}
+
+#Top_bar .menu>li>a span:not(.description) {
+    color: var(--nav-pink);
+}
+
+#Top_bar .menu>li>a span:not(.description):hover {
+    color: purple;
+}
+
+/* Menu status indicator */
+#Top_bar .menu>li>a,
+#Top_bar #menu ul li.submenu .menu-toggle {
+    color: purple;
+}
+
+#Top_bar .menu>li.current-menu-item>a,
+#Top_bar .menu>li.current_page_item>a,
+#Top_bar .menu>li.current-menu-parent>a,
+#Top_bar .menu>li.current-page-parent>a,
+#Top_bar .menu>li.current-menu-ancestor>a,
+#Top_bar .menu>li.current-page-ancestor>a,
+#Top_bar .menu>li.current_page_ancestor>a,
+#Top_bar .menu>li.hover>a {
+    color: purple;
+}
+
+#Top_bar .menu>li a:after {
+    background: purple;
+}
+
+.menuo-arrows #Top_bar .menu>li.submenu>a>span:not(.description)::after {
+    border-top-color: purple;
+}
+
+#Top_bar .menu>li.current-menu-item.submenu>a>span:not(.description)::after,
+#Top_bar .menu>li.current_page_item.submenu>a>span:not(.description)::after,
+#Top_bar .menu>li.current-menu-parent.submenu>a>span:not(.description)::after,
+#Top_bar .menu>li.current-page-parent.submenu>a>span:not(.description)::after,
+#Top_bar .menu>li.current-menu-ancestor.submenu>a>span:not(.description)::after,
+#Top_bar .menu>li.current-page-ancestor.submenu>a>span:not(.description)::after,
+#Top_bar .menu>li.current_page_ancestor.submenu>a>span:not(.description)::after,
+#Top_bar .menu>li.hover.submenu>a>span:not(.description)::after {
+    border-top-color: purple;
+}
+
+.menu-highlight #Top_bar #menu>ul>li.current-menu-item>a,
+.menu-highlight #Top_bar #menu>ul>li.current_page_item>a,
+.menu-highlight #Top_bar #menu>ul>li.current-menu-parent>a,
+.menu-highlight #Top_bar #menu>ul>li.current-page-parent>a,
+.menu-highlight #Top_bar #menu>ul>li.current-menu-ancestor>a,
+.menu-highlight #Top_bar #menu>ul>li.current-page-ancestor>a,
+.menu-highlight #Top_bar #menu>ul>li.current_page_ancestor>a,
+.menu-highlight #Top_bar #menu>ul>li.hover>a {
+    background: purple;
+}
+
+.menu-arrow-bottom #Top_bar .menu>li>a:after {
+    border-bottom-color: purple;
+}
+
+.menu-arrow-top #Top_bar .menu>li>a:after {
+    border-top-color: purple;
+}
+
+.header-plain #Top_bar .menu>li.current-menu-item>a,
+.header-plain #Top_bar .menu>li.current_page_item>a,
+.header-plain #Top_bar .menu>li.current-menu-parent>a,
+.header-plain #Top_bar .menu>li.current-page-parent>a,
+.header-plain #Top_bar .menu>li.current-menu-ancestor>a,
+.header-plain #Top_bar .menu>li.current-page-ancestor>a,
+.header-plain #Top_bar .menu>li.current_page_ancestor>a,
+.header-plain #Top_bar .menu>li.hover>a,
+.header-plain #Top_bar a:hover#header_cart,
+.header-plain #Top_bar a:hover#search_button,
+.header-plain #Top_bar .wpml-languages:hover,
+.header-plain #Top_bar .wpml-languages ul.wpml-lang-dropdown {
+    background: purple;
+    color: purple;
+}
+
+.header-plain #Top_bar,
+.header-plain #Top_bar .menu>li>a span:not(.description),
+.header-plain #Top_bar a#header_cart,
+.header-plain #Top_bar a#search_button,
+.header-plain #Top_bar .wpml-languages,
+.header-plain #Top_bar a.button.action_button {
+    border-color: purple;
+}
+
+#Top_bar .menu>li ul {
+    background-color: purple;
+}
+
+/* End of menu status indicator */
+
+/* FOOTER SECTIONS */
+
+#Footer a {
+    color: #0095eb;
+    font-weight: bold;
+}
+
+/* To top button */
+a.button .button_icon {
+    background: rgba(128, 0, 128, .05)
+}

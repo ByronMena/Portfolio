@@ -1,12 +1,12 @@
-![Byron Mena - Front-end Web Developer & Certified CompTIA A+ PC Technician](https://byronmena.github.io/Portfolio/html5up/images/bm-profile.png)
+![Byron Mena - Front-end Web Developer & Certified CompTIA A+ PC Technician](https://byronmena.github.io/img/ByroninPC.PNG)
 ---
 
 # Portfolio :wave:
 This is a portfolio of all my work since 2010.
 
 ## AOA
-- [link](https://byronmena.github.io/Portfolio/AOASF/AOASF/Index.html) (2013)
-- [AOASF - WordPress](http://aoasf.com/) (Current)
+- [AOA - HTML](https://byronmena.github.io/Portfolio/AOASF/AOASF/Index.html) (2013)
+- [AOASF - WordPress](Coming Soon)
 
 ## ACCESS
 - [2011](https://byronmena.github.io/Portfolio/ACCESS/ACCESS%202011/) 
@@ -37,8 +37,8 @@ This is a portfolio of all my work since 2010.
 
 ## CodePen.io
 
--	[FCC Portfolio - 07.07.2018](https://codepen.io/ByronM/full/PaMOpb)
-- 	[FCC Build a Technical Documentation Page Project - 06.27.2018](https://codepen.io/ByronM/full/yERQJX)
+-  [FCC Portfolio - 07.07.2018](https://codepen.io/ByronM/full/PaMOpb)
+-  [FCC Build a Technical Documentation Page Project - 06.27.2018](https://codepen.io/ByronM/full/yERQJX)
 -  [FCC Product Landing Page - 06.15.2018](https://codepen.io/ByronM/full/LrOYXo)
 -  [FCC Survey Form - 06.07.2018](https://codepen.io/ByronM/full/ERgeOz)
 -  [FCC Keep Calm Poster - 03.16.17](https://codepen.io/ByronM/full/YZrLVa)

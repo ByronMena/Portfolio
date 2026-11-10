@@ -25,6 +25,7 @@ This is a portfolio of all my work since 2010.
 - Zoli Party & Events
 	- [2018-2019](https://byronmena.github.io/Portfolio/Zoli%20Party%20%26%20Events/index.html)
 - [Portfolio site](https://byronmena.github.io/)
+- [Notary Public Website] (https://byronmena.github.io/Portfolio/Notary-website/index.html)
 
 	
 
